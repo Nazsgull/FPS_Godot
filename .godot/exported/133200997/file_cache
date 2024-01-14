@@ -1,0 +1,8 @@
+res://scenes/player.tscn::17cfae64eb4d169f9d4c9a95c7f5c668::1698775826::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/main.tscn::74038d9c295c33ec26bb558302d24e9d::1698775826::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+res://scenes/vents/intersection.tscn::423d13246837024b3d95bd9e9b42d975::1698769859::res://.godot/exported/133200997/export-132b8f006f5f0f12253784728da6e860-intersection.scn
+res://scenes/vents/material/metal_vent.tres::c31ff4b502b5541a2837548b34f584af::1698769859::res://.godot/exported/133200997/export-d77523d95040584bdcfb647c4aa07b3f-metal_vent.res
+res://scenes/vents/Lturn.tscn::e9476ec38b3a20282ce1a2ea2c643e02::1698769859::res://.godot/exported/133200997/export-48891d73a36f2c6e5a3722a5b5dd0ae6-Lturn.scn
+res://scenes/vents/T_intersection.tscn::e0ce7fd0daf653bfc2f789559dbfdfeb::1698769859::res://.godot/exported/133200997/export-ac2a4403ec6f19f52c23e4e2d87c00a8-T_intersection.scn
+res://scenes/vents/vent_straight.tscn::16af1290583718627a7045def98b7914::1698769859::res://.godot/exported/133200997/export-926078fa4971b6450ae895b15f52a8f3-vent_straight.scn
+res://scenes/vents/vent_straight_window.tscn::a1fffccde10c876340fd302b96c3acd6::1698769859::res://.godot/exported/133200997/export-a88d40f30142594908088d9aba963864-vent_straight_window.scn

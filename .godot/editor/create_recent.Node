@@ -1,0 +1,9 @@
+CollisionShape3D
+OmniLight3D
+SpotLight3D
+RayCast3D
+Camera3D
+Node3D
+CharacterBody3D
+CSGBox3D
+CSGTorus3D

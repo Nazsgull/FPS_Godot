@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://ssitsfgdqn0w"]
+
+[ext_resource type="Material" uid="uid://bjd3joudd6kpe" path="res://vents/material/metal_vent.tres" id="1_tdg5j"]
+
+[node name="vent" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45, 0, 0)
+material_override = ExtResource("1_tdg5j")
+size = Vector3(0.1, 0.1, 1.3)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45, 0, 0)
+material_override = ExtResource("1_tdg5j")
+size = Vector3(0.1, 0.1, 1.3)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="."]
+material_override = ExtResource("1_tdg5j")
+size = Vector3(0.1, 0.1, 1.3)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225, 0, 0)
+material_override = ExtResource("1_tdg5j")
+size = Vector3(0.1, 0.1, 1.3)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.225, 0, 0)
+material_override = ExtResource("1_tdg5j")
+size = Vector3(0.1, 0.1, 1.3)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+material_override = ExtResource("1_tdg5j")
+size = Vector3(1, 0.1, 1.3)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.55, 0.6)
+material_override = ExtResource("1_tdg5j")
+size = Vector3(1, 0.1, 1.2)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.55, -0.6)
+material_override = ExtResource("1_tdg5j")
+size = Vector3(1, 0.1, 1.2)
