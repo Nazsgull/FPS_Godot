@@ -25,5 +25,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 
 [node name="Camera3D" type="Camera3D" parent="head"]
 
+[node name="CSGSphere3D" type="CSGSphere3D" parent="head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0150189, 0)
+radius = 0.2
+radial_segments = 32
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="head/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.325)
+radius = 0.03
+height = 0.3
+
 [node name="RayCast3D" type="RayCast3D" parent="."]
 target_position = Vector3(0, 2, 0)
+
+[node name="vis" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="vis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26103, 0)
+size = Vector3(0.5, 0.5, 0.3)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="vis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.338244, 1.26103, 0)
+size = Vector3(0.1, 0.5, 0.2)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="vis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.338, 1.261, 0)
+size = Vector3(0.1, 0.5, 0.2)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="vis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.872919, 0)
+size = Vector3(0.5, 0.206, 0.3)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="vis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.171992, 0.371064, 0)
+size = Vector3(0.15, 0.7, 0.2)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="vis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.172, 0.371025, 0)
+size = Vector3(0.15, 0.7, 0.2)
