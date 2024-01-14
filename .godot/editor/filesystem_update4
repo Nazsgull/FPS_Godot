@@ -1,4 +1,2 @@
-res://scenes/player.tscn
-res://scenes/main.tscn
-res://scripts/main_menu.gd
-res://scenes/main_menu.tscn
+res://scenes/pre_game_menu.gd
+res://scenes/pre_game_menu.tscn

@@ -1,11 +1,11 @@
 Label
-RichTextLabel
+PanelContainer
 Button
 VBoxContainer
+Panel
+RichTextLabel
 VFlowContainer
 HFlowContainer
-PanelContainer
-Panel
 Control
 CSGBox3D
 CSGMesh3D

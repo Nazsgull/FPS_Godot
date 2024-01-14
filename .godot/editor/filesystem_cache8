@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705260625
+::res://::1705268796
 export_presets.cfg::TextFile::-1::1701283262::0::1::::<><>::
 icon.svg::CompressedTexture2D::7572029063214829503::1698693952::1698693963::1::::<><>::
 player.gd::GDScript::-1::1698695000::0::1::::<>CharacterBody3D<>::
@@ -22,9 +22,10 @@ vent_straight.tscn::PackedScene::2932562535094032434::1704727234::0::1::::<><>::
 vent_straight_window.tscn::PackedScene::1301078604505574604::1704727234::0::1::::<><>::uid://bjd3joudd6kpe
 ::res://assets/vents/material/::1705245903
 metal_vent.tres::StandardMaterial3D::3026030324004713010::1698761675::0::1::::<><>::
-::res://scenes/::1705245982
-main.tscn::PackedScene::8569339725314730122::1705245982::0::1::::<><>::uid://c8w2y027d6koa::::res://assets/textures/dev/grids/Dark/texture_07.png<>uid://ds37b38vli6wg::::res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>uid://hob0odd0bhgw::::res://scenes/player.tscn
-player.tscn::PackedScene::520329295994529974::1705245982::0::1::::<><>::res://scripts/player.gd
+::res://scenes/::1705263187
+main.tscn::PackedScene::8569339725314730122::1705261592::0::1::::<><>::uid://c8w2y027d6koa::::res://assets/textures/dev/grids/Dark/texture_07.png<>uid://ds37b38vli6wg::::res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>uid://hob0odd0bhgw::::res://scenes/player.tscn
+main_menu.tscn::PackedScene::4336995205246204871::1705263187::0::1::::<><>::res://scripts/main_menu.gd
+player.tscn::PackedScene::520329295994529974::1705261592::0::1::::<><>::res://scripts/player.gd
 ::res://scenes/vents/::1705245903
 intersection.tscn::PackedScene::5507296118910437406::1698769859::0::1::::<><>::uid://bjd3joudd6kpe
 Lturn.tscn::PackedScene::7842468758662417561::1698769859::0::1::::<><>::uid://bjd3joudd6kpe
@@ -33,5 +34,6 @@ vent_straight.tscn::PackedScene::2932562535094032434::1698769859::0::1::::<><>::
 vent_straight_window.tscn::PackedScene::1301078604505574604::1698769859::0::1::::<><>::uid://bjd3joudd6kpe
 ::res://scenes/vents/material/::1705245903
 metal_vent.tres::StandardMaterial3D::3026030324004713010::1698769859::0::1::::<><>::
-::res://scripts/::1705245903
+::res://scripts/::1705262783
+main_menu.gd::GDScript::-1::1705262783::0::1::::<>Control<>::
 player.gd::GDScript::-1::1705169457::0::1::::<>CharacterBody3D<>::
