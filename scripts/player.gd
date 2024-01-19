@@ -10,9 +10,9 @@ const JUMP_VELOCITY = 4.5
 @export var air_lerp_speed = 10.0
 
 #Mouse
-@export var mouse_sens = 0.3
+@export var mouse_sens = 0.2
 @export var invert_y_look = -1
-@export var capture_mouse = false
+@export var capture_mouse = true
 
 #Head turn
 @onready var head = $head
@@ -41,6 +41,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _ready():
 	if capture_mouse:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
 	
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -78,7 +79,6 @@ func _update_state_machine(delta) -> void:
 # Function to handle standing state
 func handle_walking(delta) -> void:
 	if not ray_cast_3d.is_colliding():
-		print("walking")
 		current_speed = WALKING_SPEED
 		standing_collision_shape.disabled = false
 		crouching_collision_shape.disabled = true
@@ -89,7 +89,6 @@ func handle_walking(delta) -> void:
 
 # Function to handle crouching state
 func handle_crouching(delta) -> void:
-	print("crouching")
 	if(is_on_floor()):
 		current_speed = CROUCHING_SPEED
 	standing_collision_shape.disabled = true
@@ -99,12 +98,10 @@ func handle_crouching(delta) -> void:
 
 # Function to handle sprinting state
 func handle_sprinting(_delta) -> void:
-	print("sprinting")
 	current_speed = SPRINTING_SPEED
 
 # Function to handle jumping state
 func handle_jumping(_delta) -> void:
-	print("jumping")
 	velocity.y = JUMP_VELOCITY
 
 
@@ -126,7 +123,6 @@ func get_input(delta):
 	move_and_slide()
 
 func _physics_process(delta):
-	print(!current_mov_state == player_mov_states.CROUCHING)
 	#Handle movement states
 	_update_state_machine(delta)
 	

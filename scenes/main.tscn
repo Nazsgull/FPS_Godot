@@ -1,12 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://dudb1j58spiqs"]
+[gd_scene load_steps=11 format=3 uid="uid://dudb1j58spiqs"]
 
 [ext_resource type="Texture2D" uid="uid://c8w2y027d6koa" path="res://assets/textures/dev/grids/Dark/texture_07.png" id="1_rk0ar"]
 [ext_resource type="Texture2D" uid="uid://ds37b38vli6wg" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_1h6t0"]
 [ext_resource type="PackedScene" uid="uid://hob0odd0bhgw" path="res://scenes/player.tscn" id="3_lp55u"]
+[ext_resource type="PackedScene" uid="uid://cwfdbw7eignm8" path="res://scenes/button.tscn" id="4_5lw4s"]
+[ext_resource type="PackedScene" uid="uid://ckhyt1k8o2iur" path="res://scenes/door_mine.tscn" id="5_cngqs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pnsss"]
+resource_local_to_scene = true
 albedo_texture = ExtResource("1_rk0ar")
 uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2h57t"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fy17b"]
 panorama = ExtResource("2_1h6t0")
@@ -97,11 +102,24 @@ use_collision = true
 size = Vector3(2, 1, 1)
 material = SubResource("StandardMaterial3D_pnsss")
 
+[node name="obstacle10" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 1, 0.323223, 2.73744)
+use_collision = true
+size = Vector3(0.5, 1, 2)
+material = SubResource("StandardMaterial3D_pnsss")
+
 [node name="obstacle8" type="CSGBox3D" parent="stage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1, 2, 1.5)
 use_collision = true
 size = Vector3(2, 1, 1)
 material = SubResource("StandardMaterial3D_pnsss")
+
+[node name="obstacle9" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 1.8, -2.5)
+use_collision = true
+collision_layer = 129
+size = Vector3(0.2, 0.2, 0.2)
+material = SubResource("StandardMaterial3D_2h57t")
 
 [node name="obstacle7" type="CSGBox3D" parent="stage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.5, 7.5)
@@ -119,4 +137,12 @@ transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75
 shadow_enabled = true
 
 [node name="player" parent="." instance=ExtResource("3_lp55u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.65887, 2.6546, 4.76837e-07)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59113, 0.8546, 4.25)
+
+[node name="TEST" parent="." instance=ExtResource("4_5lw4s")]
+transform = Transform3D(0.25, 0, 0, 0, 0.176777, -0.176777, 0, 0.176777, 0.176777, 1, 1.16374, 2.639)
+
+[node name="Door" parent="." instance=ExtResource("5_cngqs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0.1, -1.7)
+
+[connection signal="interacted" from="TEST" to="Door" method="_toggleDoor"]
