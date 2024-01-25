@@ -19,19 +19,17 @@ _data = {
 }
 
 [node name="player" type="CharacterBody3D"]
-collision_mask = 9
+collision_mask = 5
 script = ExtResource("1_7udej")
 
 [node name="standing_collision_shape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_pikys")
-metadata/_edit_lock_ = true
 
 [node name="crouching_collision_shape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("CapsuleShape3D_q10gy")
 disabled = true
-metadata/_edit_lock_ = true
 
 [node name="head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)

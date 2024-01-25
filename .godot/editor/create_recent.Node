@@ -12,16 +12,3 @@ Label
 TextureRect
 RayCast3D
 PanelContainer
-Button
-VBoxContainer
-Panel
-RichTextLabel
-VFlowContainer
-HFlowContainer
-Control
-CSGCylinder3D
-CSGSphere3D
-OmniLight3D
-SpotLight3D
-Camera3D
-CharacterBody3D
