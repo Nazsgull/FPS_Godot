@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://uqqyde4kd5ff"]
+
+[ext_resource type="PackedScene" uid="uid://k5du055eonoq" path="res://assets/models_gltf/Door_simple_marco.glb" id="1_tmfbv"]
+[ext_resource type="Material" uid="uid://chjxtb06jm8dj" path="res://assets/materials/white_B0B0B0.tres" id="2_gdfbk"]
+
+[node name="Door_simple_frame" instance=ExtResource("1_tmfbv")]
+
+[node name="mergedBlocks(Clone)" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_gdfbk")

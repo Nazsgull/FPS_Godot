@@ -6,5 +6,8 @@ res://scenes/pre_game_menu.tscn
 res://scenes/button.tscn
 res://scenes/door_fancy.tscn
 res://scenes/door_simple.tscn
-res://scripts/player.gd
-res://scenes/Area3D.gd
+res://assets/materials/red_rough.tres
+res://assets/materials/White_B0B0B0.tres
+res://scenes/door_square_frame.tscn
+res://scenes/door_simple_marco.tscn
+res://scenes/door_simple_frame.tscn

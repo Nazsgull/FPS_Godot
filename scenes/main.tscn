@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dudb1j58spiqs"]
+[gd_scene load_steps=12 format=3 uid="uid://dudb1j58spiqs"]
 
 [ext_resource type="Texture2D" uid="uid://c8w2y027d6koa" path="res://assets/textures/dev/grids/Dark/texture_07.png" id="1_rk0ar"]
 [ext_resource type="Texture2D" uid="uid://ds37b38vli6wg" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_1h6t0"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cwfdbw7eignm8" path="res://scenes/button.tscn" id="4_5lw4s"]
 [ext_resource type="PackedScene" uid="uid://ckhyt1k8o2iur" path="res://scenes/door_fancy.tscn" id="5_cngqs"]
 [ext_resource type="PackedScene" uid="uid://hxgssy3ps78p" path="res://scenes/door_simple.tscn" id="6_xbfwj"]
-[ext_resource type="Script" path="res://scenes/Area3D.gd" id="7_w53nj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pnsss"]
 resource_local_to_scene = true
@@ -26,8 +25,6 @@ background_mode = 2
 sky = SubResource("Sky_gys16")
 tonemap_mode = 2
 glow_enabled = true
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_vlxpp"]
 
 [node name="world" type="Node3D"]
 
@@ -144,7 +141,7 @@ shadow_enabled = true
 [node name="player" parent="." instance=ExtResource("3_lp55u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59113, 0.8546, 4.25)
 
-[node name="TEST" parent="." instance=ExtResource("4_5lw4s")]
+[node name="BT_Test" parent="." instance=ExtResource("4_5lw4s")]
 transform = Transform3D(0.25, 0, 0, 0, 0.176777, -0.176777, 0, 0.176777, 0.176777, 1, 1.16374, 2.639)
 
 [node name="Door" parent="." instance=ExtResource("5_cngqs")]
@@ -153,16 +150,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0.1, -1.7)
 [node name="Door2" parent="." instance=ExtResource("6_xbfwj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0.25, -0.75)
 
-[node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0.75, 1.5)
-collision_layer = 4
-script = ExtResource("7_w53nj")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, 0, 0)
-shape = SubResource("BoxShape3D_vlxpp")
-disabled = true
-
-[connection signal="interacted" from="TEST" to="Door" method="toggle_door"]
-[connection signal="interacted" from="TEST" to="Door2" method="toggle_door"]
-[connection signal="area_entered" from="Area3D" to="Area3D" method="_on_area_entered"]
+[connection signal="interacted" from="BT_Test" to="Door" method="toggle_door"]
+[connection signal="interacted" from="BT_Test" to="Door2" method="toggle_door"]
