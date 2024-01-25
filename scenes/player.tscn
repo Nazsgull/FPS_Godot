@@ -19,6 +19,7 @@ _data = {
 }
 
 [node name="player" type="CharacterBody3D"]
+collision_mask = 9
 script = ExtResource("1_7udej")
 
 [node name="standing_collision_shape" type="CollisionShape3D" parent="."]

@@ -1,8 +1,9 @@
 extends Node3D
-@onready var anim = $door_frame/AnimationPlayer
+
+@onready var anim = $AnimationPlayer
+
 
 @export var open = false
-
 func _ready():
 	if open:
 		open = false

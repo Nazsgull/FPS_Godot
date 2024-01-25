@@ -1,10 +1,10 @@
 res://scenes/main.tscn
+res://scripts/door_mine.gd
 res://scenes/main_menu.tscn
 res://scenes/player.tscn
 res://scenes/pre_game_menu.tscn
 res://scenes/button.tscn
-res://scripts/Interactable.gd
-res://scripts/InteractionRay.gd
 res://scenes/door_mine.tscn
-res://scenes/door_mine.gd
-res://scripts/door_mine.gd
+res://scenes/door_simple.tscn
+res://scripts/door_simple.gd
+res://scenes/door_fancy.tscn
