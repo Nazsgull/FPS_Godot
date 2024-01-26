@@ -144,11 +144,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59113, 0.8546, 4.25)
 [node name="BT_Test" parent="." instance=ExtResource("4_5lw4s")]
 transform = Transform3D(0.25, 0, 0, 0, 0.176777, -0.176777, 0, 0.176777, 0.176777, 1, 1.16374, 2.639)
 
+[node name="obstacle11" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 4.75, 0.323223, 2.73744)
+use_collision = true
+size = Vector3(0.5, 1, 2)
+material = SubResource("StandardMaterial3D_pnsss")
+
+[node name="BT_Test2" parent="." instance=ExtResource("4_5lw4s")]
+transform = Transform3D(0.25, 0, 0, 0, 0.176777, -0.176777, 0, 0.176777, 0.176777, 4.75, 1.16374, 2.639)
+
 [node name="Door" parent="." instance=ExtResource("5_cngqs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0.1, -1.7)
 
 [node name="Door2" parent="." instance=ExtResource("6_xbfwj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0.25, -0.75)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 0.1, -1.75)
 
 [connection signal="interacted" from="BT_Test" to="Door" method="toggle_door"]
-[connection signal="interacted" from="BT_Test" to="Door2" method="toggle_door"]
+[connection signal="interacted" from="BT_Test2" to="Door2" method="toggle_door"]

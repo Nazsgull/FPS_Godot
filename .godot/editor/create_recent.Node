@@ -1,7 +1,7 @@
+AnimationPlayer
 CSGBox3D
 CollisionShape3D
 Area3D
-AnimationPlayer
 Node3D
 CSGMesh3D
 CSGTorus3D

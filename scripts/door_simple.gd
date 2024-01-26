@@ -1,14 +1,14 @@
 extends Node3D
+class_name Door
 
 @onready var anim = $AnimationPlayer
 
-
-@export var open = false
+@export var open:bool = false
 func _ready():
 	if open:
 		open = false
 		anim.play("open")
-		
+			
 		return
 	else:
 		open = true

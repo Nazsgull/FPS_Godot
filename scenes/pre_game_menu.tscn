@@ -63,7 +63,7 @@ layout_mode = 2
 text = "Cancel
 "
 
-[connection signal="pressed" from="Panel/PanelContainer/VBoxContainer/BT_Host" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/PanelContainer/VBoxContainer/BT_Host" to="." method="_on_bt_host_pressed"]
+[connection signal="pressed" from="Panel/PanelContainer/VBoxContainer/BT_Host" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/PanelContainer/VBoxContainer/BT_Join" to="." method="_on_bt_join_pressed"]
 [connection signal="pressed" from="Panel/PanelContainer/VBoxContainer/PanelContainer/BT_Cancel" to="." method="_on_bt_cancel_pressed"]

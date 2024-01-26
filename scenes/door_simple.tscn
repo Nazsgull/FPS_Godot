@@ -36,6 +36,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4v8tg"]
+resource_local_to_scene = true
 _data = {
 "RESET": SubResource("Animation_gtvr6"),
 "open": SubResource("Animation_hto7h")
