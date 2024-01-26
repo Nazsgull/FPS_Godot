@@ -21,7 +21,7 @@ var direction = Vector3.ZERO
 
 #Crouching
 var uncrouched_height = 1.8
-var crouching_depth = -1.1
+var crouching_depth = -0.65
 
 @onready var standing_collision_shape = $standing_collision_shape
 @onready var crouching_collision_shape = $crouching_collision_shape
@@ -130,9 +130,3 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	get_input(delta)
-
-
-
-
-
-
