@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://7svxl77nwyna"]
+
+[ext_resource type="Script" path="res://scripts/InteractionRay.gd" id="1_bwohr"]
+
+[node name="InteractionRay" type="RayCast3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+target_position = Vector3(0, 0, 2)
+collision_mask = 128
+collide_with_areas = true
+script = ExtResource("1_bwohr")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, -3.79606e-08, 0.040956, 0.434219)
+sorting_offset = 1000.0

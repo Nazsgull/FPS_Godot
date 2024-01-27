@@ -27,6 +27,9 @@ var crouching_depth = -0.65
 @onready var crouching_collision_shape = $crouching_collision_shape
 @onready var ray_cast_3d = $RayCast3D
 
+var paused = false
+@onready var pause_menu = $head/Camera3D/PauseMenu
+
 enum player_mov_states {
 	CROUCHING,
 	WALKING,
@@ -103,7 +106,19 @@ func handle_sprinting(_delta) -> void:
 # Function to handle jumping state
 func handle_jumping(_delta) -> void:
 	velocity.y = JUMP_VELOCITY
+	
+# Function to handle pausing the game (NOT a movement state)
+func handle_pause(state):
+	if state:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		pause_menu.hide()
+		get_tree().paused = false
 
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().paused = true
+		pause_menu.show()
+	paused = !state
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -122,7 +137,11 @@ func get_input(delta):
 		velocity.z = lerp(velocity.z,direction.z * current_speed, delta * air_lerp_speed)
 	move_and_slide()
 
+
+
 func _physics_process(delta):
+	if Input.is_action_just_pressed("Pause"):
+		handle_pause(paused)
 	#Handle movement states
 	_update_state_machine(delta)
 	

@@ -1,7 +1,11 @@
-res://scenes/player.tscn
+res://scenes/door_simple.tscn
 res://scripts/door_mine.gd
 res://assets/materials/red_rough.tres
-res://scripts/player.gd
+res://scenes/interaction_ray.tscn
+res://scripts/Interactable.gd
 res://scenes/main.tscn
-res://scenes/door_simple.tscn
 res://scenes/door_fancy.tscn
+res://scenes/player.tscn
+res://scenes/UI/pause_menu.tscn
+res://scripts/player.gd
+res://scripts/pause_menu.gd

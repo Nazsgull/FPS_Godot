@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://hob0odd0bhgw"]
+[gd_scene load_steps=9 format=3 uid="uid://hob0odd0bhgw"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_7udej"]
-[ext_resource type="Script" path="res://scripts/InteractionRay.gd" id="2_lc7ch"]
+[ext_resource type="PackedScene" uid="uid://7svxl77nwyna" path="res://scenes/interaction_ray.tscn" id="2_evmkn"]
+[ext_resource type="PackedScene" uid="uid://b7plflu7xr7dp" path="res://scenes/UI/pause_menu.tscn" id="3_5nonw"]
 [ext_resource type="Texture2D" uid="uid://do64ecvqhjot" path="res://assets/textures/UI/puntero.png" id="3_e6h1u"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pikys"]
@@ -37,16 +38,10 @@ metadata/_edit_lock_ = true
 
 [node name="Camera3D" type="Camera3D" parent="head"]
 
-[node name="InteractionRay" type="RayCast3D" parent="head/Camera3D"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-target_position = Vector3(0, 0, 2)
-collision_mask = 128
-collide_with_areas = true
-script = ExtResource("2_lc7ch")
+[node name="InteractionRay" parent="head/Camera3D" instance=ExtResource("2_evmkn")]
 
-[node name="Label3D" type="Label3D" parent="head/Camera3D/InteractionRay"]
-transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, -3.79606e-08, 0.040956, 0.434219)
-sorting_offset = 1000.0
+[node name="PauseMenu" parent="head/Camera3D" instance=ExtResource("3_5nonw")]
+visible = false
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 target_position = Vector3(0, 2, 0)

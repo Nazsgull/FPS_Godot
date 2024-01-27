@@ -11,7 +11,7 @@ func get_prompt():
 	var key_name = ""
 	for action in InputMap.action_get_events(intended_action):
 		if action is InputEventKey:
-			key_name = action.as_text_keycode()
+			key_name = action.as_text_physical_keycode()
 	return hover_message + "\n["+key_name+"]"
 
 
