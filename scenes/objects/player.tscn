@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://hob0odd0bhgw"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_7udej"]
-[ext_resource type="PackedScene" uid="uid://7svxl77nwyna" path="res://scenes/interaction_ray.tscn" id="2_evmkn"]
+[ext_resource type="PackedScene" uid="uid://7svxl77nwyna" path="res://scenes/parts/interaction_ray.tscn" id="2_evmkn"]
 [ext_resource type="PackedScene" uid="uid://b7plflu7xr7dp" path="res://scenes/UI/pause_menu.tscn" id="3_5nonw"]
 [ext_resource type="Texture2D" uid="uid://do64ecvqhjot" path="res://assets/textures/UI/puntero.png" id="3_e6h1u"]
 

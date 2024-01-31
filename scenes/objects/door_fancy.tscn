@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://ckhyt1k8o2iur"]
 
 [ext_resource type="Script" path="res://scripts/door_mine.gd" id="1_ro08h"]
-[ext_resource type="PackedScene" uid="uid://cimsjbfk76mns" path="res://scenes/door_square_frame.tscn" id="2_0gk2h"]
+[ext_resource type="PackedScene" uid="uid://cimsjbfk76mns" path="res://scenes/parts/door_square_frame.tscn" id="2_0gk2h"]
 [ext_resource type="Material" uid="uid://bohouur8lvtc2" path="res://assets/materials/red_rough.tres" id="3_8rnuw"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_s7w5g"]

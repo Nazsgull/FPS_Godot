@@ -1,7 +1,8 @@
+AnimationPlayer
+Panel
 Button
 VBoxContainer
 MarginContainer
-AnimationPlayer
 CSGBox3D
 CollisionShape3D
 Area3D
@@ -11,5 +12,3 @@ CSGTorus3D
 AnimationTree
 MeshInstance3D
 Label3D
-Label
-TextureRect

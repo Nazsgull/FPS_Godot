@@ -1,21 +1,21 @@
 [gd_scene load_steps=12 format=3 uid="uid://dudb1j58spiqs"]
 
-[ext_resource type="Texture2D" uid="uid://c8w2y027d6koa" path="res://assets/textures/dev/grids/Dark/texture_07.png" id="1_rk0ar"]
-[ext_resource type="Texture2D" uid="uid://ds37b38vli6wg" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_1h6t0"]
-[ext_resource type="PackedScene" uid="uid://hob0odd0bhgw" path="res://scenes/player.tscn" id="3_lp55u"]
-[ext_resource type="PackedScene" uid="uid://cwfdbw7eignm8" path="res://scenes/button.tscn" id="4_5lw4s"]
-[ext_resource type="PackedScene" uid="uid://ckhyt1k8o2iur" path="res://scenes/door_fancy.tscn" id="5_cngqs"]
-[ext_resource type="PackedScene" uid="uid://hxgssy3ps78p" path="res://scenes/door_simple.tscn" id="6_xbfwj"]
+[ext_resource type="Texture2D" uid="uid://c8w2y027d6koa" path="res://assets/textures/dev/grids/Dark/texture_07.png" id="1_q3qxj"]
+[ext_resource type="Texture2D" uid="uid://ds37b38vli6wg" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_l8equ"]
+[ext_resource type="PackedScene" uid="uid://hob0odd0bhgw" path="res://scenes/objects/player.tscn" id="3_pioef"]
+[ext_resource type="PackedScene" uid="uid://cwfdbw7eignm8" path="res://scenes/objects/button.tscn" id="4_h7fie"]
+[ext_resource type="PackedScene" uid="uid://ckhyt1k8o2iur" path="res://scenes/objects/door_fancy.tscn" id="5_iecga"]
+[ext_resource type="PackedScene" uid="uid://hxgssy3ps78p" path="res://scenes/objects/door_simple.tscn" id="6_i47mx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pnsss"]
 resource_local_to_scene = true
-albedo_texture = ExtResource("1_rk0ar")
+albedo_texture = ExtResource("1_q3qxj")
 uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2h57t"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fy17b"]
-panorama = ExtResource("2_1h6t0")
+panorama = ExtResource("2_l8equ")
 
 [sub_resource type="Sky" id="Sky_gys16"]
 sky_material = SubResource("PanoramaSkyMaterial_fy17b")
@@ -165,10 +165,10 @@ environment = SubResource("Environment_gwwsl")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="player" parent="." instance=ExtResource("3_lp55u")]
+[node name="player" parent="." instance=ExtResource("3_pioef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59113, 0.8546, 4.25)
 
-[node name="BT_Test" parent="." instance=ExtResource("4_5lw4s")]
+[node name="BT_Test" parent="." instance=ExtResource("4_h7fie")]
 transform = Transform3D(0.25, 0, 0, 0, 0.176777, -0.176777, 0, 0.176777, 0.176777, 1, 1.16374, 2.639)
 
 [node name="obstacle11" type="CSGBox3D" parent="."]
@@ -177,13 +177,13 @@ use_collision = true
 size = Vector3(0.5, 1, 2)
 material = SubResource("StandardMaterial3D_pnsss")
 
-[node name="BT_Test2" parent="." instance=ExtResource("4_5lw4s")]
+[node name="BT_Test2" parent="." instance=ExtResource("4_h7fie")]
 transform = Transform3D(0.25, 0, 0, 0, 0.176777, -0.176777, 0, 0.176777, 0.176777, 4.75, 1.16374, 2.639)
 
-[node name="Door" parent="." instance=ExtResource("5_cngqs")]
+[node name="Door" parent="." instance=ExtResource("5_iecga")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0.1, -1.7)
 
-[node name="Door2" parent="." instance=ExtResource("6_xbfwj")]
+[node name="Door2" parent="." instance=ExtResource("6_i47mx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 0.1, -1.75)
 
 [connection signal="interacted" from="BT_Test" to="Door" method="toggle_door"]

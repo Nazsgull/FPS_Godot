@@ -32,10 +32,9 @@ grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="Panel"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 9
 anchor_bottom = 1.0
-grow_horizontal = 2
+offset_right = 1254.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_y7a8y")
 
@@ -50,20 +49,28 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BT_Play" type="Button" parent="Panel/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Play"
 
 [node name="BT_Options" type="Button" parent="Panel/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Options"
 
 [node name="BT_Credits" type="Button" parent="Panel/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Credits
 "
 
 [node name="BT_Quit" type="Button" parent="Panel/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Quit"
 
 [connection signal="pressed" from="Panel/PanelContainer/VBoxContainer/BT_Play" to="." method="_on_bt_play_pressed"]
