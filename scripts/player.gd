@@ -25,10 +25,11 @@ var crouching_depth = -0.65
 
 @onready var standing_collision_shape = $standing_collision_shape
 @onready var crouching_collision_shape = $crouching_collision_shape
-@onready var ray_cast_3d = $RayCast3D
+@onready var ray_cast_3d = $uncrouching_raycast
 
 var paused = false
 @onready var pause_menu = $head/Camera3D/PauseMenu
+@onready var pointer = $pointer
 
 enum player_mov_states {
 	CROUCHING,
@@ -47,7 +48,7 @@ func _ready():
 
 	
 func _input(event):
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and !paused:
 		rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
 		head.rotate_x(deg_to_rad(event.relative.y * mouse_sens * invert_y_look))
 		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-89), deg_to_rad(89))
@@ -108,17 +109,18 @@ func handle_jumping(_delta) -> void:
 	velocity.y = JUMP_VELOCITY
 	
 # Function to handle pausing the game (NOT a movement state)
-func handle_pause(state):
-	if state:
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+func handle_pause():
+	if paused:
 		pause_menu.hide()
-		get_tree().paused = false
-
+		Engine.time_scale = 1
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		pointer.show()
 	else:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		get_tree().paused = true
 		pause_menu.show()
-	paused = !state
+		Engine.time_scale = 0
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		pointer.hide()
+	paused = !paused
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -141,7 +143,7 @@ func get_input(delta):
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("Pause"):
-		handle_pause(paused)
+		handle_pause()
 	#Handle movement states
 	_update_state_machine(delta)
 	
