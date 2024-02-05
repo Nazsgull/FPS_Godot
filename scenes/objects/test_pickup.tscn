@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw4ice8i238jm"]
+
+[ext_resource type="PackedScene" uid="uid://p3glnphhxh3o" path="res://scenes/objects/base_pickup.tscn" id="1_ifw46"]
+
+[node name="test_pickup" instance=ExtResource("1_ifw46")]
+
+[node name="Area3D" parent="." index="0"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, 0)
+size = Vector3(0.5, 0.5, 0.5)

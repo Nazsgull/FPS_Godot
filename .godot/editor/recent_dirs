@@ -1,5 +1,8 @@
-res://scenes/UI
+res://scenes/objects/Equippables
+res://scenes/objects
 res://scripts
+res://scenes/parts
+res://scenes/UI
 res://scenes
 res://assets/materials
 res://

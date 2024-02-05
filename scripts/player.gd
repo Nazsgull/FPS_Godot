@@ -31,6 +31,9 @@ var paused = false
 @onready var pause_menu = $head/Camera3D/PauseMenu
 @onready var pointer = $pointer
 
+@onready var toolbar = $head/Camera3D/toolbar
+
+
 enum player_mov_states {
 	CROUCHING,
 	WALKING,
@@ -45,8 +48,24 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _ready():
 	if capture_mouse:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	connectSignals()
+		
+func connectSignals():
+	var equippables = []
+	findByClass(get_tree().current_scene,"Equippable", equippables) #populate the equippables array to connect their signals
+	for i:Equippable in equippables:
+		i.pickup.connect("pickup", self, "_handle_pickup")
 
+func findByClass(node: Node, className : String, result : Array) -> void:
+	if node.is_class(className) :
+		result.push_back(node)
+	for child in node.get_children():
+		findByClass(child, className, result)
+
+func _handle_pickup(scene:PackedScene):
+	toolbar.add_tool(scene)
 	
+
 func _input(event):
 	if event is InputEventMouseMotion and !paused:
 		rotate_y(deg_to_rad(-event.relative.x * mouse_sens))

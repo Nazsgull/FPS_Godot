@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://p3glnphhxh3o"]
+
+[ext_resource type="Script" path="res://scripts/equippable_pickup.gd" id="1_plplf"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hi60q"]
+
+[node name="equippable_pickup" type="Node3D"]
+script = ExtResource("1_plplf")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_hi60q")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

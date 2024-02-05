@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dudb1j58spiqs"]
+[gd_scene load_steps=13 format=3 uid="uid://dudb1j58spiqs"]
 
 [ext_resource type="Texture2D" uid="uid://c8w2y027d6koa" path="res://assets/textures/dev/grids/Dark/texture_07.png" id="1_q3qxj"]
 [ext_resource type="Texture2D" uid="uid://ds37b38vli6wg" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_l8equ"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cwfdbw7eignm8" path="res://scenes/objects/button.tscn" id="4_h7fie"]
 [ext_resource type="PackedScene" uid="uid://ckhyt1k8o2iur" path="res://scenes/objects/door_fancy.tscn" id="5_iecga"]
 [ext_resource type="PackedScene" uid="uid://hxgssy3ps78p" path="res://scenes/objects/door_simple.tscn" id="6_i47mx"]
+[ext_resource type="PackedScene" uid="uid://cw4ice8i238jm" path="res://scenes/objects/test_pickup.tscn" id="7_1345l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pnsss"]
 resource_local_to_scene = true
@@ -185,6 +186,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0.1, -1.7)
 
 [node name="Door2" parent="." instance=ExtResource("6_i47mx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 0.1, -1.75)
+
+[node name="test_pickup" parent="." instance=ExtResource("7_1345l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 3.25)
 
 [connection signal="interacted" from="BT_Test" to="Door" method="toggle_door"]
 [connection signal="interacted" from="BT_Test2" to="Door2" method="toggle_door"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://fk6dc1o8cqh2"]
+
+[ext_resource type="Script" path="res://test_equippable.gd" id="1_ofo7j"]
+
+[node name="test_equippable" type="Node3D"]
+script = ExtResource("1_ofo7j")
+
+[node name="pivot" type="Node3D" parent="."]
+
+[node name="vis" type="Node3D" parent="pivot"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="pivot/vis"]
+size = Vector3(0.1, 0.2, 1)
