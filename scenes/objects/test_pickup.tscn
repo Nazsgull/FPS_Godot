@@ -6,7 +6,6 @@
 
 [node name="Area3D" parent="." index="0"]
 collision_layer = 8
-collision_mask = 0
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, 0, 0)

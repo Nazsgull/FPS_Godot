@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://bxo86lh5sr6kc"]
 
-[ext_resource type="Script" path="res://scripts/toolbar.gd" id="1_l8olg"]
+[ext_resource type="Script" path="res://scripts/equppables_bar.gd" id="1_tqmkd"]
 
-[node name="toolbar" type="Node3D"]
-script = ExtResource("1_l8olg")
+[node name="equppables_bar" type="Node3D"]
+script = ExtResource("1_tqmkd")
 
 [node name="adjustment" type="Node3D" parent="."]
 transform = Transform3D(0.991445, 0, 0.130526, 0, 1, 0, -0.130526, 0, 0.991445, 0.4, -0.2, -0.8)

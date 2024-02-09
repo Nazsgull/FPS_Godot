@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://q1u11i5wp76w"]
+
+[ext_resource type="Texture2D" uid="uid://lq4lje5c8rin" path="res://assets/textures/dev/nature/grass_38.png" id="1_pitln"]
+
+[resource]
+diffuse_mode = 2
+albedo_color = Color(0, 0.772549, 0.14902, 1)
+albedo_texture = ExtResource("1_pitln")
+metallic_specular = 0.0
+anisotropy = -1.0
