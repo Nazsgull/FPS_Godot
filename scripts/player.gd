@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+class_name Player
 #Movement & constants
 var current_speed = 5.0
 const JUMP_VELOCITY = 4.5
@@ -31,7 +31,7 @@ var paused = false
 @onready var pause_menu = $head/Camera3D/PauseMenu
 @onready var pointer = $pointer
 
-@onready var toolbar = $head/Camera3D/toolbar
+@onready var equippables_bar = $head/Camera3D/equippables_bar
 
 
 enum player_mov_states {
@@ -48,22 +48,9 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _ready():
 	if capture_mouse:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	connectSignals()
-		
-func connectSignals():
-	var equippables = []
-	findByClass(get_tree().current_scene,"Equippable", equippables) #populate the equippables array to connect their signals
-	for i:Equippable in equippables:
-		i.pickup.connect("pickup", self, "_handle_pickup")
 
-func findByClass(node: Node, className : String, result : Array) -> void:
-	if node.is_class(className) :
-		result.push_back(node)
-	for child in node.get_children():
-		findByClass(child, className, result)
-
-func _handle_pickup(scene:PackedScene):
-	toolbar.add_tool(scene)
+func handle_pickup(scene_path:String):
+	equippables_bar.add_tool(scene_path)
 	
 
 func _input(event):

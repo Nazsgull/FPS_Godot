@@ -20,7 +20,7 @@ _data = {
 "crouch": SubResource("Animation_ln84c")
 }
 
-[node name="player" type="CharacterBody3D"]
+[node name="player" type="CharacterBody3D" groups=["player"]]
 collision_mask = 13
 script = ExtResource("1_7udej")
 
@@ -44,7 +44,7 @@ metadata/_edit_lock_ = true
 [node name="PauseMenu" parent="head/Camera3D" instance=ExtResource("3_5nonw")]
 visible = false
 
-[node name="toolbar" parent="head/Camera3D" instance=ExtResource("4_gah6f")]
+[node name="equippables_bar" parent="head/Camera3D" instance=ExtResource("4_gah6f")]
 
 [node name="uncrouching_raycast" type="RayCast3D" parent="."]
 target_position = Vector3(0, 2, 0)

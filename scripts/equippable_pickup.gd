@@ -1,9 +1,10 @@
 extends Node3D
 
-signal pickup(what_item_path:PackedScene)
-@onready var area_3d = $Area3D
-@onready var collision_shape_3d = $Area3D/CollisionShape3D
-@export var scene:PackedScene = load("res://scenes/objects/Equippables/test_equippable.tscn")
+signal pickup(what_item_path:String)
+
+@export var scene:String = "res://scenes/objects/Equippables/test_equippable.tscn"
+
+@onready var player:Player = get_tree().get_nodes_in_group("player")[0]
 
 func _on_area_3d_body_entered(body):
-	print("Test pickup succesful")
+	player.handle_pickup(scene)

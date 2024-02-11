@@ -3,11 +3,12 @@ extends Node3D
 var equippables:Array[Equippable] = []
 var currently_equipped:int = 0
 
-func add_tool(new_equippable:Equippable):
-	var loading_equippable = new_equippable.load()
-	var new_equippable_instance:PackedScene = loading_equippable.instantiate()
+func add_tool(new_scene:String):
 	
-	equippables.append(new_equippable_instance)
+	var new_equippable:Equippable = Equippable.new(new_scene)
+	new_equippable.set_is_working(false)
+	equippables.append(new_equippable)
+	
 
 func _tool_switching_by_input():
 	if Input.is_action_just_pressed("tool_next"):
@@ -36,8 +37,10 @@ func _tool_switching_by_input():
 func _update_equippable_displayed():
 	for each_equippable in equippables:
 		each_equippable.set_is_working(false)
-	equippables[currently_equipped].set_is_working(true)
+	if equippables.size()>0:
+		equippables[currently_equipped].set_is_working(true)
 	
 func _process(delta):
 	_tool_switching_by_input()
+	_update_equippable_displayed()
 	return

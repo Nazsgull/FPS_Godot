@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://p3glnphhxh3o"]
 
-[ext_resource type="Script" path="res://scripts/equippable_pickup.gd" id="1_plplf"]
+[ext_resource type="Script" path="res://scripts/equippable_pickup.gd" id="1_hqxxt"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hi60q"]
 
 [node name="equippable_pickup" type="Node3D"]
-script = ExtResource("1_plplf")
+script = ExtResource("1_hqxxt")
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 8
