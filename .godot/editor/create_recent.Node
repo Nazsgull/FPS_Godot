@@ -1,3 +1,4 @@
+Timer
 AudioStreamPlayer
 Node3D
 RayCast3D
@@ -12,4 +13,3 @@ MarginContainer
 CSGMesh3D
 CSGTorus3D
 AnimationTree
-MeshInstance3D

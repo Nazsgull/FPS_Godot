@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" path="res://scripts/equppables_bar.gd" id="1_tqmkd"]
 
-[node name="equppables_bar" type="Node3D"]
+[node name="equippables_bar" type="Node3D"]
 script = ExtResource("1_tqmkd")
 
-[node name="adjustment" type="Node3D" parent="."]
+[node name="pivot" type="Node3D" parent="."]
 transform = Transform3D(0.991445, 0, 0.130526, 0, 1, 0, -0.130526, 0, 0.991445, 0.4, -0.2, -0.8)
 
-[node name="reference_raycasts_NOT_in_use" type="Node3D" parent="adjustment"]
+[node name="reference_raycasts_NOT_in_use" type="Node3D" parent="pivot"]
 
-[node name="toolbar_forward" type="RayCast3D" parent="adjustment/reference_raycasts_NOT_in_use"]
+[node name="forward" type="RayCast3D" parent="pivot/reference_raycasts_NOT_in_use"]
 enabled = false
 target_position = Vector3(0, 0, -1)
 collision_mask = 0
