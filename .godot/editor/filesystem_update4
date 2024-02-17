@@ -1,11 +1,4 @@
 res://scenes/parts/equippables_bar.tscn
 res://scripts/door_mine.gd
-res://assets/materials/green_grass.tres
-res://assets/materials/red_rough.tres
 res://scripts/equppables_bar.gd
-res://scenes/objects/Abstract/base_pickup.tscn
-res://scenes/objects/player.tscn
-res://scenes/maps/test_area.tscn
-res://scenes/objects/Equippables/test_equippable.tscn
-res://scenes/objects/test_pickup.tscn
-res://scripts/equippable_pickup.gd
+res://scripts/classes/Equippable.gd

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv3rpkqj85jv3"]
+
+[ext_resource type="PackedScene" uid="uid://fk6dc1o8cqh2" path="res://scenes/objects/Testing/test_equippable.tscn" id="1_6n01k"]
+
+[node name="test_equippable" instance=ExtResource("1_6n01k")]
+
+[node name="vis" parent="pivot" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0)
+
+[node name="CSGBox3D" parent="pivot/vis" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.11759e-08, 1.11759e-08)
+size = Vector3(0.023, 0.1, 0.02)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="pivot/vis" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.124, 1.11759e-08)
+size = Vector3(0.005, 0.15, 0.005)

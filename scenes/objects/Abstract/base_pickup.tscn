@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://p3glnphhxh3o"]
 
 [ext_resource type="Script" path="res://scripts/equippable_pickup.gd" id="1_hqxxt"]
-[ext_resource type="AudioStream" uid="uid://cae5tltvmwqmd" path="res://assets/audio/Pickup_Coin.mp3" id="2_mc5eu"]
+[ext_resource type="AudioStream" uid="uid://cae5tltvmwqmd" path="res://assets/audio/Pickup_Coin.mp3" id="2_lxk8t"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hi60q"]
 
@@ -15,7 +15,7 @@ collision_layer = 8
 shape = SubResource("SphereShape3D_hi60q")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_mc5eu")
+stream = ExtResource("2_lxk8t")
 bus = &"SFX"
 
 [node name="Timer" type="Timer" parent="."]

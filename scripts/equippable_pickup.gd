@@ -8,7 +8,7 @@ signal pickup(what_item_path:String)
 @onready var audio_sp = $AudioStreamPlayer
 @onready var player:Player = get_tree().get_nodes_in_group("player")[0]
 
-func _on_area_3d_body_entered(body):
+func _on_area_3d_body_entered(_body):
 	if !used:
 		used = true
 		audio_sp.play()
