@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c10g3x4i58t7b"]
+
+[ext_resource type="Texture2D" uid="uid://b1g6vvl28eijo" path="res://assets/textures/dev/testing/A_test.png" id="1_120vf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mhwf"]
+albedo_texture = ExtResource("1_120vf")
+
+[node name="TEST_OBJECT_A" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+material = SubResource("StandardMaterial3D_7mhwf")

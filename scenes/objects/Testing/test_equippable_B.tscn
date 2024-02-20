@@ -5,7 +5,7 @@
 [node name="test_equippable" instance=ExtResource("1_6n01k")]
 
 [node name="vis" parent="pivot" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
 
 [node name="CSGBox3D" parent="pivot/vis" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.11759e-08, 1.11759e-08)

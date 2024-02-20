@@ -5,7 +5,7 @@
 [node name="test_equippable" instance=ExtResource("1_cuao7")]
 
 [node name="vis" parent="pivot" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 1.41421, 1.41421, 0, -1.41421, 1.41421, 0, 0, 0)
 
 [node name="CSGBox3D" parent="pivot/vis" index="0"]
 size = Vector3(0.02, 0.3, 0.02)

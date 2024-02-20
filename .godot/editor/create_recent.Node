@@ -1,8 +1,8 @@
+CSGBox3D
 Timer
 AudioStreamPlayer
 Node3D
 RayCast3D
-CSGBox3D
 CollisionShape3D
 Area3D
 AnimationPlayer
@@ -12,4 +12,3 @@ VBoxContainer
 MarginContainer
 CSGMesh3D
 CSGTorus3D
-AnimationTree
