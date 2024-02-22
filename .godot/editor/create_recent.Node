@@ -1,4 +1,5 @@
 CSGBox3D
+CSGMesh3D
 Timer
 AudioStreamPlayer
 Node3D
@@ -10,5 +11,4 @@ Panel
 Button
 VBoxContainer
 MarginContainer
-CSGMesh3D
 CSGTorus3D

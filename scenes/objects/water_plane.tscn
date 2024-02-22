@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://g386sbqjtrjh"]
+
+[ext_resource type="Material" uid="uid://dtjrhgaht0w68" path="res://assets/materials/water.tres" id="1_oju3s"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_y0tae"]
+
+[node name="water_plane" type="Node3D"]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+mesh = SubResource("PlaneMesh_y0tae")
+material = ExtResource("1_oju3s")
