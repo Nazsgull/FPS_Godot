@@ -2,7 +2,7 @@
 
 shader_type spatial;
 uniform vec3 water_color : source_color;
-uniform float uv_scale :hint_range(0.0, 1000.0, 0.1) = 1;
+uniform float uv_scale :hint_range(0.0, 1000.0, 0.1) = 1.0;
 uniform sampler2D water_normal_noise;
 uniform float time_scale : hint_range(0.0,10.0,0.05) = 1.0;
 uniform sampler2D screen_texture : hint_screen_texture, repeat_disable;
@@ -31,8 +31,8 @@ void fragment() {
 	_uv.x += sin(TIME * time_scale + (_uv.x + _uv.y)* 25.0) * 0.01;
 	_uv.y += cos(TIME * time_scale + (_uv.x - _uv.y)* 25.0) * 0.01;
 	
-	_suv.x += sin(TIME * time_scale + (_suv.x + _suv.y)* 25.0) * 0.003;
-	_suv.y += cos(TIME * time_scale + (_suv.x - _suv.y)* 25.0) * 0.003;
+	_suv.x += sin(TIME * time_scale + (_suv.x - _suv.y)* 25.0) * 0.0003;
+	_suv.y += cos(TIME * time_scale + (_suv.x + _suv.y)* 25.0) * 0.0003;
 	
 	float r = texture(sun_highlights,_uv+abberration_r+TIME*highlights_time_scale).r;
 	float g = texture(sun_highlights,_uv+abberration_g+TIME*highlights_time_scale).g;

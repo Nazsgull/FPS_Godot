@@ -34,6 +34,7 @@ var paused = false
 @onready var equippables_bar = $head/Camera3D/equippables_bar
 
 
+
 enum player_mov_states {
 	CROUCHING,
 	WALKING,

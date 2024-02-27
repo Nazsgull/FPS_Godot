@@ -1,11 +1,10 @@
 res://scripts/door_mine.gd
-res://assets/materials/water.tres
 res://assets/materials/water.gdshader
-res://scenes/objects/water_plane.tscn
+res://scenes/objects/Keypad/keypad_key.tscn
+res://scenes/maps/test_area.tscn
 res://assets/materials/green_grass.tres
 res://assets/materials/red_rough.tres
-res://scenes/objects/Testing/test_equippable.tscn
-res://scenes/objects/player.tscn
-res://scenes/objects/Testing/test_equippable_B.tscn
-res://scenes/objects/Testing/test_equippable_C.tscn
-res://scenes/maps/test_area.tscn
+res://assets/materials/water.tres
+res://scenes/objects/button.tscn
+res://scripts/keypad_button.gd
+res://scenes/objects/Keypad/keypad.tscn
