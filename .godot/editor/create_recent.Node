@@ -1,3 +1,11 @@
+GridContainer
+Sprite2D
+ColorRect
+Panel
+TabBar
+Container
+TabContainer
+MarginContainer
 CSGBox3D
 CSGMesh3D
 Timer
@@ -5,10 +13,3 @@ AudioStreamPlayer
 Node3D
 RayCast3D
 CollisionShape3D
-Area3D
-AnimationPlayer
-Panel
-Button
-VBoxContainer
-MarginContainer
-CSGTorus3D

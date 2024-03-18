@@ -1,2 +1,4 @@
+InvItem
+Inventory
 ShaderMaterial
 StandardMaterial3D
