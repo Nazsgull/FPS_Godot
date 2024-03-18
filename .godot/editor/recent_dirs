@@ -1,7 +1,9 @@
-res://assets/materials
 res://scenes/objects/Testing
+res://scripts/inventory
+res://scenes/UI/Inventory
+res://objects/inventory
+res://assets/materials
 res://assets/textures/dev/testing
-res://scenes/objects/Equippables
 res://scenes/objects
 res://scripts
 res://scenes/parts
@@ -9,4 +11,3 @@ res://scenes/UI
 res://scenes
 res://
 res://assets/textures/UI
-C:/Users/Usuario/Documents/GODOT
