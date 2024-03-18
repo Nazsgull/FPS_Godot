@@ -1,12 +1,13 @@
+res://
+res://scripts
 res://assets/materials
+res://scenes/parts
+res://scripts/classes
+res://scenes/objects
 res://scenes/objects/Testing
 res://assets/textures/dev/testing
 res://scenes/objects/Equippables
-res://scenes/objects
-res://scripts
-res://scenes/parts
 res://scenes/UI
 res://scenes
-res://
 res://assets/textures/UI
 C:/Users/Usuario/Documents/GODOT
