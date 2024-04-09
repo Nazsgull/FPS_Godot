@@ -1,9 +1,9 @@
-res://
-res://scripts
 res://assets/materials
 res://scenes/parts
-res://scripts/classes
 res://scenes/objects
+res://scripts/classes
+res://
+res://scripts
 res://scenes/objects/Testing
 res://assets/textures/dev/testing
 res://scenes/objects/Equippables

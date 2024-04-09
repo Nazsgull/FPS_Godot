@@ -1,13 +1,11 @@
 extends "res://scripts/classes/Interactable.gd"
 
-@onready var label = $boton_combinacion/CSGBox3D/Label3D
+@onready var label = $Label3D
+
 
 #anim_player = $AnimationPlayer
 
 @export var text = "0"
-
-func _init():
-	anim_player = $AnimationPlayer
 
 	
 func _ready():

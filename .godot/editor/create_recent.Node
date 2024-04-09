@@ -1,8 +1,9 @@
-AnimationPlayer
-AudioStreamPlayer3D
-Label3D
-Node3D
+WorldEnvironment
 CSGBox3D
+Label3D
+AnimationPlayer
+Node3D
+AudioStreamPlayer3D
 CollisionShape3D
 Area3D
 CSGMesh3D
@@ -11,4 +12,3 @@ AudioStreamPlayer
 RayCast3D
 Panel
 Button
-VBoxContainer

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd3scx5jl8nfg"]
+
+[ext_resource type="Script" path="res://scripts/boton_combinacion.gd" id="1_udngt"]
+[ext_resource type="Material" uid="uid://dg8dy6cpg2s6l" path="res://assets/materials/orange.tres" id="2_iusht"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0vt6h"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="Button_keypad" type="Area3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+collision_layer = 128
+collision_mask = 0
+script = ExtResource("1_udngt")
+
+[node name="CollisionBox" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6.51926e-09, 6.51926e-09, 1.11022e-16)
+shape = SubResource("BoxShape3D_0vt6h")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.65661e-09, 4.65661e-09, 1.66533e-16)
+size = Vector3(0.1, 0.1, 0.1)
+material = ExtResource("2_iusht")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.051)
+pixel_size = 0.0001
+text = "0"
+font_size = 750
+outline_size = 127

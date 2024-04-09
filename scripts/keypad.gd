@@ -1,48 +1,70 @@
 extends Node3D
-
 signal combinacion_es_correcta
 signal combinacion_es_incorrecta
 
 @export_range(0,99999999) var combinacion_correcta:int = 0000
-var combinacion_actual = 0
+var combinacion_actual = ""
 var digito_actual = str(combinacion_correcta).length()
 var digitos_totales = str(combinacion_correcta).length()
-var texto_final:String = ""
 @onready var texto_en_pantalla = $vis/texto_en_pantalla
 @onready var correcto = $Correcto
 @onready var incorrecto = $Incorrecto
 @onready var input = $Input
 @onready var reset = $Reset
+@onready var indicador = $vis/indicador
 
-
-
+func _ready():
+	_stealth_reset()
+	
 func _compara_combinacion():
-	if combinacion_actual == combinacion_correcta:
-		emit_signal("combinacion_es_correcta")
+	if combinacion_actual == "":
+		return
+	if int(combinacion_actual) == combinacion_correcta:
+		emit_signal("combinacion_es_correcta",1)
 		correcto.play()
+		_show_correct()
 	else:
-		emit_signal("combinacion_es_incorrecta")
+		_reset()
+		emit_signal("combinacion_es_incorrecta",1)
 		incorrecto.play()
+		_show_incorrect()
 
+func _show_correct():
+	indicador.material = preload("res://assets/materials/green_glowy.tres")
+	
+func _show_incorrect():
+	
+	indicador.material = preload("res://assets/materials/red_glowy.tres")
+	
+	#Quitar el 0 al principio
+	#Limitar dígitos máximos
+	#Permitir combinaciones que empiecen por 0
+	
+	
 func relay(num:int):
-	input.play()
-	combinacion_actual = combinacion_actual + num * (10^digito_actual-1)
-	digito_actual = digito_actual - 1
-	texto_final = str(combinacion_actual)
-	for i in range(0,digitos_totales-digito_actual):
-		texto_final.insert(texto_final.length()-1," _")
+	
+	if digito_actual > 0:
+		input.play()
+		combinacion_actual = combinacion_actual + str(num)
+		digito_actual = digito_actual - 1
+	else:
+		return
+
+func _stealth_reset():
+	combinacion_actual = ""
+	texto_en_pantalla.text = ""
+	digito_actual = str(combinacion_correcta).length()
 	
 func _reset():
 	reset.play()
-	combinacion_actual = null
-	digito_actual = str(combinacion_correcta).length()
+	_stealth_reset()
 	
 func _update_screen():
 	texto_en_pantalla.text = str(combinacion_actual)
+	
 
 func _on_boton_combinacion_reset_interacted(_body):
 	_reset()
-	_update_screen()
 
 func _on_boton_combinacion_0_interacted(_body):
 	relay(0)
@@ -96,4 +118,4 @@ func _on_boton_combinacion_3_interacted(_body):
 
 func _on_boton_combinacion_enter_interacted(_body):
 	_compara_combinacion()
-	_update_screen()
+	_stealth_reset()
