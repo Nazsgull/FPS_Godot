@@ -1,11 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://dudb1j58spiqs"]
+[gd_scene load_steps=14 format=3 uid="uid://dudb1j58spiqs"]
 
 [ext_resource type="Texture2D" uid="uid://c8w2y027d6koa" path="res://assets/textures/dev/grids/Dark/texture_07.png" id="1_q3qxj"]
 [ext_resource type="Texture2D" uid="uid://ds37b38vli6wg" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_l8equ"]
 [ext_resource type="Material" uid="uid://q1u11i5wp76w" path="res://assets/materials/green_grass.tres" id="2_vbclm"]
 [ext_resource type="PackedScene" uid="uid://hob0odd0bhgw" path="res://scenes/objects/player.tscn" id="3_pioef"]
 [ext_resource type="PackedScene" uid="uid://cwfdbw7eignm8" path="res://scenes/objects/button.tscn" id="4_h7fie"]
-[ext_resource type="Resource" uid="uid://bv2ja5isdrw0s" path="res://objects/inventory/main_inventory.tres" id="5_1dcbn"]
 [ext_resource type="PackedScene" uid="uid://ckhyt1k8o2iur" path="res://scenes/objects/door_fancy.tscn" id="5_iecga"]
 [ext_resource type="PackedScene" uid="uid://hxgssy3ps78p" path="res://scenes/objects/door_simple.tscn" id="6_i47mx"]
 [ext_resource type="PackedScene" uid="uid://cw4ice8i238jm" path="res://scenes/objects/Testing/test_pickup.tscn" id="7_1345l"]
@@ -1040,7 +1039,6 @@ shadow_enabled = true
 
 [node name="player" parent="." instance=ExtResource("3_pioef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.54, -0.005, 18.49)
-inv = ExtResource("5_1dcbn")
 
 [node name="BT_Test" parent="." instance=ExtResource("4_h7fie")]
 transform = Transform3D(0.25, 0, 0, 0, 0.176777, -0.176777, 0, 0.176777, 0.176777, 42, 1.16374, 14.639)
