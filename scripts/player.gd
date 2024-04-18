@@ -1,5 +1,9 @@
 extends CharacterBody3D
 class_name Player
+
+#Inventory
+@export var inv: Inventory
+
 #Movement & constants
 var current_speed = 5.0
 const JUMP_VELOCITY = 4.5
@@ -13,6 +17,7 @@ const JUMP_VELOCITY = 4.5
 @export var mouse_sens = 0.2
 @export var invert_y_look = -1
 @export var capture_mouse = true
+
 
 #Head turn
 @onready var head = $head

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://brknanr3kadw4"]
+
+[ext_resource type="Script" path="res://scripts/inventory/inventory_slot.gd" id="1_ppi0a"]
+
+[node name="inventory_slot" type="Panel"]
+custom_minimum_size = Vector2(256, 256)
+offset_right = 256.0
+offset_bottom = 256.0
+script = ExtResource("1_ppi0a")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 256.0
+color = Color(0.219608, 0.219608, 0.219608, 1)
+
+[node name="item_display" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+centered = false
