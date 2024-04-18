@@ -1,3 +1,4 @@
+WorldEnvironment
 GridContainer
 Sprite2D
 ColorRect
@@ -7,9 +8,16 @@ Container
 TabContainer
 MarginContainer
 CSGBox3D
+Label3D
+AnimationPlayer
+Node3D
+AudioStreamPlayer3D
+CollisionShape3D
+Area3D
 CSGMesh3D
 Timer
 AudioStreamPlayer
-Node3D
 RayCast3D
+Panel
+Button
 CollisionShape3D

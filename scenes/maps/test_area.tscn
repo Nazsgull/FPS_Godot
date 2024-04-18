@@ -4,12 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://ds37b38vli6wg" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_l8equ"]
 [ext_resource type="Material" uid="uid://q1u11i5wp76w" path="res://assets/materials/green_grass.tres" id="2_vbclm"]
 [ext_resource type="PackedScene" uid="uid://hob0odd0bhgw" path="res://scenes/objects/player.tscn" id="3_pioef"]
+[ext_resource type="PackedScene" uid="uid://cwfdbw7eignm8" path="res://scenes/objects/button_simple.tscn" id="4_h7fie"]
 [ext_resource type="PackedScene" uid="uid://cwfdbw7eignm8" path="res://scenes/objects/button.tscn" id="4_h7fie"]
 [ext_resource type="Resource" uid="uid://bv2ja5isdrw0s" path="res://objects/inventory/main_inventory.tres" id="5_1dcbn"]
 [ext_resource type="PackedScene" uid="uid://ckhyt1k8o2iur" path="res://scenes/objects/door_fancy.tscn" id="5_iecga"]
 [ext_resource type="PackedScene" uid="uid://hxgssy3ps78p" path="res://scenes/objects/door_simple.tscn" id="6_i47mx"]
 [ext_resource type="PackedScene" uid="uid://cw4ice8i238jm" path="res://scenes/objects/Testing/test_pickup.tscn" id="7_1345l"]
 [ext_resource type="PackedScene" uid="uid://g386sbqjtrjh" path="res://scenes/objects/water_plane.tscn" id="9_si7nd"]
+[ext_resource type="PackedScene" uid="uid://by4ao52surwi3" path="res://scenes/objects/keypad.tscn" id="10_d5erw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pnsss"]
 resource_local_to_scene = true
@@ -1051,6 +1053,12 @@ use_collision = true
 size = Vector3(0.5, 1, 2)
 material = SubResource("StandardMaterial3D_pnsss")
 
+[node name="obstacle12" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 49.55, 0.858578, 14.7728)
+use_collision = true
+size = Vector3(0.5, 1, 2)
+material = SubResource("StandardMaterial3D_pnsss")
+
 [node name="BT_Test2" parent="." instance=ExtResource("4_h7fie")]
 transform = Transform3D(0.25, 0, 0, 0, 0.176777, -0.176777, 0, 0.176777, 0.176777, 45.75, 1.16374, 14.639)
 
@@ -1059,6 +1067,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.5, 0.1, 10.5)
 
 [node name="Door2" parent="." instance=ExtResource("6_i47mx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47, 0.1, 10.5)
+
+[node name="Door3" parent="." instance=ExtResource("6_i47mx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0.1, 10.5)
 
 [node name="test_pickup" parent="." instance=ExtResource("7_1345l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, 0.5, 16.55)
@@ -1075,5 +1086,9 @@ scene = "res://scenes/objects/Testing/test_equippable_B.tscn"
 [node name="water_plane" parent="." instance=ExtResource("9_si7nd")]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 122.6, -1.406, -33.2)
 
+[node name="keypad" parent="." instance=ExtResource("10_d5erw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6, 1.5, 15.3)
+
 [connection signal="interacted" from="BT_Test" to="Door" method="toggle_door"]
 [connection signal="interacted" from="BT_Test2" to="Door2" method="toggle_door"]
+[connection signal="combinacion_es_correcta" from="keypad" to="Door3" method="toggle_door"]
