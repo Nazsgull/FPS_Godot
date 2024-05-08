@@ -1,3 +1,4 @@
+ConfirmationDialog
 WorldEnvironment
 GridContainer
 Sprite2D
@@ -12,12 +13,3 @@ Label3D
 AnimationPlayer
 Node3D
 AudioStreamPlayer3D
-CollisionShape3D
-Area3D
-CSGMesh3D
-Timer
-AudioStreamPlayer
-RayCast3D
-Panel
-Button
-CollisionShape3D
