@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b214xbcbjfo60"]
+[gd_scene load_steps=5 format=3 uid="uid://b214xbcbjfo60"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_3e030"]
+[ext_resource type="PackedScene" uid="uid://cyb6vrmfk70r7" path="res://scenes/UI/credits.tscn" id="2_d1l4i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y7a8y"]
 content_margin_left = 400.0
@@ -72,6 +73,10 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Quit"
+
+[node name="Credits" parent="." instance=ExtResource("2_d1l4i")]
+visible = false
+layout_mode = 1
 
 [connection signal="pressed" from="Panel/PanelContainer/VBoxContainer/BT_Play" to="." method="_on_bt_play_pressed"]
 [connection signal="pressed" from="Panel/PanelContainer/VBoxContainer/BT_Options" to="." method="_on_bt_options_pressed"]
