@@ -1,6 +1,9 @@
 extends Control
 
 var game_start = "res://scenes/maps/test_area.tscn"
+@onready var panel = $Panel
+
+@onready var credits = $Credits
 
 func _init():
 	Engine.time_scale = 1
@@ -15,8 +18,9 @@ func _on_bt_options_pressed():
 
 #Triggered when "BT_Credits" is pressed
 func _on_bt_credits_pressed():
-	pass # Replace with function body.
-
+	panel.hide()
+	credits.show()
+	credits.main_menu = panel
 #Triggered when "BT_Quit" is pressed
 func _on_bt_quit_pressed():
 	get_tree().quit()

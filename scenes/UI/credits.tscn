@@ -1,0 +1,242 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyb6vrmfk70r7"]
+
+[ext_resource type="Script" path="res://scenes/UI/credits.gd" id="1_3v1m8"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3v1m8")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -701.0
+offset_right = 701.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Aliquam maximus sapien a erat finibus porttitor.
+Sed egestas elit quis sapien elementum varius.
+Pellentesque fringilla turpis rutrum dapibus malesuada.
+Maecenas vitae nisl vulputate ligula rhoncus fermentum.
+Cras quis sem in ante tincidunt fermentum vitae ac ex.
+Vestibulum vel orci gravida, efficitur elit eget, pulvinar nibh.
+Vivamus vel augue quis urna aliquam volutpat.
+In ullamcorper tellus id nulla cursus, in commodo purus consectetur.
+Phasellus nec est placerat, facilisis diam in, commodo felis.
+Nam interdum ipsum ac molestie ultricies.
+Integer nec lacus id ipsum ullamcorper consectetur.
+Vestibulum sodales augue eget dui maximus accumsan.
+Vestibulum ullamcorper dui a metus fermentum, sit amet pellentesque arcu eleifend.
+Cras sollicitudin nunc et sollicitudin ornare.
+Quisque a turpis sit amet justo tempus tincidunt in quis tortor.
+Cras a nunc ut nisi convallis tristique vel ut neque.
+Donec nec libero id magna ornare varius id et lacus.
+Suspendisse accumsan sem non nibh aliquam volutpat.
+Phasellus at odio auctor justo mollis pellentesque.
+Praesent eget est vel sem finibus euismod ut sit amet ligula.
+In ac est sit amet dolor suscipit eleifend.
+Aenean molestie leo quis augue aliquet, eu pellentesque est elementum.
+Donec mattis nisl a mauris malesuada, sit amet posuere metus vulputate.
+Etiam euismod velit eget lacus semper, ut faucibus libero eleifend.
+Ut id justo placerat, venenatis odio sit amet, auctor lorem.
+Morbi ut enim in magna malesuada imperdiet nec ac massa.
+Aenean faucibus ante et nunc dictum rutrum.
+Cras at diam volutpat, consectetur leo in, ullamcorper diam.
+Curabitur et orci et massa malesuada efficitur in faucibus sapien.
+Curabitur et tellus et tellus facilisis varius.
+Sed sed nisi sit amet metus dapibus maximus.
+Fusce sit amet arcu convallis, dapibus erat ut, porttitor leo.
+Proin pretium odio quis tincidunt vehicula.
+Maecenas mattis justo non lorem ultricies, sed auctor ipsum gravida.
+Donec et orci et lorem condimentum pellentesque a sit amet augue.
+Proin viverra nisi auctor metus auctor aliquet.
+Donec vitae purus sed risus pulvinar faucibus aliquam consectetur nibh.
+Integer nec metus quis quam tempus pellentesque eget non orci.
+Nulla imperdiet lorem id diam aliquet mollis.
+Vivamus bibendum sapien sit amet augue pretium vestibulum.
+Suspendisse faucibus nunc non ultrices ullamcorper.
+Quisque sit amet ipsum aliquet, porta nunc id, aliquam tortor.
+Sed id orci nec nibh molestie rutrum sit amet gravida purus.
+Proin dignissim nulla sit amet sagittis vulputate.
+Aenean sagittis leo a risus sagittis bibendum.
+Nunc suscipit odio id enim aliquam rhoncus a eu ex.
+Duis sollicitudin nibh eget dolor rutrum, ut faucibus ligula pellentesque.
+Pellentesque a ligula in metus posuere scelerisque eu et ex.
+Nullam condimentum velit vitae magna efficitur, quis iaculis neque tempor.
+Suspendisse lobortis sapien eget posuere dignissim.
+Nulla a quam et velit hendrerit euismod vitae a ex.
+Ut quis augue a nulla finibus mattis.
+Vestibulum nec augue nec arcu porttitor tincidunt vitae non urna.
+Etiam ornare libero quis faucibus euismod.
+Vestibulum pharetra erat in odio mollis porta.
+Suspendisse et justo sed mauris tempus aliquet.
+In faucibus magna et accumsan malesuada.
+Duis ac velit commodo, accumsan dui quis, porttitor neque.
+Quisque ut tellus a urna accumsan scelerisque malesuada eget neque.
+Duis sed nibh euismod, sollicitudin sapien sit amet, sodales risus.
+Vestibulum dignissim odio vel nulla consequat, eu placerat tellus commodo.
+Nunc dictum erat vitae diam varius, at euismod tortor dictum.
+Nulla feugiat eros ac velit rhoncus pharetra.
+Pellentesque sed massa laoreet, scelerisque neque sit amet, dictum ligula.
+Aenean quis tortor aliquet, bibendum mauris ac, rutrum erat.
+Aenean fermentum eros vel iaculis luctus.
+Curabitur consequat metus vitae nibh convallis bibendum.
+Maecenas congue quam sed nisi mattis laoreet.
+Vestibulum eget massa at diam porttitor mollis.
+Aenean ullamcorper orci ac consectetur scelerisque.
+Sed tristique nisl ut justo semper tempor.
+Sed laoreet est et velit posuere placerat.
+Donec tincidunt dolor sit amet odio varius feugiat.
+Nulla non massa suscipit, tincidunt diam nec, eleifend orci.
+Cras efficitur lectus eget bibendum tempus.
+Fusce eu dui ut magna aliquet volutpat eu vel velit.
+Cras vitae erat ut ex dignissim hendrerit.
+Donec a leo maximus, finibus sem nec, placerat risus.
+Sed tempor enim et pulvinar congue.
+Etiam efficitur libero in elit porta, vitae vehicula felis lacinia.
+Donec ut neque vel diam malesuada pulvinar sit amet nec eros.
+Quisque elementum magna nec sollicitudin laoreet.
+Proin dignissim enim ac neque iaculis, nec porta tellus varius.
+Morbi eu urna at nibh fringilla ultrices vel sit amet lacus.
+Proin venenatis arcu ac hendrerit ullamcorper.
+Sed commodo metus eu lacus luctus, et finibus massa dignissim.
+Suspendisse placerat sapien id lectus tincidunt vestibulum.
+Nullam finibus mi eget eros dictum tempor.
+Ut interdum ex in arcu malesuada placerat.
+Proin eget sapien nec metus sagittis faucibus quis quis enim.
+Morbi sit amet turpis et massa mollis auctor sit amet et lorem.
+Duis quis nisi vel ipsum varius posuere.
+Cras nec elit quis tellus hendrerit ultricies.
+Vestibulum ornare risus vel pharetra laoreet.
+Donec quis nunc tristique, volutpat urna id, ullamcorper lectus.
+Cras laoreet eros a lacus iaculis, non molestie est facilisis.
+Fusce nec quam mattis mi mollis malesuada sit amet at ipsum.
+Fusce consequat libero a quam varius, ac imperdiet purus elementum.
+Maecenas finibus ante at nisi eleifend scelerisque.
+Praesent dapibus libero eget sapien suscipit, eu tincidunt metus tincidunt.
+Morbi ut erat dignissim, euismod sapien ut, auctor magna.
+Pellentesque id tortor et dolor elementum imperdiet.
+GAME NAME
+Sed a magna sit amet massa finibus ultricies.
+Duis tempor justo vitae lectus mattis, ac mollis purus placerat.
+Suspendisse mattis nunc eget tortor laoreet, vitae fringilla justo blandit.
+Cras vitae arcu vel dui congue condimentum id a odio.
+Suspendisse vitae mi faucibus dolor ultrices hendrerit.
+Curabitur vitae tellus faucibus, pretium dolor at, congue orci.
+Sed congue arcu vel turpis tincidunt, sed scelerisque tellus tristique.
+Vivamus ornare orci eget urna auctor interdum.
+Vestibulum aliquet mauris eu urna tincidunt convallis.
+Pellentesque blandit erat non tempus bibendum.
+Nunc vel nisi non sapien bibendum euismod.
+Donec a nibh at neque scelerisque venenatis sit amet eget ligula.
+Aliquam in augue vel tellus pharetra ultricies.
+Maecenas vitae justo hendrerit, mollis ipsum quis, mollis urna.
+Proin a urna sed dui tristique auctor nec non quam.
+Nulla eleifend elit non augue dignissim, bibendum lacinia arcu cursus.
+Aenean id massa sed sem dapibus congue.
+Nulla molestie ligula eu felis auctor accumsan.
+Integer feugiat eros at ipsum eleifend sollicitudin a non eros.
+Ut euismod massa sed erat interdum, ut pharetra nisi tincidunt.
+Sed condimentum lectus eu ante tristique scelerisque.
+Cras in sem ac est fringilla tempor.
+In eu nulla porttitor, ullamcorper dolor vitae, malesuada purus.
+Quisque id sapien semper, cursus erat et, efficitur tellus.
+Vivamus vel mi in mauris molestie porta.
+Cras rhoncus diam sed mauris iaculis, vitae euismod diam convallis.
+Duis sollicitudin urna nec est suscipit suscipit.
+Maecenas sit amet elit pulvinar, ultrices nisi ac, vulputate quam.
+Fusce malesuada enim eget lobortis ultrices.
+Donec tempor mi fermentum finibus finibus.
+Sed facilisis risus nec tempor posuere.
+In vitae velit tempor, ultrices massa eget, posuere lectus.
+Duis eu augue nec risus feugiat pretium at eu ante.
+Sed auctor nibh vel risus dapibus efficitur.
+Suspendisse non ipsum vitae turpis vestibulum congue.
+Integer vitae massa molestie, feugiat libero mollis, tempus nisi.
+Suspendisse in nisi sed eros egestas elementum.
+Integer sagittis velit ut ex blandit, vitae tempus ante interdum.
+Aliquam commodo velit iaculis placerat mollis.
+Sed vel magna nec leo laoreet commodo sit amet quis orci.
+Curabitur interdum nisl nec ex bibendum pharetra.
+Proin nec nulla rhoncus, porttitor odio at, tempus massa.
+Sed vulputate dui elementum ante lobortis lacinia.
+Nam at tellus vel eros scelerisque molestie.
+Cras bibendum nisl at elit interdum, et condimentum nisi porttitor.
+Ut commodo ante eu ligula ultrices eleifend.
+Duis volutpat metus eget ante interdum aliquet.
+Nullam ac elit in lorem pellentesque volutpat sed ut libero.
+Morbi fringilla risus nec pharetra tempor.
+Curabitur suscipit erat et est sollicitudin, id placerat ex ultricies.
+Donec accumsan arcu sit amet neque vehicula sagittis.
+Cras quis felis porttitor, volutpat augue in, vehicula nibh.
+Nunc volutpat enim a nunc imperdiet, nec convallis sapien congue.
+Donec vel velit id lacus ullamcorper ornare.
+Nulla tempor justo vitae fringilla scelerisque.
+Mauris faucibus lectus placerat ipsum fringilla, eu sollicitudin ligula laoreet.
+Etiam vulputate tellus at lorem pulvinar venenatis id a quam.
+Etiam vitae tortor eu ipsum cursus volutpat.
+Pellentesque vestibulum dui aliquet tortor euismod aliquam.
+Nullam ut turpis sed purus venenatis elementum nec quis turpis.
+Donec at neque vitae risus dapibus tincidunt eget in urna.
+In id erat a sapien tristique tristique.
+Fusce bibendum dui eu lacinia fermentum.
+Phasellus vitae enim vestibulum, fringilla lorem at, commodo velit.
+Maecenas ac nisi non leo blandit venenatis sed sed nunc.
+Morbi venenatis purus in tincidunt euismod.
+Cras gravida mauris ac erat iaculis, ut auctor lorem posuere.
+Pellentesque nec nibh efficitur, lacinia felis a, rutrum ipsum.
+Praesent blandit eros eget erat consectetur, id consectetur purus aliquam.
+Nulla vitae odio et ligula mattis hendrerit non sed tortor.
+Mauris molestie lectus sed arcu placerat, ac vestibulum neque viverra.
+Sed congue elit et tortor lacinia, et pellentesque quam tincidunt.
+Mauris tincidunt nisl condimentum ipsum condimentum lacinia.
+Proin ut neque vel enim dictum consequat non eget risus.
+Pellentesque bibendum ipsum ac tortor molestie pellentesque.
+Etiam lacinia diam sit amet augue ornare, nec fringilla libero vestibulum.
+Sed nec massa non sapien lobortis mollis in quis sapien.
+Proin consectetur nulla ac lacus accumsan porttitor.
+Phasellus congue lorem non porttitor pellentesque.
+Aenean imperdiet leo eget enim semper, sed gravida massa porta."
+fit_content = true
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="BT_Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.964313
+anchor_top = 0.951926
+anchor_right = 0.9875
+anchor_bottom = 0.980556
+offset_left = -0.480103
+offset_top = -0.0800171
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "Back"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="BT_Back" to="." method="handle_back"]
