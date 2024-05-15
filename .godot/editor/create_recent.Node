@@ -1,11 +1,4 @@
-AudioStreamPlayer
-Timer
-VBoxContainer
-VFlowContainer
-ScrollContainer
-Button
-RichTextLabel
-VScrollBar
+ConfirmationDialog
 WorldEnvironment
 GridContainer
 Sprite2D
@@ -13,3 +6,10 @@ ColorRect
 Panel
 TabBar
 Container
+TabContainer
+MarginContainer
+CSGBox3D
+Label3D
+AnimationPlayer
+Node3D
+AudioStreamPlayer3D

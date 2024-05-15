@@ -41,6 +41,18 @@ text = "Options
 layout_mode = 2
 text = "Quit"
 
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+title = "Quit to main menu?"
+initial_position = 1
+size = Vector2i(200, 80)
+exclusive = false
+unresizable = true
+always_on_top = true
+popup_window = true
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/BT_Resume" to="." method="handle_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/BT_Options" to="." method="handle_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/BT_Quit" to="." method="handle_quit_pressed"]
+[connection signal="canceled" from="ConfirmationDialog" to="." method="handle_cancel_pressed"]
+[connection signal="close_requested" from="ConfirmationDialog" to="." method="handle_cancel_pressed"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="handle_quit_confirmed"]
