@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://4asvsxmij85k"]
+[gd_scene load_steps=8 format=3 uid="uid://4asvsxmij85k"]
 
 [ext_resource type="PackedScene" uid="uid://cwfdbw7eignm8" path="res://scenes/objects/button_simple.tscn" id="1_ncf8y"]
+[ext_resource type="Script" path="res://scenes/objects/button_fancy.gd" id="2_pnpk3"]
 [ext_resource type="PackedScene" uid="uid://k1g58xui7tlt" path="res://assets/models_gltf/button_body.glb" id="2_xrqd4"]
 [ext_resource type="PackedScene" uid="uid://cy1jcxbilc8v2" path="res://assets/models_gltf/button_presser.glb" id="3_fkcgq"]
 
@@ -13,7 +14,7 @@ tracks/0/path = NodePath("button_presser:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(5),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0, 0.3, 0)]
@@ -42,6 +43,7 @@ _data = {
 }
 
 [node name="Button_fancy" instance=ExtResource("1_ncf8y")]
+script = ExtResource("2_pnpk3")
 
 [node name="CSGBox3D" parent="." index="1"]
 visible = false

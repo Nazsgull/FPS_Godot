@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dudb1j58spiqs"]
+[gd_scene load_steps=17 format=3 uid="uid://dudb1j58spiqs"]
 
 [ext_resource type="Texture2D" uid="uid://c8w2y027d6koa" path="res://assets/textures/dev/grids/Dark/texture_07.png" id="1_q3qxj"]
 [ext_resource type="Texture2D" uid="uid://ds37b38vli6wg" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_l8equ"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cw4ice8i238jm" path="res://scenes/objects/Testing/test_pickup.tscn" id="7_1345l"]
 [ext_resource type="PackedScene" uid="uid://g386sbqjtrjh" path="res://scenes/objects/water_plane.tscn" id="9_si7nd"]
 [ext_resource type="PackedScene" uid="uid://by4ao52surwi3" path="res://scenes/objects/keypad.tscn" id="10_d5erw"]
+[ext_resource type="PackedScene" uid="uid://4asvsxmij85k" path="res://scenes/objects/button_fancy.tscn" id="12_h3pwm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pnsss"]
 resource_local_to_scene = true
@@ -1088,6 +1089,10 @@ transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 122.6, -1.406, -33.2)
 [node name="keypad" parent="." instance=ExtResource("10_d5erw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6, 1.5, 15.3)
 
+[node name="Button_fancy" parent="." instance=ExtResource("12_h3pwm")]
+transform = Transform3D(0.5, 0, 0, 0, 0.354078, -0.353029, 0, 0.353029, 0.354078, 41.9941, 0.671254, 15.1679)
+
 [connection signal="interacted" from="BT_Test" to="Door" method="toggle_door"]
 [connection signal="interacted" from="BT_Test2" to="Door2" method="toggle_door"]
 [connection signal="combinacion_es_correcta" from="keypad" to="Door3" method="toggle_door"]
+[connection signal="interacted" from="Button_fancy" to="Door" method="toggle_door"]
