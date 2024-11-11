@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6lradejrrjqw"]
+
+[ext_resource type="Script" path="res://scripts/fishing_rod.gd" id="1_v2u0n"]
+
+[node name="FishingRod" type="Node3D"]
+script = ExtResource("1_v2u0n")

@@ -1,3 +1,4 @@
+CSGBox3D
 ConfirmationDialog
 WorldEnvironment
 GridContainer
@@ -8,8 +9,6 @@ TabBar
 Container
 TabContainer
 MarginContainer
-CSGBox3D
 Label3D
 AnimationPlayer
 Node3D
-AudioStreamPlayer3D
