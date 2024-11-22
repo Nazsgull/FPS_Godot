@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=3 uid="uid://b2ddllldugrvc"]
+
+[ext_resource type="PackedScene" uid="uid://g386sbqjtrjh" path="res://scenes/objects/water_plane.tscn" id="1_i0w1c"]
+[ext_resource type="Script" path="res://scripts/WaryWaters_WallMap.gd" id="1_yaoay"]
+[ext_resource type="PackedScene" uid="uid://cf6it4ih04vwy" path="res://scenes/objects/piston.tscn" id="2_f6ewe"]
+[ext_resource type="PackedScene" uid="uid://hob0odd0bhgw" path="res://scenes/objects/player.tscn" id="4_a02oc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x07qw"]
+albedo_color = Color(0, 0, 0, 1)
+rim = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_rk1g5"]
+lightmap_size_hint = Vector2i(10009, 12006)
+material = SubResource("StandardMaterial3D_x07qw")
+size = Vector3(1, 200, 2000)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n5ok6"]
+albedo_color = Color(0.109804, 0.219608, 0.219608, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cqwrx"]
+size = Vector2(2000, 2000)
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_8g2jl"]
+
+[sub_resource type="Sky" id="Sky_86fsu"]
+sky_material = SubResource("PhysicalSkyMaterial_8g2jl")
+
+[sub_resource type="Environment" id="Environment_j68he"]
+background_mode = 2
+background_energy_multiplier = 5.0
+sky = SubResource("Sky_86fsu")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+fog_density = 0.02
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_emission = Color(0.596078, 0.717647, 0.956863, 1)
+volumetric_fog_emission_energy = 0.5
+volumetric_fog_length = 500.0
+volumetric_fog_ambient_inject = 2.0
+
+[node name="WaryWatersWallMap" type="Node3D"]
+script = ExtResource("1_yaoay")
+
+[node name="water_plane" parent="." instance=ExtResource("1_i0w1c")]
+transform = Transform3D(500, 0, 0, 0, 500, 0, 0, 0, 500, 0, 0, 0)
+
+[node name="the_wall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0)
+mesh = SubResource("BoxMesh_rk1g5")
+skeleton = NodePath("../WorldEnvironment")
+
+[node name="ocean_bottom" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+material_override = SubResource("StandardMaterial3D_n5ok6")
+mesh = SubResource("PlaneMesh_cqwrx")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_j68he")
+
+[node name="Piston" parent="." instance=ExtResource("2_f6ewe")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 5, 0)
+
+[node name="player" parent="." instance=ExtResource("4_a02oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 8, 17)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71, 7, 19.5)
+use_collision = true
+collision_layer = 4
+size = Vector3(10, 1, 7)

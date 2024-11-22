@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ki5lwy3qqvc3"]
+
+[ext_resource type="PackedScene" uid="uid://c61b4ee0qpcn8" path="res://assets/models_gltf/piston_ww.glb" id="1_dqr3e"]
+[ext_resource type="Material" uid="uid://bc7g0yqdyjv0p" path="res://assets/materials/oxido_hierro.tres" id="2_m415u"]
+
+[node name="piston_ww" instance=ExtResource("1_dqr3e")]
+
+[node name="Cylinder" parent="." index="0"]
+material_override = ExtResource("2_m415u")

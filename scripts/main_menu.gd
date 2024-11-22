@@ -1,6 +1,6 @@
 extends Control
 
-var game_start = "res://scenes/maps/test_area.tscn"
+var game_start = "res://scenes/maps/WaryWaters_WallMap.tscn"
 @onready var panel = $Panel
 
 @onready var credits = $Credits

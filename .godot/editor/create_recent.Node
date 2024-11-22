@@ -1,6 +1,10 @@
 CSGBox3D
-ConfirmationDialog
+MeshInstance3D
+FogVolume
+AnimationPlayer
 WorldEnvironment
+AnimationTree
+ConfirmationDialog
 GridContainer
 Sprite2D
 ColorRect
@@ -8,7 +12,3 @@ Panel
 TabBar
 Container
 TabContainer
-MarginContainer
-Label3D
-AnimationPlayer
-Node3D

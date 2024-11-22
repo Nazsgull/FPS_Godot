@@ -4,3 +4,5 @@
 
 [node name="FishingRod" type="Node3D"]
 script = ExtResource("1_v2u0n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
