@@ -2,8 +2,9 @@
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_k48at"]
 noise_type = 3
-seed = 45
-fractal_octaves = 10
+seed = 47
+frequency = 0.0077
+fractal_octaves = 8
 fractal_gain = 1.99
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_b0385"]
@@ -14,4 +15,7 @@ noise = SubResource("FastNoiseLite_k48at")
 [resource]
 albedo_color = Color(0.607843, 0.184314, 0.109804, 1)
 albedo_texture = SubResource("NoiseTexture2D_b0385")
-uv1_scale = Vector3(1.025, 50, 1.025)
+ao_enabled = true
+ao_light_affect = 1.0
+ao_on_uv2 = true
+uv1_scale = Vector3(0.05, 0.5, 0.05)

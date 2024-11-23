@@ -15,7 +15,7 @@ func handle_back():
 	self.hide()
 	main_menu.show()
 
-func _process(delta):
+func _process(_delta):
 	handle_inputs()
 	if is_scroll_enabled:
 		autoscroll()

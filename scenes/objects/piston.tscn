@@ -35,7 +35,7 @@ tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(26, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-24, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/3/type = "bezier"
@@ -68,7 +68,7 @@ tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(76, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-23, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/6/type = "bezier"
@@ -101,7 +101,7 @@ tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(126, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-22, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/9/type = "bezier"
@@ -134,7 +134,7 @@ tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(176, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-21, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/12/type = "bezier"
@@ -167,7 +167,7 @@ tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(226, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-20, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 
@@ -348,24 +348,165 @@ _data = {
 }
 
 [node name="Piston" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_lnyyp")
 
 [node name="piston_1" parent="." instance=ExtResource("1_4leyo")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.1506e-05, 0, 226)
+transform = Transform3D(-0.923879, 0.382683, -1.50996e-07, 0.382683, 0.923879, -3.3413e-08, 1.26715e-07, -8.86531e-08, -1, 2.1506e-05, 0, -20)
+
+[node name="pasarela_1" type="Node3D" parent="piston_1"]
+transform = Transform3D(-0.92388, 0.382683, 1.26715e-07, 0.382683, 0.92388, -8.86532e-08, -1.50996e-07, -3.3413e-08, -1, 0.191357, 0.461932, 25)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="piston_1/pasarela_1"]
+transform = Transform3D(0.999994, 0, 0, 0, 0.999994, 0, 0, 0, 1, 0, -0.48, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="piston_1/pasarela_1"]
+transform = Transform3D(0.723203, -0.690625, 0, 0.690625, 0.723203, 0, 0, 0, 1, 0.373224, -0.392599, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="piston_1/pasarela_1"]
+transform = Transform3D(-0.722962, -0.690877, 0, 0.690877, -0.722962, 0, 0, 0, 1, -0.373, -0.393, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
 
 [node name="piston_2" parent="." instance=ExtResource("1_4leyo")]
-transform = Transform3D(-1.4, 0, -8.74228e-08, 0, 1.4, 0, 1.22392e-07, 0, -1, 1.72223e-05, 0, 176)
+transform = Transform3D(-1.29343, 0.535757, -1.50996e-07, 0.535757, 1.29343, -3.3413e-08, 1.77401e-07, -1.24114e-07, -1, 1.72223e-05, 0, -21)
+
+[node name="pasarela_2" type="Node3D" parent="piston_2"]
+transform = Transform3D(-0.92388, 0.382683, 1.26715e-07, 0.382683, 0.92388, -8.86532e-08, -1.50996e-07, -3.3413e-08, -1, 0.191357, 0.461932, 25)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="piston_2/pasarela_2"]
+transform = Transform3D(0.999994, 0, 0, 0, 0.999994, 0, 0, 0, 1, 0, -0.48, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="piston_2/pasarela_2"]
+transform = Transform3D(0.723203, -0.690625, 0, 0.690625, 0.723203, 0, 0, 0, 1, 0.373224, -0.392599, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="piston_2/pasarela_2"]
+transform = Transform3D(-0.722962, -0.690877, 0, 0.690877, -0.722962, 0, 0, 0, 1, -0.373, -0.393, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
 
 [node name="piston_3" parent="." instance=ExtResource("1_4leyo")]
-transform = Transform3D(-2, 0, -8.74228e-08, 0, 2, 0, 1.74846e-07, 0, -1, 1.29386e-05, 0, 126)
+transform = Transform3D(-1.84776, 0.765367, -1.50996e-07, 0.765367, 1.84776, -3.3413e-08, 2.53431e-07, -1.77306e-07, -1, 1.29386e-05, 0, -22)
+
+[node name="pasarela_3" type="Node3D" parent="piston_3"]
+transform = Transform3D(-0.92388, 0.382683, 1.26715e-07, 0.382683, 0.92388, -8.86532e-08, -1.50996e-07, -3.3413e-08, -1, 0.191357, 0.461932, 25)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="piston_3/pasarela_3"]
+transform = Transform3D(0.999994, 0, 0, 0, 0.999994, 0, 0, 0, 1, 0, -0.48, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="piston_3/pasarela_3"]
+transform = Transform3D(0.723203, -0.690625, 0, 0.690625, 0.723203, 0, 0, 0, 1, 0.373224, -0.392599, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="piston_3/pasarela_3"]
+transform = Transform3D(-0.722962, -0.690877, 0, 0.690877, -0.722962, 0, 0, 0, 1, -0.373, -0.393, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
 
 [node name="piston_4" parent="." instance=ExtResource("1_4leyo")]
-transform = Transform3D(-2.9, 0, -1.50996e-07, 0, 2.9, 0, 4.37888e-07, 0, -1, 1.49486e-05, 0, 76)
+transform = Transform3D(-2.67925, 1.10978, -1.50996e-07, 1.10978, 2.67925, -5.77106e-08, 3.40509e-07, -3.22193e-07, -1, 1.49486e-05, 0, -23)
+
+[node name="pasarela_4" type="Node3D" parent="piston_4"]
+transform = Transform3D(-0.92388, 0.382683, 1.26715e-07, 0.382683, 0.92388, -8.86532e-08, -1.50996e-07, -3.3413e-08, -1, 0.191357, 0.461932, 25)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="piston_4/pasarela_4"]
+transform = Transform3D(0.999994, 0, 0, 0, 0.999994, 0, 0, 0, 1, 0, -0.48, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="piston_4/pasarela_4"]
+transform = Transform3D(0.723203, -0.690625, 0, 0.690625, 0.723203, 0, 0, 0, 1, 0.373224, -0.392599, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="piston_4/pasarela_4"]
+transform = Transform3D(-0.722962, -0.690877, 0, 0.690877, -0.722962, 0, 0, 0, 1, -0.373, -0.393, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
 
 [node name="piston_5" parent="." instance=ExtResource("1_4leyo")]
-transform = Transform3D(-3.9, 0, -1.50996e-07, 0, 3.9, 0, 5.88884e-07, 0, -1, 7.54979e-06, 0, 26)
+transform = Transform3D(-3.60313, 1.49247, -1.50996e-07, 1.49247, 3.60313, -5.77106e-08, 4.57926e-07, -4.33295e-07, -1, 7.54979e-06, 0, -24)
+
+[node name="pasarela5" type="Node3D" parent="piston_5"]
+transform = Transform3D(-0.92388, 0.382683, 1.26715e-07, 0.382683, 0.92388, -8.86532e-08, -1.50996e-07, -3.3413e-08, -1, 0.191357, 0.461932, 25)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="piston_5/pasarela5"]
+transform = Transform3D(0.999994, 0, 0, 0, 0.999994, 0, 0, 0, 1, 0, -0.48, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="piston_5/pasarela5"]
+transform = Transform3D(0.723203, -0.690625, 0, 0.690625, 0.723203, 0, 0, 0, 1, 0.373224, -0.392599, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="piston_5/pasarela5"]
+transform = Transform3D(-0.722962, -0.690877, 0, 0.690877, -0.722962, 0, 0, 0, 1, -0.373, -0.393, 25)
+layers = 0
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.075, 1, 50)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_lus7k")
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 130.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

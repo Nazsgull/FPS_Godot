@@ -1,9 +1,12 @@
-res://scenes/maps/WaryWaters_WallMap.tscn
+res://scenes/objects/piston.tscn
 res://scripts/door_mine.gd
 res://assets/materials/water.gdshader
 res://assets/materials/water.tres
 res://assets/materials/oxido_hierro.tres
 res://objects/inventory/main_inventory.tres
+res://scripts/piston.gd
 res://scenes/objects/water_plane.tscn
-res://scenes/objects/piston.tscn
+res://scenes/maps/WaryWaters_WallMap.tscn
 res://scenes/UI/main_menu.tscn
+res://scenes/parts/piston_cuerpo.tscn
+res://assets/materials/underwater.gdshader
