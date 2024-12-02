@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://b2ddllldugrvc"]
+[gd_scene load_steps=14 format=3 uid="uid://b2ddllldugrvc"]
 
 [ext_resource type="PackedScene" uid="uid://g386sbqjtrjh" path="res://scenes/objects/water_plane.tscn" id="1_i0w1c"]
 [ext_resource type="Script" path="res://scripts/WaryWaters_WallMap.gd" id="1_yaoay"]
 [ext_resource type="PackedScene" uid="uid://cf6it4ih04vwy" path="res://scenes/objects/piston.tscn" id="2_f6ewe"]
 [ext_resource type="PackedScene" uid="uid://hob0odd0bhgw" path="res://scenes/objects/player.tscn" id="4_a02oc"]
 [ext_resource type="PackedScene" uid="uid://4asvsxmij85k" path="res://scenes/objects/button_fancy.tscn" id="5_jhipa"]
+[ext_resource type="PackedScene" uid="uid://c08w371nri2fs" path="res://scenes/objects/fish_bank.tscn" id="6_w2flc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x07qw"]
 albedo_color = Color(0, 0, 0, 1)
@@ -78,4 +79,8 @@ use_collision = true
 collision_layer = 4
 size = Vector3(20, 1, 200)
 
+[node name="Fish_bank" parent="." instance=ExtResource("6_w2flc")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -68, 9, 16)
+
 [connection signal="interacted" from="Button_fancy" to="Piston" method="_on_button_fancy_interacted"]
+[connection signal="interacted" from="Button_fancy" to="Fish_bank" method="donate_1fish"]

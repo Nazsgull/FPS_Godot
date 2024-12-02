@@ -1,9 +1,10 @@
+Timer
+Label3D
+MeshInstance3D
 FogVolume
 CSGBox3D
 Node3D
-Timer
 DirectionalLight3D
-MeshInstance3D
 AnimationPlayer
 WorldEnvironment
 AnimationTree
@@ -11,4 +12,3 @@ ConfirmationDialog
 GridContainer
 Sprite2D
 ColorRect
-Panel

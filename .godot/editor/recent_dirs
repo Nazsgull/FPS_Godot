@@ -1,8 +1,8 @@
-res://assets/materials
-res://scripts
-res://scenes/parts
 res://scenes/objects
+res://scripts
 res://scripts/classes
+res://assets/materials
+res://scenes/parts
 res://
 res://scenes/objects/Testing
 res://scripts/inventory

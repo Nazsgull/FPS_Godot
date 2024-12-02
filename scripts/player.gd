@@ -32,12 +32,12 @@ var crouching_depth = -0.65
 @onready var crouching_collision_shape = $crouching_collision_shape
 @onready var ray_cast_3d = $uncrouching_raycast
 
+#Pause
 var paused = false
 @onready var pause_menu = $head/Camera3D/PauseMenu
 @onready var pointer = $pointer
 
 @onready var equippables_bar = $head/Camera3D/equippables_bar
-
 
 enum player_mov_states {
 	CROUCHING,
@@ -49,10 +49,12 @@ enum player_mov_states {
 var current_mov_state : player_mov_states = player_mov_states.WALKING
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+@onready var fishcount_updater = $fishcount_updater
 
 func _ready():
 	if capture_mouse:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	fishcount_updater.start()
 
 func handle_pickup(scene_path:String):
 	equippables_bar.add_tool(scene_path)
@@ -60,9 +62,19 @@ func handle_pickup(scene_path:String):
 
 func _input(event):
 	if event is InputEventMouseMotion and !paused:
-		rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
-		head.rotate_x(deg_to_rad(event.relative.y * mouse_sens * invert_y_look))
-		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-89), deg_to_rad(89))
+		_rotate_head(event)
+		_rotate_fishcount_display(event)
+		
+func _rotate_head(event: InputEventMouseMotion)->void:
+	rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
+	head.rotate_x(deg_to_rad(event.relative.y * mouse_sens * invert_y_look))
+	head.rotation.x = clamp(head.rotation.x, deg_to_rad(-89), deg_to_rad(89))
+
+func _rotate_fishcount_display(event: InputEventMouseMotion)->void:
+	rotate_y(deg_to_rad(-event.relative.x * mouse_sens))
+	fishcount_display.rotate_x(deg_to_rad(event.relative.y * mouse_sens * invert_y_look))
+	fishcount_display.rotation.x = clamp(head.rotation.x, deg_to_rad(-89), deg_to_rad(89))
+
 
 func _set_state(new_state : player_mov_states) -> void:
 	current_mov_state = new_state
@@ -150,8 +162,6 @@ func get_input(delta):
 		velocity.z = lerp(velocity.z,direction.z * current_speed, delta * air_lerp_speed)
 	move_and_slide()
 
-
-
 func _physics_process(delta):
 	if Input.is_action_just_pressed("Pause"):
 		handle_pause()
@@ -162,3 +172,21 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	get_input(delta)
+
+#FISH AREA
+@export var fishcount: int = 69
+@onready var fishcount_display = $fishcount_display
+@onready var bank = get_tree().get_first_node_in_group("Bank")
+
+func get_fish():
+	return fishcount
+
+func set_fish(new_fish: int)-> void:
+	fishcount = new_fish
+	_update_fishcount_display()
+
+func _update_fishcount_display():
+	fishcount_display.text = (str(fishcount)+" fish") 
+
+func _on_timer_timeout():
+	_update_fishcount_display()
