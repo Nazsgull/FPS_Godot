@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b214xbcbjfo60"]
+[gd_scene load_steps=6 format=3 uid="uid://b214xbcbjfo60"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_3e030"]
+[ext_resource type="FontFile" uid="uid://c2aqepmm6c8c1" path="res://assets/fonts/PlayfairDisplay-VariableFont_wght.ttf" id="2_05h83"]
 [ext_resource type="PackedScene" uid="uid://cyb6vrmfk70r7" path="res://scenes/UI/credits.tscn" id="2_d1l4i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y7a8y"]
@@ -10,8 +11,10 @@ content_margin_right = 400.0
 content_margin_bottom = 400.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_3c71g"]
-font_size = 32
-outline_size = 5
+line_spacing = 10.0
+font = ExtResource("2_05h83")
+font_size = 64
+outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
 [node name="MainMenu" type="Control"]
@@ -44,7 +47,8 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Panel/PanelContainer/VBoxContainer"]
 layout_mode = 2
-text = "Whatever your game is called"
+text = "Wary  Waters
+"
 label_settings = SubResource("LabelSettings_3c71g")
 horizontal_alignment = 1
 vertical_alignment = 1

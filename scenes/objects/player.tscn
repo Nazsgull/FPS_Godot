@@ -114,7 +114,7 @@ pixel_size = 0.0001
 text = "0"
 font = ExtResource("7_bnmlf")
 font_size = 256
-outline_size = 5
+outline_size = 20
 
 [node name="fishcount_updater" type="Timer" parent="."]
 

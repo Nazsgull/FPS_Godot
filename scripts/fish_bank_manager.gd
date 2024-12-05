@@ -35,7 +35,7 @@ func _update_text()-> void:
 
 func donate_1fish(a) -> void:
 	var player_fish : int = player.get_fish()
-	if(player_fish - 1 > 0):	
+	if(player_fish - 1 >= 0):	
 		fish_actual += 1
 		player.set_fish(player_fish-1)
 	

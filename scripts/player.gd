@@ -174,7 +174,7 @@ func _physics_process(delta):
 	get_input(delta)
 
 #FISH AREA
-@export var fishcount: int = 69
+@export var fishcount: int = 10
 @onready var fishcount_display = $fishcount_display
 @onready var bank = get_tree().get_first_node_in_group("Bank")
 

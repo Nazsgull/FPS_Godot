@@ -71,7 +71,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 8, 17)
 transform = Transform3D(0.965926, 0, -0.258819, 0.258819, 1.31134e-07, 0.965926, 3.394e-08, -1, 1.26666e-07, 0, 0, 0)
 
 [node name="Button_fancy" parent="." instance=ExtResource("5_jhipa")]
-transform = Transform3D(0.241718, -0.43769, 0, 0.43769, 0.241718, 0, 0, 0, 0.5, -67.5166, 8.87538, 18)
+transform = Transform3D(0.241718, -0.43769, 0, 0.43769, 0.241718, 0, 0, 0, 0.5, -67.5166, 8.87538, 18.5)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69, 7, 18)
@@ -80,7 +80,7 @@ collision_layer = 4
 size = Vector3(20, 1, 200)
 
 [node name="Fish_bank" parent="." instance=ExtResource("6_w2flc")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -68, 9, 16)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -68, 9, 17.5)
 
 [connection signal="interacted" from="Button_fancy" to="Piston" method="_on_button_fancy_interacted"]
 [connection signal="interacted" from="Button_fancy" to="Fish_bank" method="donate_1fish"]
