@@ -1,0 +1,151 @@
+[gd_scene load_steps=13 format=3 uid="uid://bb46v2yh2p1lh"]
+
+[ext_resource type="PackedScene" uid="uid://hob0odd0bhgw" path="res://scenes/objects/player.tscn" id="1_yxds8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_yaxrg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vktij"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_r72dk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qyx7n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0sd3q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rmai2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k67ax"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_umfkj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_51tu3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3xujh"]
+
+[sub_resource type="Environment" id="Environment_20xon"]
+background_energy_multiplier = 3.0
+tonemap_mode = 1
+ssr_fade_in = 0.0955919
+ssao_enabled = true
+ssao_radius = 16.0
+glow_enabled = true
+glow_normalized = true
+fog_enabled = true
+fog_light_color = Color(0, 0.709804, 0.984314, 1)
+fog_density = 0.0
+
+[node name="RunCaracolMap" type="Node3D"]
+
+[node name="player" parent="." instance=ExtResource("1_yxds8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, 9)
+
+[node name="Entorno fisico" type="Node3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="Suelo" type="MeshInstance3D" parent="Entorno fisico"]
+transform = Transform3D(3.6, 0, 0, 0, 0.1, 0, 0, 0, 3.1, 1.78814e-05, 0.0540251, 0.00260687)
+mesh = SubResource("BoxMesh_yaxrg")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="StaticBody3D" parent="Entorno fisico/Suelo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Entorno fisico/Suelo/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_vktij")
+
+[node name="Pilar_central" type="MeshInstance3D" parent="Entorno fisico"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+mesh = SubResource("BoxMesh_r72dk")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="Entorno fisico/Pilar_central"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Entorno fisico/Pilar_central/Area3D"]
+shape = SubResource("BoxShape3D_qyx7n")
+
+[node name="Pared_1" type="MeshInstance3D" parent="Entorno fisico"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.6, 1)
+mesh = SubResource("BoxMesh_r72dk")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="Entorno fisico/Pared_1"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Entorno fisico/Pared_1/Area3D"]
+shape = SubResource("BoxShape3D_0sd3q")
+
+[node name="Pared_2" type="MeshInstance3D" parent="Entorno fisico"]
+transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 2.5, -1.8, 0.6, -0.35)
+mesh = SubResource("BoxMesh_r72dk")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="Entorno fisico/Pared_2"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Entorno fisico/Pared_2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_rmai2")
+
+[node name="Pared_3" type="MeshInstance3D" parent="Entorno fisico"]
+transform = Transform3D(-4.37114e-09, 0, -3.375, 0, 1, 0, 0.1, 0, -1.47526e-07, -0.1, 0.6, -1.55)
+mesh = SubResource("BoxMesh_r72dk")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="Entorno fisico/Pared_3"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Entorno fisico/Pared_3/Area3D"]
+transform = Transform3D(1, 0, 1.13687e-13, 0, 1, 0, -1.11022e-16, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_k67ax")
+
+[node name="Pared_4" type="MeshInstance3D" parent="Entorno fisico"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.6, -1)
+mesh = SubResource("BoxMesh_r72dk")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="Entorno fisico/Pared_4"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Entorno fisico/Pared_4/Area3D"]
+shape = SubResource("BoxShape3D_umfkj")
+
+[node name="Pared_5" type="MeshInstance3D" parent="Entorno fisico"]
+transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 2.5, 1.8, 0.6, 0.35)
+mesh = SubResource("BoxMesh_r72dk")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="Entorno fisico/Pared_5"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Entorno fisico/Pared_5/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_51tu3")
+
+[node name="Pared_6" type="MeshInstance3D" parent="Entorno fisico"]
+transform = Transform3D(-4.37114e-09, 0, -3.375, 0, 1, 0, 0.1, 0, -1.47526e-07, 0.1, 0.6, 1.55)
+mesh = SubResource("BoxMesh_r72dk")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="Entorno fisico/Pared_6"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Entorno fisico/Pared_6/Area3D"]
+transform = Transform3D(1, 0, 1.13687e-13, 0, 1, 0, -1.11022e-16, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_3xujh")
+
+[node name="Iluminacion" type="Node3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Iluminacion"]
+environment = SubResource("Environment_20xon")
