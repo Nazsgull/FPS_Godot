@@ -38,6 +38,9 @@ var paused = false
 
 @onready var equippables_bar = $head/Camera3D/equippables_bar
 
+@onready var player = $"."
+
+
 
 enum player_mov_states {
 	CROUCHING,
@@ -153,6 +156,7 @@ func get_input(delta):
 
 
 func _physics_process(delta):
+
 	if Input.is_action_just_pressed("Pause"):
 		handle_pause()
 	#Handle movement states

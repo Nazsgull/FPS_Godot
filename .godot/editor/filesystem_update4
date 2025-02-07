@@ -1,7 +1,8 @@
+res://scenes/objects/caracol.tscn
 res://objects/inventory/main_inventory.tres
 res://scripts/door_mine.gd
 res://assets/materials/water.gdshader
 res://scenes/maps/run_caracol_map.tscn
-res://scenes/UI/main_menu.tscn
-res://scripts/main_menu.gd
-res://CharacterBody3D.gd
+res://scenes/objects/player.tscn
+res://scripts/caracol.gd
+res://assets/models_gltf/caracol1.gd

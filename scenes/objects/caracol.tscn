@@ -1,19 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnbfmimpbn7j3"]
+[gd_scene load_steps=5 format=3 uid="uid://bp3ro7dk6aqh0"]
 
-[ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_j55m1"]
+[ext_resource type="Script" path="res://scripts/caracol.gd" id="1_fk11y"]
+[ext_resource type="PackedScene" uid="uid://dfejgbpvj3ny1" path="res://assets/models_gltf/caracol1.glb" id="2_v8swq"]
+[ext_resource type="Script" path="res://assets/models_gltf/caracol1.gd" id="3_i42q7"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7n1r4"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_krx7v"]
+radius = 0.483996
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
-collision_layer = 16
-script = ExtResource("1_j55m1")
+[node name="Caracol" type="CharacterBody3D" groups=["enemy"]]
+script = ExtResource("1_fk11y")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_7n1r4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.1)
+shape = SubResource("CapsuleShape3D_krx7v")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7, 0)
-use_collision = true
-collision_layer = 0
-collision_mask = 0
-size = Vector3(0.5, 0.5, 0.5)
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.209551, -0.0390568)
+aabb = AABB(-0.157579, -0.212491, -0.4, 0.315158, 0.424981, 0.8)
+
+[node name="caracol1" parent="." instance=ExtResource("2_v8swq")]
+transform = Transform3D(3.105, 0, 0, 0, 3.105, 0, 0, 0, 3.105, 0, 0, 0)
+script = ExtResource("3_i42q7")
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]

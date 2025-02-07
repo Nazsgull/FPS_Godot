@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnbfmimpbn7j3"]
+
+[ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_j55m1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7n1r4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhox5"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+collision_layer = 16
+script = ExtResource("1_j55m1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_7n1r4")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7, 0)
+material_override = SubResource("StandardMaterial3D_vhox5")
+use_collision = true
+collision_layer = 0
+collision_mask = 0
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

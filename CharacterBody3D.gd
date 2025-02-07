@@ -1,28 +1,30 @@
 extends CharacterBody3D
 
 @onready var player = get_tree().get_nodes_in_group("player")[0]
-const SPEED = 5.0
+@onready var navigation_agent_3d = $NavigationAgent3D
+
+const SPEED = 3.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-
+func _process(delta):
+	navigation_agent_3d.target_position = player.position
+	
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-
-
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.y -= 2
 
+	var next_location = navigation_agent_3d.get_next_path_position()
+	var current_location = self.position
+	var new_velocity = (next_location - current_location).normalized() * SPEED
+	
+	velocity = velocity.move_toward(new_velocity,0.25)
+	target_position()
 	move_and_slide()
+	
+func target_position():
+	navigation_agent_3d.target_position = player.position
