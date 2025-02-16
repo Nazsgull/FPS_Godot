@@ -14,3 +14,9 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+project.godot
+.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.md5
+.godot/editor/script_editor_cache.cfg
+.godot/editor/project_metadata.cfg
+.godot/editor/filesystem_cache8
+.godot/editor/editor_layout.cfg
