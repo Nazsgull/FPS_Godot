@@ -18,9 +18,7 @@ func update_target_location(new_target_location):
 
 func _on_visible_on_screen_notifier_3d_screen_entered():
 	SPEED = .1
-	printerr(SPEED)
+
 
 func _on_visible_on_screen_notifier_3d_screen_exited():
 	SPEED = 4
-	
-	printerr(SPEED)
