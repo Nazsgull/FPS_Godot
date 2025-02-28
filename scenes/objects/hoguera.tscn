@@ -1,0 +1,731 @@
+[gd_scene load_steps=33 format=3 uid="uid://blnkkar62c40c"]
+
+[ext_resource type="Texture2D" uid="uid://c1pwkqwuq7eax" path="res://assets/textures/objects/hoguera_0.png" id="1_byala"]
+[ext_resource type="Script" path="res://scripts/hoguera.gd" id="1_gak6i"]
+[ext_resource type="Material" uid="uid://b8hs0ltqjqcsu" path="res://assets/materials/yellow_glowy.tres" id="1_ny6to"]
+[ext_resource type="Texture2D" uid="uid://ca86a8l63vptf" path="res://assets/textures/objects/hoguera_2.png" id="3_7483f"]
+[ext_resource type="Texture2D" uid="uid://dui2wd16odig0" path="res://assets/textures/objects/hoguera_3.png" id="4_q07nt"]
+[ext_resource type="Texture2D" uid="uid://b226eev3hm60j" path="res://assets/textures/objects/hoguera_4.png" id="5_h1voe"]
+[ext_resource type="Texture2D" uid="uid://nxgs6cgcwk6x" path="res://assets/textures/objects/hoguera_5.png" id="6_5g7m5"]
+[ext_resource type="Texture2D" uid="uid://dys4k3jwhibq8" path="res://assets/textures/objects/hoguera_6.png" id="7_ri2mp"]
+[ext_resource type="Script" path="res://scenes/objects/hoguera_area3D.gd" id="9_ptjer"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ucr4o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vtv5r"]
+transparency = 1
+albedo_texture = ExtResource("1_byala")
+emission_enabled = true
+emission = Color(1, 1, 0.313726, 1)
+emission_energy_multiplier = 10.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jyvki"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xjvc0"]
+transparency = 1
+albedo_texture = ExtResource("3_7483f")
+emission_enabled = true
+emission = Color(1, 1, 0.313726, 1)
+emission_energy_multiplier = 10.01
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tp0at"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oqmk3"]
+transparency = 1
+albedo_texture = ExtResource("4_q07nt")
+emission_enabled = true
+emission = Color(1, 1, 0.313726, 1)
+emission_energy_multiplier = 10.01
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_o6rvc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cr304"]
+transparency = 1
+albedo_texture = ExtResource("5_h1voe")
+emission_enabled = true
+emission = Color(1, 1, 0.313726, 1)
+emission_energy_multiplier = 10.01
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qi6py"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ki56h"]
+transparency = 1
+albedo_texture = ExtResource("6_5g7m5")
+emission_enabled = true
+emission = Color(1, 1, 0.313726, 1)
+emission_energy_multiplier = 10.01
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3dh85"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdtth"]
+transparency = 1
+albedo_texture = ExtResource("7_ri2mp")
+emission_enabled = true
+emission = Color(1, 1, 0.313726, 1)
+emission_energy_multiplier = 10.0
+
+[sub_resource type="Animation" id="Animation_co88i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("vis/hoguera_5:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("vis/hoguera_6:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tjnq6"]
+resource_name = "giros"
+length = 60.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("vis/hoguera_5:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 30, 60),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 3.14159, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("vis/hoguera_6:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 30, 60),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 3.14159, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dwpp7"]
+_data = {
+"RESET": SubResource("Animation_co88i"),
+"giros": SubResource("Animation_tjnq6")
+}
+
+[sub_resource type="Animation" id="Animation_gpol3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("vis/hoguera_4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("vis/hoguera_3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vwump"]
+resource_name = "giros"
+length = 4.0
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("vis/hoguera_4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1, 1.8, 2, 2.8, 3, 3.8, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0), Vector3(0, 4.71239, 0), Vector3(0, 4.71239, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("vis/hoguera_3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.8, 1, 1.3, 1.5, 1.8, 2, 2.3, 2.5, 2.8, 3, 3.3, 3.5, 3.8, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0), Vector3(0, 4.71239, 0), Vector3(0, 4.71239, 0), Vector3(0, 6.28319, 0), Vector3(0, 6.28319, 0), Vector3(0, 7.85398, 0), Vector3(0, 7.85398, 0), Vector3(0, 9.42478, 0), Vector3(0, 9.42478, 0), Vector3(0, 10.9956, 0), Vector3(0, 10.9956, 0), Vector3(0, 12.5664, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ob3pu"]
+_data = {
+"RESET": SubResource("Animation_gpol3"),
+"giros": SubResource("Animation_vwump")
+}
+
+[sub_resource type="Animation" id="Animation_ewhc1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("vis/hoguera_2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("vis/hoguera_1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ybrk8"]
+resource_name = "giro"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("vis/hoguera_1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 3.14159, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5pmyr"]
+resource_name = "giro_2"
+length = 30.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("vis/hoguera_2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9, 1, 1.9, 2, 2.9, 3, 3.9, 4, 4.9, 5, 5.9, 6, 6.9, 7, 7.9, 8, 8.9, 9, 9.9, 10, 10.9, 11, 11.9, 12, 12.9, 13, 13.9, 14, 14.9, 15, 15.9, 16, 16.9, 17, 17.9, 18, 18.9, 19, 19.9, 20, 20.9, 21, 21.9, 22, 22.9, 23, 23.9, 24, 24.9, 25, 25.9, 26, 26.9, 27, 27.9, 28, 28.9, 29, 29.9, 30),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0.10472, 0), Vector3(0, 0.10472, 0), Vector3(0, 0.20944, 0), Vector3(0, 0.20944, 0), Vector3(0, 0.314159, 0), Vector3(0, 0.314159, 0), Vector3(0, 0.418879, 0), Vector3(0, 0.418879, 0), Vector3(0, 0.523599, 0), Vector3(0, 0.523599, 0), Vector3(0, 0.628319, 0), Vector3(0, 0.628319, 0), Vector3(0, 0.733038, 0), Vector3(0, 0.733038, 0), Vector3(0, 0.837758, 0), Vector3(0, 0.837758, 0), Vector3(0, 0.942478, 0), Vector3(0, 0.942478, 0), Vector3(0, 1.0472, 0), Vector3(0, 1.0472, 0), Vector3(0, 1.15192, 0), Vector3(0, 1.15192, 0), Vector3(0, 1.25664, 0), Vector3(0, 1.25664, 0), Vector3(0, 1.36136, 0), Vector3(0, 1.36136, 0), Vector3(0, 1.46608, 0), Vector3(0, 1.46608, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.67552, 0), Vector3(0, 1.67552, 0), Vector3(0, 1.78024, 0), Vector3(0, 1.78024, 0), Vector3(0, 1.88496, 0), Vector3(0, 1.88496, 0), Vector3(0, 1.98968, 0), Vector3(0, 1.98968, 0), Vector3(0, 2.0944, 0), Vector3(0, 2.0944, 0), Vector3(0, 2.19911, 0), Vector3(0, 2.19911, 0), Vector3(0, 2.30383, 0), Vector3(0, 2.30383, 0), Vector3(0, 2.40855, 0), Vector3(0, 2.40855, 0), Vector3(0, 2.51327, 0), Vector3(0, 2.51327, 0), Vector3(0, 2.61799, 0), Vector3(0, 2.61799, 0), Vector3(0, 2.72271, 0), Vector3(0, 2.72271, 0), Vector3(0, 2.82743, 0), Vector3(0, 2.82743, 0), Vector3(0, 2.93215, 0), Vector3(0, 2.93215, 0), Vector3(0, 3.03687, 0), Vector3(0, 3.03687, 0), Vector3(0, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gblk2"]
+_data = {
+"RESET": SubResource("Animation_ewhc1"),
+"giro": SubResource("Animation_ybrk8"),
+"giro_2": SubResource("Animation_5pmyr")
+}
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gq3eg"]
+height = 1.5
+
+[node name="Hoguera" type="Node3D"]
+script = ExtResource("1_gak6i")
+
+[node name="vis" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="hoguera_0" type="Node3D" parent="vis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="vis/hoguera_0"]
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0199122, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0404145, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0603267, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D9" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0797195, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D11" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0996317, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D13" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.120134, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D15" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.140046, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D17" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.159812, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D19" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.179724, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D21" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.200227, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D23" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.220139, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D25" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.239532, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D27" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.259444, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D29" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.279946, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D31" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.299858, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D33" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.319916, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D35" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.339828, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D37" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.360331, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D39" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.380243, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D41" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.399636, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D43" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419548, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D45" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44005, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D47" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.459962, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D49" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.479728, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D51" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499641, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D53" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.520143, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D55" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.540055, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D57" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.559448, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D59" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.57936, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D61" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.599862, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D63" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.619775, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D65" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.640369, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D67" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.660281, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D69" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.680784, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D71" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.700696, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D73" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.720088, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D75" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.740001, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D77" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.760503, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D79" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.780415, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D81" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.800181, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D83" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.820093, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D85" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.840596, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D87" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860508, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D89" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.879901, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D91" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.899813, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D93" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.920315, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D95" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.940227, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D97" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.960285, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D99" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.980197, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D101" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0007, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D103" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02061, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D105" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.04, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D107" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05992, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D109" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08042, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D111" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10033, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D113" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1201, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D115" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14001, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D117" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16051, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D119" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18042, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D121" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19982, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D123" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21973, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D125" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24023, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="CSGMesh3D127" type="CSGMesh3D" parent="vis/hoguera_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26014, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = SubResource("StandardMaterial3D_vtv5r")
+
+[node name="hoguera_1" type="Node3D" parent="vis"]
+transform = Transform3D(-1, 0, 2.53518e-06, 0, 1, 0, -2.53518e-06, 0, -1, 0, 0, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="vis/hoguera_1"]
+mesh = SubResource("PlaneMesh_ucr4o")
+material = ExtResource("1_ny6to")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="vis/hoguera_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0205955, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = ExtResource("1_ny6to")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="vis/hoguera_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0400307, 0)
+mesh = SubResource("PlaneMesh_ucr4o")
+material = ExtResource("1_ny6to")
+
+[node name="hoguera_2" type="Node3D" parent="vis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="vis/hoguera_2"]
+mesh = SubResource("PlaneMesh_jyvki")
+material = SubResource("StandardMaterial3D_xjvc0")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="vis/hoguera_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0197393, 0)
+mesh = SubResource("PlaneMesh_jyvki")
+material = SubResource("StandardMaterial3D_xjvc0")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="vis/hoguera_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.039543, 0)
+mesh = SubResource("PlaneMesh_jyvki")
+material = SubResource("StandardMaterial3D_xjvc0")
+
+[node name="hoguera_3" type="Node3D" parent="vis"]
+transform = Transform3D(-3.61999e-06, 0, -1, 0, 1, 0, 1, 0, -3.61999e-06, 0, 0.6, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="vis/hoguera_3"]
+mesh = SubResource("PlaneMesh_tp0at")
+material = SubResource("StandardMaterial3D_oqmk3")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="vis/hoguera_3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.020761, 0)
+mesh = SubResource("PlaneMesh_tp0at")
+material = SubResource("StandardMaterial3D_oqmk3")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="vis/hoguera_3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0414071, 0)
+mesh = SubResource("PlaneMesh_tp0at")
+material = SubResource("StandardMaterial3D_oqmk3")
+
+[node name="hoguera_4" type="Node3D" parent="vis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="vis/hoguera_4"]
+mesh = SubResource("PlaneMesh_o6rvc")
+material = SubResource("StandardMaterial3D_cr304")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="vis/hoguera_4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0198345, 0)
+mesh = SubResource("PlaneMesh_o6rvc")
+material = SubResource("StandardMaterial3D_cr304")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="vis/hoguera_4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0394584, 0)
+mesh = SubResource("PlaneMesh_o6rvc")
+material = SubResource("StandardMaterial3D_cr304")
+
+[node name="hoguera_5" type="Node3D" parent="vis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="vis/hoguera_5"]
+mesh = SubResource("PlaneMesh_qi6py")
+material = SubResource("StandardMaterial3D_ki56h")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="vis/hoguera_5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0198266, 0)
+mesh = SubResource("PlaneMesh_qi6py")
+material = SubResource("StandardMaterial3D_ki56h")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="vis/hoguera_5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0396418, 0)
+mesh = SubResource("PlaneMesh_qi6py")
+material = SubResource("StandardMaterial3D_ki56h")
+
+[node name="hoguera_6" type="Node3D" parent="vis"]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="vis/hoguera_6"]
+mesh = SubResource("PlaneMesh_3dh85")
+material = SubResource("StandardMaterial3D_wdtth")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="vis/hoguera_6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0207042, 0)
+mesh = SubResource("PlaneMesh_3dh85")
+material = SubResource("StandardMaterial3D_wdtth")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="vis/hoguera_6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0412799, 0)
+mesh = SubResource("PlaneMesh_3dh85")
+material = SubResource("StandardMaterial3D_wdtth")
+
+[node name="AnimationPlayer_0" type="AnimationPlayer" parent="vis"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_dwpp7")
+}
+
+[node name="AnimationPlayer_1" type="AnimationPlayer" parent="vis"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_ob3pu")
+}
+
+[node name="AnimationPlayer_2" type="AnimationPlayer" parent="vis"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_gblk2")
+}
+
+[node name="AnimationPlayer_3" type="AnimationPlayer" parent="vis"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_gblk2")
+}
+
+[node name="interaction" type="Node3D" parent="."]
+
+[node name="AreaHoguera" type="Area3D" parent="interaction"]
+collision_layer = 128
+collision_mask = 0
+script = ExtResource("9_ptjer")
+hover_message = "Link"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="interaction/AreaHoguera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("CapsuleShape3D_gq3eg")
+
+[node name="sound" type="Node3D" parent="."]
+
+[node name="sound_player" type="AudioStreamPlayer3D" parent="sound"]
+
+[connection signal="interacted" from="interaction/AreaHoguera" to="." method="_on_area_3d_interacted"]
