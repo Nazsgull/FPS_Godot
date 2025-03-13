@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckhaspxarvopw"]
+
+[ext_resource type="Texture2D" uid="uid://bdbb0wdrjfyso" path="res://assets/textures/obj/line.png" id="1_vmtyy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i7w27"]
+transparency = 1
+albedo_texture = ExtResource("1_vmtyy")
+emission_enabled = true
+emission = Color(0.541176, 0.690196, 1, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rpr2u"]
+material = SubResource("StandardMaterial3D_i7w27")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+mesh = SubResource("PlaneMesh_rpr2u")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -1, 0, 0)
+mesh = SubResource("PlaneMesh_rpr2u")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -1, 0, 0)
+mesh = SubResource("PlaneMesh_rpr2u")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.707107, 0.707107, 0, -0.707107, -0.707107, -1, 0, 0)
+mesh = SubResource("PlaneMesh_rpr2u")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, -1, -1, 0, 0)
+mesh = SubResource("PlaneMesh_rpr2u")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.707107, -0.707107, 0, 0.707107, -0.707107, -1, 0, 0)
+mesh = SubResource("PlaneMesh_rpr2u")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -1, 0, 0)
+mesh = SubResource("PlaneMesh_rpr2u")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -1, 0, 0)
+mesh = SubResource("PlaneMesh_rpr2u")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+mesh = SubResource("PlaneMesh_rpr2u")

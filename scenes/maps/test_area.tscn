@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dudb1j58spiqs"]
+[gd_scene load_steps=18 format=3 uid="uid://dudb1j58spiqs"]
 
 [ext_resource type="Texture2D" uid="uid://c8w2y027d6koa" path="res://assets/textures/dev/grids/Dark/texture_07.png" id="1_q3qxj"]
 [ext_resource type="Texture2D" uid="uid://ds37b38vli6wg" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_l8equ"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://cw4ice8i238jm" path="res://scenes/objects/Testing/test_pickup.tscn" id="7_1345l"]
 [ext_resource type="PackedScene" uid="uid://g386sbqjtrjh" path="res://scenes/objects/water_plane.tscn" id="9_si7nd"]
 [ext_resource type="PackedScene" uid="uid://by4ao52surwi3" path="res://scenes/objects/keypad.tscn" id="10_d5erw"]
+[ext_resource type="PackedScene" uid="uid://d4jwu1207et7a" path="res://scenes/environment/parts/cube_full.tscn" id="12_crs25"]
+[ext_resource type="PackedScene" uid="uid://b3fsgw2jnke7j" path="res://scenes/environment/parts/cube_untop.tscn" id="13_w4blf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pnsss"]
 resource_local_to_scene = true
@@ -1087,6 +1089,335 @@ transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 122.6, -1.406, -33.2)
 
 [node name="keypad" parent="." instance=ExtResource("10_d5erw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6, 1.5, 15.3)
+
+[node name="DIGITAL" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 7.60347, -1)
+
+[node name="D" type="Node3D" parent="DIGITAL"]
+
+[node name="Node3D8" parent="DIGITAL/D" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+
+[node name="Node3D12" parent="DIGITAL/D" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -8)
+
+[node name="Node3D" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="Node3D13" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -8)
+
+[node name="Node3D14" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="Node3D15" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -8)
+
+[node name="Node3D16" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, -8)
+
+[node name="Node3D17" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, -8)
+
+[node name="Node3D18" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -8, -6)
+
+[node name="Node3D19" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -8, -4)
+
+[node name="Node3D20" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -8, -2)
+
+[node name="Node3D5" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+
+[node name="Node3D6" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Node3D7" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="Node3D9" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 6, -2)
+
+[node name="Node3D10" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 6, -4)
+
+[node name="Node3D11" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 6, -6)
+
+[node name="Node3D2" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+
+[node name="Node3D3" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
+
+[node name="Node3D4" parent="DIGITAL/D" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0)
+
+[node name="A" type="Node3D" parent="DIGITAL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -52)
+
+[node name="Node3D8" parent="DIGITAL/A" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+
+[node name="Node3D12" parent="DIGITAL/A" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -8)
+
+[node name="Node3D" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="Node3D13" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -8)
+
+[node name="Node3D14" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="Node3D15" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -8)
+
+[node name="Node3D16" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, -8)
+
+[node name="Node3D17" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, -8)
+
+[node name="Node3D18" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -6)
+
+[node name="Node3D19" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -4)
+
+[node name="Node3D20" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -2)
+
+[node name="Node3D5" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+
+[node name="Node3D6" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Node3D7" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="Node3D9" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 6, -2)
+
+[node name="Node3D10" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 6, -4)
+
+[node name="Node3D11" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 6, -6)
+
+[node name="Node3D2" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+
+[node name="Node3D3" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
+
+[node name="Node3D4" parent="DIGITAL/A" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0)
+
+[node name="I" type="Node3D" parent="DIGITAL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14)
+
+[node name="Node3D8" parent="DIGITAL/I" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+
+[node name="Node3D" parent="DIGITAL/I" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="Node3D20" parent="DIGITAL/I" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -8, -2)
+
+[node name="Node3D22" parent="DIGITAL/I" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 6, 2)
+
+[node name="Node3D21" parent="DIGITAL/I" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, -8, 2)
+
+[node name="Node3D5" parent="DIGITAL/I" instance=ExtResource("13_w4blf")]
+
+[node name="Node3D6" parent="DIGITAL/I" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Node3D7" parent="DIGITAL/I" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="Node3D9" parent="DIGITAL/I" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 6, -2)
+
+[node name="Node3D2" parent="DIGITAL/I" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+
+[node name="Node3D3" parent="DIGITAL/I" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
+
+[node name="Node3D4" parent="DIGITAL/I" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0)
+
+[node name="G" type="Node3D" parent="DIGITAL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+
+[node name="Node3D13" parent="DIGITAL/G" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, -2)
+
+[node name="Node3D14" parent="DIGITAL/G" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -2)
+
+[node name="Node3D20" parent="DIGITAL/G" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="Node3D22" parent="DIGITAL/G" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -8)
+
+[node name="Node3D12" parent="DIGITAL/G" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -8)
+
+[node name="Node3D" parent="DIGITAL/G" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="Node3D15" parent="DIGITAL/G" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -2, -6)
+
+[node name="Node3D16" parent="DIGITAL/G" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, -8)
+
+[node name="Node3D17" parent="DIGITAL/G" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, -8)
+
+[node name="Node3D18" parent="DIGITAL/G" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -8, -6)
+
+[node name="Node3D19" parent="DIGITAL/G" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -8, -4)
+
+[node name="Node3D5" parent="DIGITAL/G" instance=ExtResource("13_w4blf")]
+
+[node name="Node3D6" parent="DIGITAL/G" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Node3D10" parent="DIGITAL/G" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 6, -4)
+
+[node name="Node3D11" parent="DIGITAL/G" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 6, -6)
+
+[node name="Node3D2" parent="DIGITAL/G" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+
+[node name="Node3D3" parent="DIGITAL/G" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
+
+[node name="I2" type="Node3D" parent="DIGITAL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -34)
+
+[node name="Node3D8" parent="DIGITAL/I2" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+
+[node name="Node3D" parent="DIGITAL/I2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="Node3D20" parent="DIGITAL/I2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -8, -2)
+
+[node name="Node3D22" parent="DIGITAL/I2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 6, 2)
+
+[node name="Node3D21" parent="DIGITAL/I2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, -8, 2)
+
+[node name="Node3D5" parent="DIGITAL/I2" instance=ExtResource("13_w4blf")]
+
+[node name="Node3D6" parent="DIGITAL/I2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Node3D7" parent="DIGITAL/I2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="Node3D9" parent="DIGITAL/I2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 6, -2)
+
+[node name="Node3D2" parent="DIGITAL/I2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+
+[node name="Node3D3" parent="DIGITAL/I2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
+
+[node name="Node3D4" parent="DIGITAL/I2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0)
+
+[node name="T" type="Node3D" parent="DIGITAL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -44)
+
+[node name="Node3D8" parent="DIGITAL/T" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+
+[node name="Node3D" parent="DIGITAL/T" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="Node3D20" parent="DIGITAL/T" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 6, -4)
+
+[node name="Node3D22" parent="DIGITAL/T" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 6, 2)
+
+[node name="Node3D21" parent="DIGITAL/T" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 6, 4)
+
+[node name="Node3D5" parent="DIGITAL/T" instance=ExtResource("13_w4blf")]
+
+[node name="Node3D6" parent="DIGITAL/T" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Node3D7" parent="DIGITAL/T" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="Node3D9" parent="DIGITAL/T" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 6, -2)
+
+[node name="Node3D2" parent="DIGITAL/T" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+
+[node name="Node3D3" parent="DIGITAL/T" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
+
+[node name="Node3D4" parent="DIGITAL/T" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0)
+
+[node name="T2" type="Node3D" parent="DIGITAL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -68)
+
+[node name="Node3D8" parent="DIGITAL/T2" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 4)
+
+[node name="Node3D10" parent="DIGITAL/T2" instance=ExtResource("12_crs25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0)
+
+[node name="Node3D" parent="DIGITAL/T2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 4)
+
+[node name="Node3D22" parent="DIGITAL/T2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, -8, 2)
+
+[node name="Node3D21" parent="DIGITAL/T2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, -8, 4)
+
+[node name="Node3D5" parent="DIGITAL/T2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Node3D6" parent="DIGITAL/T2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 4)
+
+[node name="Node3D7" parent="DIGITAL/T2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 4)
+
+[node name="Node3D9" parent="DIGITAL/T2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -8, -2)
+
+[node name="Node3D2" parent="DIGITAL/T2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 4)
+
+[node name="Node3D3" parent="DIGITAL/T2" instance=ExtResource("13_w4blf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 4)
 
 [connection signal="interacted" from="BT_Test" to="Door" method="toggle_door"]
 [connection signal="interacted" from="BT_Test2" to="Door2" method="toggle_door"]
