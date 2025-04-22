@@ -1,0 +1,164 @@
+[gd_scene load_steps=9 format=3 uid="uid://rhra853ndqb1"]
+
+[ext_resource type="PackedScene" uid="uid://cv7y3f048vl5y" path="res://scenes/objects/pilar.tscn" id="1_l536o"]
+[ext_resource type="PackedScene" uid="uid://hob0odd0bhgw" path="res://scenes/objects/player.tscn" id="2_ekr4n"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_i1eno"]
+rayleigh_coefficient = 0.0
+rayleigh_color = Color(0.376471, 0.407843, 0.462745, 1)
+mie_coefficient = 1.0
+mie_eccentricity = 0.5
+mie_color = Color(0.543111, 0.777771, 0.648142, 1)
+turbidity = 210.84
+ground_color = Color(0.101961, 0.0705882, 0.0352941, 1)
+
+[sub_resource type="Sky" id="Sky_juw47"]
+sky_material = SubResource("PhysicalSkyMaterial_i1eno")
+
+[sub_resource type="Environment" id="Environment_t8fuy"]
+sky = SubResource("Sky_juw47")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 0.776471, 1)
+reflected_light_source = 2
+glow_enabled = true
+glow_normalized = true
+fog_enabled = true
+fog_light_color = Color(0.709804, 0.819608, 0.992157, 1)
+fog_light_energy = 1.5
+fog_density = 0.0005
+fog_height = -132.66
+fog_height_density = 0.005
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0065
+adjustment_enabled = true
+adjustment_brightness = 1.13
+
+[sub_resource type="Animation" id="Animation_ay146"]
+resource_name = "new_animation"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:environment:fog_light_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.709804, 0.819608, 0.992157, 1), Color(0.478431, 0.890196, 0.913725, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_57h1x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:environment:fog_light_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.709804, 0.819608, 0.992157, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wbctp"]
+_data = {
+"RESET": SubResource("Animation_57h1x"),
+"new_animation": SubResource("Animation_ay146")
+}
+
+[node name="Pilars" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.0818, -198.966, 2877.89)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.861394, -0.44561, -0.243788, 0.50317, 0.682997, 0.529466, -0.0694289, -0.578745, 0.812548, 78.0818, 198.966, -2877.89)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_t8fuy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WorldEnvironment"]
+libraries = {
+"": SubResource("AnimationLibrary_wbctp")
+}
+
+[node name="Pilar" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -863.782, 196.495, -1900.55)
+
+[node name="Pilar2" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -363.782, 196.495, -1900.55)
+
+[node name="Pilar3" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 136.218, 196.495, -1900.55)
+
+[node name="Pilar4" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 636.218, 196.495, -1900.55)
+
+[node name="Pilar5" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 1136.22, 196.495, -1900.55)
+
+[node name="Pilar6" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -863.782, 196.495, -2400.55)
+
+[node name="Pilar7" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -363.782, 196.495, -2400.55)
+
+[node name="Pilar8" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 136.218, 196.495, -2400.55)
+
+[node name="Pilar9" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 636.218, 196.495, -2400.55)
+
+[node name="Pilar10" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 1136.22, 196.495, -2400.55)
+
+[node name="Pilar11" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -863.782, 196.495, -2900.55)
+
+[node name="Pilar12" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -363.782, 196.495, -2900.55)
+
+[node name="Pilar13" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 136.218, 196.495, -2900.55)
+
+[node name="Pilar14" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 636.218, 196.495, -2900.55)
+
+[node name="Pilar15" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 1136.22, 196.495, -2900.55)
+
+[node name="Pilar16" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -863.782, 196.495, -3400.55)
+
+[node name="Pilar17" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -363.782, 196.495, -3400.55)
+
+[node name="Pilar18" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 136.218, 196.495, -3400.55)
+
+[node name="Pilar19" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 636.218, 196.495, -3400.55)
+
+[node name="Pilar20" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 1136.22, 196.495, -3400.55)
+
+[node name="Pilar21" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -863.782, 196.495, -3900.55)
+
+[node name="Pilar22" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -363.782, 196.495, -3900.55)
+
+[node name="Pilar23" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 136.218, 196.495, -3900.55)
+
+[node name="Pilar24" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 636.218, 196.495, -3900.55)
+
+[node name="Pilar25" parent="." instance=ExtResource("1_l536o")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 1136.22, 196.495, -3900.55)
+
+[node name="player" parent="." instance=ExtResource("2_ekr4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -483.673, 201.864, -2962.37)

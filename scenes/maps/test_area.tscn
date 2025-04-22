@@ -11,19 +11,20 @@
 [ext_resource type="PackedScene" uid="uid://cw4ice8i238jm" path="res://scenes/objects/Testing/test_pickup.tscn" id="7_1345l"]
 [ext_resource type="PackedScene" uid="uid://g386sbqjtrjh" path="res://scenes/objects/water_plane.tscn" id="9_si7nd"]
 [ext_resource type="PackedScene" uid="uid://by4ao52surwi3" path="res://scenes/objects/keypad.tscn" id="10_d5erw"]
-[ext_resource type="PackedScene" uid="uid://d4jwu1207et7a" path="res://scenes/environment/parts/cube_full.tscn" id="12_crs25"]
-[ext_resource type="PackedScene" uid="uid://b3fsgw2jnke7j" path="res://scenes/environment/parts/cube_untop.tscn" id="13_w4blf"]
+[ext_resource type="PackedScene" uid="uid://d4jwu1207et7a" path="res://scenes/environment/things/cube_full.tscn" id="12_crs25"]
+[ext_resource type="PackedScene" uid="uid://b3fsgw2jnke7j" path="res://scenes/environment/things/cube_untop.tscn" id="13_w4blf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pnsss"]
 resource_local_to_scene = true
 albedo_texture = ExtResource("1_q3qxj")
 uv1_triplanar = true
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fy17b"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jnxjc"]
+resource_local_to_scene = true
 panorama = ExtResource("2_l8equ")
 
 [sub_resource type="Sky" id="Sky_gys16"]
-sky_material = SubResource("PanoramaSkyMaterial_fy17b")
+sky_material = SubResource("PanoramaSkyMaterial_jnxjc")
 
 [sub_resource type="Environment" id="Environment_gwwsl"]
 background_mode = 2
@@ -34,6 +35,7 @@ glow_enabled = true
 [node name="world" type="Node3D"]
 
 [node name="stage" type="Node3D" parent="."]
+visible = false
 
 [node name="floor" type="CSGBox3D" parent="stage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, 8.5)
@@ -346,6 +348,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.5, 42.75, -85.25)
 use_collision = true
 collision_layer = 4
 size = Vector3(26, 76, 26)
+material = SubResource("StandardMaterial3D_pnsss")
+
+[node name="floor82" type="CSGBox3D" parent="stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.36327, 5.36452, -18.2796)
+use_collision = true
+collision_layer = 4
+size = Vector3(5.0448, 15.0698, 39.5268)
 material = SubResource("StandardMaterial3D_pnsss")
 
 [node name="floor20" type="CSGBox3D" parent="stage"]
