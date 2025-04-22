@@ -1,8 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dudb1j58spiqs"]
+[gd_scene load_steps=17 format=3 uid="uid://dudb1j58spiqs"]
 
 [ext_resource type="Texture2D" uid="uid://c8w2y027d6koa" path="res://assets/textures/dev/grids/Dark/texture_07.png" id="1_q3qxj"]
-[ext_resource type="Texture2D" uid="uid://ds37b38vli6wg" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_l8equ"]
 [ext_resource type="Material" uid="uid://q1u11i5wp76w" path="res://assets/materials/green_grass.tres" id="2_vbclm"]
+[ext_resource type="Material" uid="uid://dos6nea8yiry5" path="res://assets/materials/shader_materials/ASCII.tres" id="3_p5yvh"]
 [ext_resource type="PackedScene" uid="uid://hob0odd0bhgw" path="res://scenes/objects/player.tscn" id="3_pioef"]
 [ext_resource type="PackedScene" uid="uid://cwfdbw7eignm8" path="res://scenes/objects/button_simple.tscn" id="4_h7fie"]
 [ext_resource type="Resource" uid="uid://bv2ja5isdrw0s" path="res://objects/inventory/main_inventory.tres" id="5_1dcbn"]
@@ -19,12 +19,8 @@ resource_local_to_scene = true
 albedo_texture = ExtResource("1_q3qxj")
 uv1_triplanar = true
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jnxjc"]
-resource_local_to_scene = true
-panorama = ExtResource("2_l8equ")
-
 [sub_resource type="Sky" id="Sky_gys16"]
-sky_material = SubResource("PanoramaSkyMaterial_jnxjc")
+sky_material = ExtResource("3_p5yvh")
 
 [sub_resource type="Environment" id="Environment_gwwsl"]
 background_mode = 2
@@ -35,7 +31,6 @@ glow_enabled = true
 [node name="world" type="Node3D"]
 
 [node name="stage" type="Node3D" parent="."]
-visible = false
 
 [node name="floor" type="CSGBox3D" parent="stage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, 8.5)

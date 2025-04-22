@@ -33,6 +33,21 @@ volumetric_fog_density = 0.0065
 adjustment_enabled = true
 adjustment_brightness = 1.13
 
+[sub_resource type="Animation" id="Animation_57h1x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:environment:fog_light_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.709804, 0.819608, 0.992157, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_ay146"]
 resource_name = "new_animation"
 length = 10.0
@@ -48,21 +63,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0.709804, 0.819608, 0.992157, 1), Color(0.478431, 0.890196, 0.913725, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_57h1x"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:environment:fog_light_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.709804, 0.819608, 0.992157, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wbctp"]

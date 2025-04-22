@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dbdlgwlp6b61q"]
+
+[ext_resource type="Shader" path="res://assets/materials/shader_materials/test.gdshader" id="1_bhyax"]
+
+[resource]
+shader = ExtResource("1_bhyax")
+shader_parameter/brightness = 2.0
+shader_parameter/contrast = 1.0
+shader_parameter/saturation = 1.0
