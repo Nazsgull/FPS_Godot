@@ -1,3 +1,6 @@
+#BANCO DE PECES, monetario, pero la moneda son los peces.
+#Cada día que pasa se deduce "fish_upkeep" para alimentar a los habitantes de la aldea.
+
 extends Node3D
 @onready var fish_label = $Label3D
 @onready var player = get_tree().get_first_node_in_group("player")
@@ -19,7 +22,8 @@ func get_fish_upkeep() -> int:
 func _ready():
 	_update_text()
 
-func _day_pass()-> void:
+
+func day_pass():
 	fish_actual = fish_actual - fish_upkeep
 	_update_text()
 	days += 1

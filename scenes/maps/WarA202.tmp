@@ -67,6 +67,15 @@ transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -10, 5
 
 [node name="player" parent="." instance=ExtResource("4_a02oc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 8, 17)
+WALKING_SPEED = 5.0
+SPRINTING_SPEED = 8.0
+CROUCHING_SPEED = 2.0
+ground_lerp_speed = 10.0
+air_lerp_speed = 10.0
+mouse_sens = 0.2
+invert_y_look = -1
+capture_mouse = true
+fishcount = 10
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.965926, 0, -0.258819, 0.258819, 1.31134e-07, 0.965926, 3.394e-08, -1, 1.26666e-07, 0, 0, 0)

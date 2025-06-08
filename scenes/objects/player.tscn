@@ -116,6 +116,6 @@ font = ExtResource("7_bnmlf")
 font_size = 256
 outline_size = 20
 
-[node name="fishcount_updater" type="Timer" parent="."]
+[node name="fishcount_updater" type="Timer" parent="." groups=["jugador"]]
 
 [connection signal="timeout" from="fishcount_updater" to="." method="_on_timer_timeout"]
