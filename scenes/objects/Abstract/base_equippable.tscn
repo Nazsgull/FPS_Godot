@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://csj4m2tdlxwgf"]
+
+[ext_resource type="Script" path="res://scripts/base_equippable.gd" id="1_tx2e0"]
+
+[node name="BaseEquippable" type="Node3D"]
+script = ExtResource("1_tx2e0")
+
+[node name="pivot" type="Node3D" parent="."]
+
+[node name="vis" type="Node3D" parent="pivot"]

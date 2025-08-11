@@ -2,7 +2,7 @@ extends Node3D
 var used = false
 signal pickup(what_item_path:String)
 
-@export var scene:String = "res://scenes/objects/Equippables/test_equippable.tscn"
+@export var scene:String = "res://scenes/objects/fishing_rod.tscn"
 
 @onready var timer = $Timer
 @onready var audio_sp = $AudioStreamPlayer

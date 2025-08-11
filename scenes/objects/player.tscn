@@ -103,7 +103,7 @@ grow_vertical = 2
 scale = Vector2(0.01, 0.01)
 texture = ExtResource("3_e6h1u")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="crouch_uncrouch_animPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_03bfd")
 }

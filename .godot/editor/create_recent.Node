@@ -1,9 +1,9 @@
+CSGBox3D
+Node3D
 Timer
 Label3D
 MeshInstance3D
 FogVolume
-CSGBox3D
-Node3D
 DirectionalLight3D
 AnimationPlayer
 WorldEnvironment

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://joso5nj5anwa"]
+
+[ext_resource type="PackedScene" uid="uid://csj4m2tdlxwgf" path="res://scenes/objects/Abstract/base_equippable.tscn" id="1_7erqv"]
+[ext_resource type="PackedScene" uid="uid://b6lradejrrjqw" path="res://scenes/objects/fishing_rod.tscn" id="2_f1b7n"]
+
+[node name="BaseEquippable" instance=ExtResource("1_7erqv")]
+
+[node name="FishingRod" parent="pivot/vis" index="0" instance=ExtResource("2_f1b7n")]
+transform = Transform3D(0.965926, 0.061522, -0.251401, 0, 0.971338, 0.237703, 0.258819, -0.229603, 0.93824, 0.365325, -1, 0)

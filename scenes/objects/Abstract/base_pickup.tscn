@@ -1,12 +1,33 @@
 [gd_scene load_steps=4 format=3 uid="uid://p3glnphhxh3o"]
 
-[ext_resource type="Script" path="res://scripts/equippable_pickup.gd" id="1_hqxxt"]
 [ext_resource type="AudioStream" uid="uid://cae5tltvmwqmd" path="res://assets/audio/Pickup_Coin.mp3" id="2_lxk8t"]
+
+[sub_resource type="GDScript" id="GDScript_m3m5h"]
+script/source = "extends Node3D
+var used = false
+signal pickup(what_item_path:String)
+
+@export var scene:String = \"res://scenes/objects/Equippables/test_equippable.tscn\"
+
+@onready var timer = $Timer
+@onready var audio_sp = $AudioStreamPlayer
+@onready var player:Player = get_tree().get_nodes_in_group(\"player\")[0]
+
+func _on_area_3d_body_entered(_body):
+	if !used:
+		used = true
+		audio_sp.play()
+		player.handle_pickup(scene)
+		timer.start()
+
+func _on_timer_timeout():
+	self.queue_free()
+"
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hi60q"]
 
 [node name="equippable_pickup" type="Node3D"]
-script = ExtResource("1_hqxxt")
+script = SubResource("GDScript_m3m5h")
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 8

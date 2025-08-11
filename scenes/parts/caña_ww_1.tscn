@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxh5b4qwy60ub"]
+
+[ext_resource type="PackedScene" uid="uid://cp465kf8115v4" path="res://assets/models_gltf/caña_ww_1.glb" id="1_tvxkd"]
+
+[node name="caña_ww_1" instance=ExtResource("1_tvxkd")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
