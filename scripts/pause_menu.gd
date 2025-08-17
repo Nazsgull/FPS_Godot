@@ -2,9 +2,12 @@ extends Control
 @onready var conf_diag = $ConfirmationDialog
 @onready var player_root = $"../../../" #we jump 3 up in the player component hierarchy
 @onready var main_menu_path = "res://scenes/UI/main_menu.tscn"
+signal paused
+signal unpaused
+
 func handle_resume_pressed() -> void:
 	player_root.handle_pause()
-
+	emit_signal("paused")
 func handle_options_pressed() -> void:
 	pass
 
