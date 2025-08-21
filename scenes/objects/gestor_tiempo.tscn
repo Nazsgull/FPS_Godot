@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://dsi3ppghy4huk"]
 
-[ext_resource type="Script" path="res://Dias.gd" id="1_00lcg"]
+[ext_resource type="Script" path="res://scripts/Dias.gd" id="1_00lcg"]
+
 
 [node name="GestorTiempo" type="Node3D"]
 script = ExtResource("1_00lcg")

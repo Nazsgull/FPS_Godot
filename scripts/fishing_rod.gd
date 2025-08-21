@@ -8,8 +8,9 @@ var _callable_unpause = Callable(self,"handle_unpause")
 # Called when the node enters the scene tree for the first time.
 # Conecto las señales a los métodos (declarados arriba)
 func _ready():
-	connect("paused", _callable_pause)
-	connect("unpaused", _callable_unpause)
+	Messenger.connect("PAUSED",_callable_pause,2)
+	Messenger.connect("UNPAUSED",_callable_unpause,2)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

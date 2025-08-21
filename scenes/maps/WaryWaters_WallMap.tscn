@@ -46,6 +46,8 @@ volumetric_fog_ambient_inject = 2.0
 [node name="WaryWatersWallMap" type="Node3D"]
 script = ExtResource("1_yaoay")
 
+[node name="tierra_firme" type="Node3D" parent="."]
+
 [node name="water_plane" parent="." instance=ExtResource("1_i0w1c")]
 transform = Transform3D(500, 0, 0, 0, 500, 0, 0, 0, 500, -500, 0, 0)
 

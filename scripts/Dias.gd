@@ -13,4 +13,4 @@ func _process(delta):
 
 func _on_timer_timeout():
 	emit_signal("ha_pasado_un_dia")
-	printerr("HA PASADO UN DÍA")
+	print("HA PASADO UN DÍA")

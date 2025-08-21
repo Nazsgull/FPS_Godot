@@ -133,17 +133,19 @@ func handle_jumping(_delta) -> void:
 	
 # Function to handle pausing the game (NOT a movement state)
 func handle_pause():
+	paused = !paused
 	if paused:
-		pause_menu.hide()
-		Engine.time_scale = 1
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		pointer.show()
-	else:
 		pause_menu.show()
 		Engine.time_scale = 0
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		pointer.hide()
-	paused = !paused
+		Messenger.emit_signal("PAUSED")
+	else:
+		pause_menu.hide()
+		Engine.time_scale = 1
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		pointer.show()
+		Messenger.emit_signal("UNPAUSED")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -165,6 +167,7 @@ func get_input(delta):
 func _physics_process(delta):
 	if Input.is_action_just_pressed("Pause"):
 		handle_pause()
+
 	#Handle movement states
 	_update_state_machine(delta)
 	
