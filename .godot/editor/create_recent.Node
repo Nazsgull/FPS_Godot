@@ -1,4 +1,5 @@
 Node3D
+Node
 CSGBox3D
 Timer
 Label3D
@@ -11,4 +12,3 @@ AnimationTree
 ConfirmationDialog
 GridContainer
 Sprite2D
-ColorRect

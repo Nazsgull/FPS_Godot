@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bikxoxh7s25kr"]
+
+[ext_resource type="PackedScene" uid="uid://c5c2w834dunvv" path="res://assets/models_gltf/Neriglissar_platform/Neriglissar_WW_sección_babor.glb" id="1_hgjrb"]
+
+[node name="Neriglissar_WW_sección_babor" instance=ExtResource("1_hgjrb")]

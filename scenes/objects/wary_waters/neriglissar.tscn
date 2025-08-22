@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://davfoyfwx6vm4"]
+
+[ext_resource type="PackedScene" uid="uid://c5c2w834dunvv" path="res://assets/models_gltf/Neriglissar_platform/Neriglissar_WW_sección_babor.glb" id="1_puh8w"]
+[ext_resource type="PackedScene" uid="uid://c2ogsk2n4tpiu" path="res://assets/models_gltf/Neriglissar_platform/Neriglissar_WW_sección_estribor.glb" id="2_otd24"]
+[ext_resource type="PackedScene" uid="uid://cca0xxg4k12ei" path="res://assets/models_gltf/Neriglissar_platform/Neriglissar_WW_sección_puente.glb" id="3_734nw"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Ng_sección_babor" parent="." instance=ExtResource("1_puh8w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.4, 7.4)
+
+[node name="Ng_sección_estribor" parent="." instance=ExtResource("2_otd24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.5, 7.5)
+
+[node name="Ng_sección_puente" parent="." instance=ExtResource("3_734nw")]

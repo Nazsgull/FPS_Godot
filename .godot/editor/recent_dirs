@@ -1,8 +1,8 @@
-res://scripts/global
+res://scenes/parts
 res://scenes/objects/wary_waters
+res://scripts/global
 res://scripts
 res://scenes/objects/Abstract
-res://scenes/parts
 res://assets/fonts
 res://scenes/objects
 res://scripts/classes

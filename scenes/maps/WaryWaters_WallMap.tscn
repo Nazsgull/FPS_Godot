@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b2ddllldugrvc"]
+[gd_scene load_steps=17 format=3 uid="uid://b2ddllldugrvc"]
 
 [ext_resource type="PackedScene" uid="uid://g386sbqjtrjh" path="res://scenes/objects/water_plane.tscn" id="1_i0w1c"]
 [ext_resource type="Script" path="res://scripts/WaryWaters_WallMap.gd" id="1_yaoay"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c08w371nri2fs" path="res://scenes/objects/fish_bank.tscn" id="6_w2flc"]
 [ext_resource type="PackedScene" uid="uid://dsi3ppghy4huk" path="res://scenes/objects/gestor_tiempo.tscn" id="7_vtp0w"]
 [ext_resource type="PackedScene" uid="uid://bsidce2fpxi8m" path="res://scenes/objects/wary_waters/fishing_rod_pickup.tscn" id="8_h7lfs"]
+[ext_resource type="PackedScene" uid="uid://davfoyfwx6vm4" path="res://scenes/objects/wary_waters/neriglissar.tscn" id="9_yqr1e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x07qw"]
 albedo_color = Color(0, 0, 0, 1)
@@ -37,10 +38,12 @@ sky = SubResource("Sky_86fsu")
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 fog_density = 0.02
-volumetric_fog_density = 0.01
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0378
+volumetric_fog_albedo = Color(0.556953, 0.556953, 0.556953, 1)
 volumetric_fog_emission = Color(0.596078, 0.717647, 0.956863, 1)
-volumetric_fog_emission_energy = 0.5
-volumetric_fog_length = 500.0
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_length = 175.0
 volumetric_fog_ambient_inject = 2.0
 
 [node name="WaryWatersWallMap" type="Node3D"]
@@ -68,19 +71,13 @@ environment = SubResource("Environment_j68he")
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -10, 5, -4.37114e-07)
 
 [node name="player" parent="." instance=ExtResource("4_a02oc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 8, 17)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 7, 30)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.965926, 0, -0.258819, 0.258819, 1.31134e-07, 0.965926, 3.394e-08, -1, 1.26666e-07, 0, 0, 0)
 
 [node name="Button_fancy" parent="." instance=ExtResource("5_jhipa")]
 transform = Transform3D(0.241718, -0.43769, 0, 0.43769, 0.241718, 0, 0, 0, 0.5, -67.5166, 8.87538, 18.5)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69, 7, 18)
-use_collision = true
-collision_layer = 4
-size = Vector3(20, 1, 200)
 
 [node name="Fish_bank" parent="." instance=ExtResource("6_w2flc")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -68, 9, 17.5)
@@ -90,6 +87,9 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -68, 9
 [node name="fishing_rod_pickup" parent="." instance=ExtResource("8_h7lfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71, 9, 13)
 scene = "res://scenes/objects/wary_waters/fishing_rod_equippable.tscn"
+
+[node name="neriglissar" parent="." instance=ExtResource("9_yqr1e")]
+transform = Transform3D(-2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, -32, 7, 0)
 
 [connection signal="interacted" from="Button_fancy" to="Piston" method="_on_button_fancy_interacted"]
 [connection signal="interacted" from="Button_fancy" to="Fish_bank" method="donate_1fish"]
