@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c2ogsk2n4tpiu"
+uid="uid://nvxyuyrm2i3i"
 path="res://.godot/imported/Neriglissar_WW_sección_estribor.glb-f77208916b2598f54b6671e992d3dd98.scn"
 
 [deps]
@@ -34,6 +34,7 @@ _subresources={
 "PATH:mergedBlocks(Clone)": {
 "generate/physics": true,
 "physics/layer": 4,
+"physics/mask": 0,
 "physics/shape_type": 2
 }
 }

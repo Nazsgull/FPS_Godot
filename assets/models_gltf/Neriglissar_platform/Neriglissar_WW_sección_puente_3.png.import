@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cljj4tgipputt"
-path.s3tc="res://.godot/imported/Neriglissar_WW_sección_babor_2.png-204f32ba230bbeeec007a2a0b197e88d.s3tc.ctex"
+uid="uid://ngy3wod6jpve"
+path.s3tc="res://.godot/imported/Neriglissar_WW_sección_puente_3.png-37fc27b4f5c8327ac14562a9d4825245.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "7050e14a34bdcb94d4acef5477093778"
+"md5": "41112925581775f7ee7725daac7985b7"
 }
 
 [deps]
 
-source_file="res://assets/models_gltf/Neriglissar_platform/Neriglissar_WW_sección_babor_2.png"
-dest_files=["res://.godot/imported/Neriglissar_WW_sección_babor_2.png-204f32ba230bbeeec007a2a0b197e88d.s3tc.ctex"]
+source_file="res://assets/models_gltf/Neriglissar_platform/Neriglissar_WW_sección_puente_3.png"
+dest_files=["res://.godot/imported/Neriglissar_WW_sección_puente_3.png-37fc27b4f5c8327ac14562a9d4825245.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c5c2w834dunvv"
+uid="uid://dq1415g4dvpx4"
 path="res://.godot/imported/Neriglissar_WW_sección_babor.glb-c23aaa19813fb793a51fccfda7f4c8dc.scn"
 
 [deps]
@@ -34,6 +34,7 @@ _subresources={
 "PATH:mergedBlocks(Clone)": {
 "generate/physics": true,
 "physics/layer": 4,
+"physics/mask": 0,
 "physics/shape_type": 2
 }
 }
