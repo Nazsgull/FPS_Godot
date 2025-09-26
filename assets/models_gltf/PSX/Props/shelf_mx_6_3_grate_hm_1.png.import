@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cu3aytxtu858r"
+path.s3tc="res://.godot/imported/shelf_mx_6_3_grate_hm_1.png-f9421d78bc04777fb5158315035a6da4.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "f36c5c897063218a9685e8cd906b1bb8"
+}
+
+[deps]
+
+source_file="res://assets/models_gltf/PSX/Props/shelf_mx_6_3_grate_hm_1.png"
+dest_files=["res://.godot/imported/shelf_mx_6_3_grate_hm_1.png-f9421d78bc04777fb5158315035a6da4.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

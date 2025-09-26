@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://btk316ku8gwvb"
+path.s3tc="res://.godot/imported/metal_barrel_hr_4_metal_barrel_hr_4.png-c5fe80afa4600b9f6bd94b0645a9dff9.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "333b7fd2eadc8aeb3a21120ea93ad563"
+}
+
+[deps]
+
+source_file="res://assets/models_gltf/PSX/Props/metal_barrel_hr_4_metal_barrel_hr_4.png"
+dest_files=["res://.godot/imported/metal_barrel_hr_4_metal_barrel_hr_4.png-c5fe80afa4600b9f6bd94b0645a9dff9.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

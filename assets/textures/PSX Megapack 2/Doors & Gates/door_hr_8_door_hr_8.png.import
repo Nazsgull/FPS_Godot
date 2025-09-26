@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://g8hvtqy2i8oe"
+path.s3tc="res://.godot/imported/door_hr_8_door_hr_8.png-21659bf3b490374b0c04f4b2fede1356.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "0757260fcfbb499c721571cc9349e26c"
+}
+
+[deps]
+
+source_file="res://assets/textures/PSX Megapack 2/Doors & Gates/door_hr_8_door_hr_8.png"
+dest_files=["res://.godot/imported/door_hr_8_door_hr_8.png-21659bf3b490374b0c04f4b2fede1356.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

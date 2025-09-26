@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ddq5olotuf16b"
+path.s3tc="res://.godot/imported/poster_cx_13_poster_cx_13.png-3853a0ed087a2cb63ce0fe4d95987d89.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "4915a0cc7d795d5b7bcf8589b29bb71a"
+}
+
+[deps]
+
+source_file="res://assets/textures/PSX Megapack 2/Decals/poster_cx_13_poster_cx_13.png"
+dest_files=["res://.godot/imported/poster_cx_13_poster_cx_13.png-3853a0ed087a2cb63ce0fe4d95987d89.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

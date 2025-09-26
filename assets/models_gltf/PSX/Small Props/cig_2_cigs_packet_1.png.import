@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://f3dbgjlogu4q"
+path.s3tc="res://.godot/imported/cig_2_cigs_packet_1.png-ae1e2d78a1fecd0b1f70df6fe250cb18.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "7e4749c78801b7e096c3038a56db27cc"
+}
+
+[deps]
+
+source_file="res://assets/models_gltf/PSX/Small Props/cig_2_cigs_packet_1.png"
+dest_files=["res://.godot/imported/cig_2_cigs_packet_1.png-ae1e2d78a1fecd0b1f70df6fe250cb18.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b7v6euq2jmp3r"
+path.s3tc="res://.godot/imported/ceiling_peace_1_metal_floor_2.png-a18bae76b5f9833ec620340af5a317b7.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "1fd33ac2eb0adb1c6ad3b2f8e6f3c6ce"
+}
+
+[deps]
+
+source_file="res://assets/models_gltf/PSX/Misc/ceiling_peace_1_metal_floor_2.png"
+dest_files=["res://.godot/imported/ceiling_peace_1_metal_floor_2.png-a18bae76b5f9833ec620340af5a317b7.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

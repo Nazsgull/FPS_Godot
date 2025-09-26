@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://wk8bf6n4unl1"
+path.s3tc="res://.godot/imported/garage_door_frame_hr_2_garage_door_hm_8.png-5b952dcf3209027950d77d166261e59c.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "294a45bf8fcb2ab2994306df59c5e663"
+}
+
+[deps]
+
+source_file="res://assets/models_gltf/PSX/Modular Structures/garage_door_frame_hr_2_garage_door_hm_8.png"
+dest_files=["res://.godot/imported/garage_door_frame_hr_2_garage_door_hm_8.png-5b952dcf3209027950d77d166261e59c.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

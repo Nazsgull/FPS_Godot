@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cmo7lqoc1rnk1"
+path.s3tc="res://.godot/imported/keypad_1_keypad_1_emission.png-96a3d03f013571d0329097fe4c6b5fbd.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "328514b3001e789a8f8663f1b9f7d456"
+}
+
+[deps]
+
+source_file="res://assets/models_gltf/PSX/Small Props/keypad_1_keypad_1_emission.png"
+dest_files=["res://.godot/imported/keypad_1_keypad_1_emission.png-96a3d03f013571d0329097fe4c6b5fbd.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

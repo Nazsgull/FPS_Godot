@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c5esqy1468sfg"
+path.s3tc="res://.godot/imported/ramp_platform_wide_mx_1_concrete_hr_4.png-fdfe922d0923212007a5825f1df2639a.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "e32714842c6fd484527e2697d4016277"
+}
+
+[deps]
+
+source_file="res://assets/models_gltf/PSX/Modular Structures/ramp_platform_wide_mx_1_concrete_hr_4.png"
+dest_files=["res://.godot/imported/ramp_platform_wide_mx_1_concrete_hr_4.png-fdfe922d0923212007a5825f1df2639a.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dh62cen40e6la"
+path.s3tc="res://.godot/imported/glass_bottle_mx_1_glass_bottle_mx_1.png-5a6decf6b0dca1eecd7d7bb155c70dff.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "582521543cd1530f4e4205b583b4df41"
+}
+
+[deps]
+
+source_file="res://assets/models_gltf/PSX/Props/glass_bottle_mx_1_glass_bottle_mx_1.png"
+dest_files=["res://.godot/imported/glass_bottle_mx_1_glass_bottle_mx_1.png-5a6decf6b0dca1eecd7d7bb155c70dff.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

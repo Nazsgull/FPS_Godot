@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b4qmk0xtuib2g"
+path.s3tc="res://.godot/imported/toilet_cabin_mp_1_sawdust_board_mp_1.png-762317e0a1e9ff8336e6b929ae9d37c7.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "eb9713b69c40aa4b43331964c6b18435"
+}
+
+[deps]
+
+source_file="res://assets/models_gltf/PSX/Modular Structures/toilet_cabin_mp_1_sawdust_board_mp_1.png"
+dest_files=["res://.godot/imported/toilet_cabin_mp_1_sawdust_board_mp_1.png-762317e0a1e9ff8336e6b929ae9d37c7.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

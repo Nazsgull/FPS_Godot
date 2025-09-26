@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bfalm8l8com0a"
+path.s3tc="res://.godot/imported/canned_food_3_canned_food_3.png-e73693ca7211bc47631d728a5d954f32.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "b889bc6360fde2d073b5509ba440a627"
+}
+
+[deps]
+
+source_file="res://assets/models_gltf/PSX/Canned food/canned_food_3_canned_food_3.png"
+dest_files=["res://.godot/imported/canned_food_3_canned_food_3.png-e73693ca7211bc47631d728a5d954f32.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
