@@ -47,9 +47,24 @@ _data = {
 visible = false
 
 [node name="button_body" parent="." index="2" instance=ExtResource("2_xrqd4")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="button_presser" parent="." index="3" instance=ExtResource("3_fkcgq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="button_presser" index="1"]
+transform = Transform3D(2, 0, 0, 0, -8.74228e-08, 2, 0, -2, -8.74228e-08, 0, 1, -4.37114e-08)
+light_energy = 0.125
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 5.087
+light_specular = 10.0
+shadow_enabled = true
+shadow_transmittance_bias = 8.535
+shadow_blur = 10.0
+spot_range = 0.3
+spot_attenuation = 2.63902
+spot_angle = 14.0
+spot_angle_attenuation = 5.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
 libraries = {

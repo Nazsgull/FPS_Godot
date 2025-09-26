@@ -37,6 +37,9 @@ background_energy_multiplier = 5.0
 sky = SubResource("Sky_86fsu")
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
+glow_enabled = true
+glow_normalized = true
+fog_enabled = true
 fog_density = 0.02
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0378
@@ -68,7 +71,7 @@ mesh = SubResource("PlaneMesh_cqwrx")
 environment = SubResource("Environment_j68he")
 
 [node name="Piston" parent="." instance=ExtResource("2_f6ewe")]
-transform = Transform3D(-4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, -10, 7, -4.37114e-07)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.8, 8.3, -6.46929e-07)
 
 [node name="player" parent="." instance=ExtResource("4_a02oc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.2, 6, 25.5)
@@ -89,7 +92,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71, 6, 13)
 scene = "res://scenes/objects/wary_waters/fishing_rod_equippable.tscn"
 
 [node name="neriglissar" parent="." instance=ExtResource("9_yqr1e")]
-transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -33.6, 7, -6.99374e-08)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -33.6, 7, -6.99374e-08)
 
 [connection signal="interacted" from="Button_fancy" to="Piston" method="_on_button_fancy_interacted"]
 [connection signal="interacted" from="Button_fancy" to="Fish_bank" method="donate_1fish"]

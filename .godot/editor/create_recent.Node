@@ -1,6 +1,9 @@
+OmniLight3D
+PointLight2D
+SpotLight3D
+MeshInstance3D
 CollisionShape3D
 Area3D
-MeshInstance3D
 Node3D
 Node
 CSGBox3D
@@ -9,6 +12,3 @@ Label3D
 FogVolume
 DirectionalLight3D
 AnimationPlayer
-WorldEnvironment
-AnimationTree
-ConfirmationDialog
