@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://br8gtfyvxkyt0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vc3a5"]
+albedo_color = Color(0.999999, 0.975092, 0.700458, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_iecrj"]
+size = Vector2(0.4, 0.3)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+material_override = SubResource("StandardMaterial3D_vc3a5")
+size = Vector3(0.45, 0.35, 0.4)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+operation = 2
+size = Vector3(0.4, 0.3, 0.3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.18)
+mesh = SubResource("QuadMesh_iecrj")
+
+[node name="SubViewport" type="SubViewport" parent="MeshInstance3D"]
+
+[node name="Control" type="Control" parent="MeshInstance3D/SubViewport"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TabContainer" type="TabContainer" parent="MeshInstance3D/SubViewport/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
