@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn3100fb4i300"]
+
+[ext_resource type="Script" path="res://scripts/RoomGenerator/RoomGenerator.gd" id="1_n7a6o"]
+[ext_resource type="PackedScene" uid="uid://bso4hta5t7bx" path="res://scenes/objects/Bunkers/RoomGen/elevator_base.tscn" id="2_aflyg"]
+
+[node name="Origin" type="Node3D"]
+script = ExtResource("1_n7a6o")
+
+[node name="elevator_12" parent="." instance=ExtResource("2_aflyg")]
