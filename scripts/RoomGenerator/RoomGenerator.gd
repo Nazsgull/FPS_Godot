@@ -6,4 +6,4 @@ var size_y:int
 var size_z:int
 @export_group("")
 
-func _ready():
+

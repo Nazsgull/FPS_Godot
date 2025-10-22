@@ -38,6 +38,16 @@ var paused = false
 
 @onready var equippables_bar = $head/Camera3D/equippables_bar
 
+@export var arma_0 = ""
+@export var arma_1 = ""
+@export var arma_2 = ""
+
+enum weapons{
+	HANDGUN,
+	SHOTGUN,
+	GUN,
+	ROCKET_LAUNCHER,
+}
 
 enum player_mov_states {
 	CROUCHING,
