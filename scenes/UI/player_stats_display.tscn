@@ -83,8 +83,24 @@ layout_direction = 3
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 20
-text = "NOMBRE"
+text = "UNDEFINED"
 horizontal_alignment = 2
+
+[node name="PlayerLevel_Container" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/PlayerLevel_Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Level :"
+
+[node name="Label_NAME" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/PlayerLevel_Container"]
+layout_direction = 3
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "1"
 
 [node name="HSeparator3" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
 layout_mode = 2
@@ -108,24 +124,6 @@ size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
 
-[node name="Precision_Container2" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-tooltip_text = "How able are you to keep your weapon centered on a target. 
-The higher it gets, the better your aim will be."
-
-[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Precision_Container2"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "Precision :"
-
-[node name="Label_PREC_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Precision_Container2"]
-layout_mode = 2
-size_flags_horizontal = 14
-theme_override_font_sizes/font_size = 20
-text = "1"
-
 [node name="Stamina_Container3" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -144,81 +142,19 @@ size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Luck_Container4" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+[node name="Precision_Container2" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-tooltip_text = "Luck favours those who prepare! 
-The higher it gets, the more chance you have for good things to happen to you... within reason."
+tooltip_text = "How able are you to keep your weapon centered on a target. 
+The higher it gets, the better your aim will be."
 
-[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Luck_Container4"]
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Precision_Container2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "Luck :"
+text = "Precision :"
 
-[node name="Label_LCK_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Luck_Container4"]
-layout_mode = 2
-size_flags_horizontal = 14
-theme_override_font_sizes/font_size = 20
-text = "1"
-
-[node name="Cypher_Container5" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-tooltip_text = "No, really, don't go in there, there's no collision set up yet! 
-It scales how much damage you do with glitch based weapons."
-
-[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Cypher_Container5"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "Cypher :"
-
-[node name="Label_CYPH_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Cypher_Container5"]
-layout_mode = 2
-size_flags_horizontal = 14
-theme_override_font_sizes/font_size = 20
-text = "1"
-
-[node name="Science_Container6" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-tooltip_text = "Science b!tch! This will allow you to solve problems meant for WIDE brains. 
-It also scales how much damage do your laser based weapons."
-
-[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Science_Container6"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "Science :"
-
-[node name="Label_SCI_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Science_Container6"]
-layout_mode = 2
-size_flags_horizontal = 14
-theme_override_font_sizes/font_size = 20
-text = "1"
-
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Strength_Container7" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-tooltip_text = "UNGA BUNGA!  The higher it gets, the more weight you'll be able to have equipped at the same time. 
-It also scales how much damage do with your explosive based weapons and how far you can throw grenades."
-
-[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Strength_Container7"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "Strength :"
-
-[node name="Label_STR_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Strength_Container7"]
+[node name="Label_PREC_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Precision_Container2"]
 layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
@@ -242,6 +178,46 @@ size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
 
+[node name="HSeparator" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Strength_Container7" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "UNGA BUNGA!  The higher it gets, the more weight you'll be able to have equipped at the same time. 
+It also scales how much damage do with your explosive based weapons and how far you can throw grenades."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Strength_Container7"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Strength :"
+
+[node name="Label_STR_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Strength_Container7"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "1"
+
+[node name="Science_Container6" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "Science b!tch! This will allow you to solve problems meant for WIDE brains. 
+It also scales how much damage do your laser based weapons."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Science_Container6"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Science :"
+
+[node name="Label_SCI_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Science_Container6"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "1"
+
 [node name="Ballistics_Container9" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -260,17 +236,272 @@ size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
 
+[node name="Cypher_Container5" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "No, really, don't go in there, there's no collision set up yet! 
+It scales how much damage you do with glitch based weapons."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Cypher_Container5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Cypher :"
+
+[node name="Label_CYPH_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Cypher_Container5"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "1"
+
+[node name="Luck_Container4" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "Luck favours those who prepare! 
+The higher it gets, the more chance you have for good things to happen to you... within reason."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Luck_Container4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Luck :"
+
+[node name="Label_LCK_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/Luck_Container4"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "1"
+
 [node name="VSeparator" type="VSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer"]
 layout_mode = 2
 
 [node name="MarginContainer_Resultados" type="MarginContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 10
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados"]
+[node name="GridContainer2" type="GridContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados"]
 layout_mode = 2
-columns = 2
+
+[node name="Stats_Title_GridContainer" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Stats_Title_GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Outcome"
+
+[node name="HSeparator4" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="VitalityPoints_Container" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "A combination of your willpower and how much life you have in you.
+The higher it gets, the more hits you'll be able to sustain without dying."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/VitalityPoints_Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "HP :"
+
+[node name="Label_VITA_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/VitalityPoints_Container"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "10"
+
+[node name="StaminaPoints_Container3" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "Your cardiopulmonary capacity. 
+The higher it gets, the further you will be able to run without stopping to rest."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/StaminaPoints_Container3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Stamina points :"
+
+[node name="Label_STA_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/StaminaPoints_Container3"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "10"
+
+[node name="PrecisionPercentaje_Container2" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "How able are you to keep your weapon centered on a target. 
+The higher it gets, the better your aim will be."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/PrecisionPercentaje_Container2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Precision :"
+
+[node name="Label_PREC_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/PrecisionPercentaje_Container2"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "10%"
+
+[node name="VisionDistance_Container8" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "Where are my glasses?! 
+The higher this stat gets, the further you'll be able to see."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/VisionDistance_Container8"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Vision :"
+
+[node name="Label_VIS_M" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/VisionDistance_Container8"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "10"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ThrowDist_Container7" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "UNGA BUNGA!  The higher it gets, the more weight you'll be able to have equipped at the same time. 
+It also scales how much damage do with your explosive based weapons and how far you can throw grenades."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/ThrowDist_Container7"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Max throw distance (m):"
+
+[node name="Label_STR_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/ThrowDist_Container7"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "5"
+
+[node name="Strength_Container8" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "UNGA BUNGA!  The higher it gets, the more weight you'll be able to have equipped at the same time. 
+It also scales how much damage do with your explosive based weapons and how far you can throw grenades."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Strength_Container8"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Weight carry capacity :"
+
+[node name="Label_STR_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Strength_Container8"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "10"
+
+[node name="Strength_Container9" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "UNGA BUNGA!  The higher it gets, the more weight you'll be able to have equipped at the same time. 
+It also scales how much damage do with your explosive based weapons and how far you can throw grenades."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Strength_Container9"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Explosives DMG :"
+
+[node name="Label_STR_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Strength_Container9"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "1"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Science_Container6" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "Science b!tch! This will allow you to solve problems meant for WIDE brains. 
+It also scales how much damage do your laser based weapons."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Science_Container6"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Laser weapons DMG:"
+
+[node name="Label_SCI_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Science_Container6"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "1"
+
+[node name="Ballistics_Container9" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "Cleaning, disassembling and reassembling of regular weapons. 
+The higher this stat gets, the more damage your ballistic weaponry will do."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Ballistics_Container9"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Ballistics DMG:"
+
+[node name="Label_BALL_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Ballistics_Container9"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "1"
+
+[node name="Cypher_Container5" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "No, really, don't go in there, there's no collision set up yet! 
+It scales how much damage you do with glitch based weapons."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Cypher_Container5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Cypher DMG:"
+
+[node name="Label_CYPH_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Cypher_Container5"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "1"
+
+[node name="Luck_Container4" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tooltip_text = "Luck favours those who prepare! 
+The higher it gets, the more chance you have for good things to happen to you... within reason."
+
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Luck_Container4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Luck :"
+
+[node name="Label_LCK_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Luck_Container4"]
+layout_mode = 2
+size_flags_horizontal = 14
+theme_override_font_sizes/font_size = 20
+text = "1"
