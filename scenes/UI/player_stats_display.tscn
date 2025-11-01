@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://7p1bkovf6yxl"]
+[gd_scene load_steps=2 format=3 uid="uid://7p1bkovf6yxl"]
+
+[ext_resource type="Script" path="res://scenes/UI/player_stats_display.gd" id="1_xjqxa"]
 
 [node name="PlayerStatsDisplay" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xjqxa")
 
 [node name="MarginContainer_Transparencia" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -86,6 +89,10 @@ theme_override_font_sizes/font_size = 20
 text = "UNDEFINED"
 horizontal_alignment = 2
 
+[node name="HSeparator12" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
 [node name="PlayerLevel_Container" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -95,7 +102,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Level :"
 
-[node name="Label_NAME" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/PlayerLevel_Container"]
+[node name="Label_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer/PlayerLevel_Container"]
 layout_direction = 3
 layout_mode = 2
 size_flags_horizontal = 3
@@ -124,6 +131,10 @@ size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
 
+[node name="HSeparator5" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
 [node name="Stamina_Container3" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -142,6 +153,10 @@ size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
 
+[node name="HSeparator6" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
 [node name="Precision_Container2" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -159,6 +174,10 @@ layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
+
+[node name="HSeparator7" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="Vision_Container8" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
 layout_mode = 2
@@ -200,6 +219,10 @@ size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
 
+[node name="HSeparator8" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
 [node name="Science_Container6" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -217,6 +240,10 @@ layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
+
+[node name="HSeparator9" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="Ballistics_Container9" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
 layout_mode = 2
@@ -236,6 +263,10 @@ size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
 
+[node name="HSeparator10" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
 [node name="Cypher_Container5" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -253,6 +284,10 @@ layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
+
+[node name="HSeparator11" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="Luck_Container4" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Stats/GridContainer"]
 layout_mode = 2
@@ -273,6 +308,12 @@ theme_override_font_sizes/font_size = 20
 text = "1"
 
 [node name="VSeparator" type="VSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator3" type="VSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer"]
 layout_mode = 2
 
 [node name="MarginContainer_Resultados" type="MarginContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer"]
@@ -300,23 +341,27 @@ text = "Outcome"
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="VitalityPoints_Container" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+[node name="VitalityPoints_MAX" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 tooltip_text = "A combination of your willpower and how much life you have in you.
 The higher it gets, the more hits you'll be able to sustain without dying."
 
-[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/VitalityPoints_Container"]
+[node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/VitalityPoints_MAX"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "HP :"
+text = "Max HP :"
 
-[node name="Label_VITA_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/VitalityPoints_Container"]
+[node name="Label_MAX_HP" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/VitalityPoints_MAX"]
 layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "10"
+
+[node name="HSeparator5" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="StaminaPoints_Container3" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
 layout_mode = 2
@@ -330,11 +375,15 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Stamina points :"
 
-[node name="Label_STA_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/StaminaPoints_Container3"]
+[node name="Label_STA_POINTS_MAX" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/StaminaPoints_Container3"]
 layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "10"
+
+[node name="HSeparator6" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="PrecisionPercentaje_Container2" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
 layout_mode = 2
@@ -346,13 +395,17 @@ The higher it gets, the better your aim will be."
 [node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/PrecisionPercentaje_Container2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "Precision :"
+text = "Precision (%) :"
 
-[node name="Label_PREC_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/PrecisionPercentaje_Container2"]
+[node name="Label_PREC_PCTG" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/PrecisionPercentaje_Container2"]
 layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
-text = "10%"
+text = "10"
+
+[node name="HSeparator7" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="VisionDistance_Container8" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
 layout_mode = 2
@@ -364,7 +417,7 @@ The higher this stat gets, the further you'll be able to see."
 [node name="Label" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/VisionDistance_Container8"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "Vision :"
+text = "Vision (m) :"
 
 [node name="Label_VIS_M" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/VisionDistance_Container8"]
 layout_mode = 2
@@ -388,11 +441,15 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Max throw distance (m):"
 
-[node name="Label_STR_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/ThrowDist_Container7"]
+[node name="Label_STR_THROW_DIST" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/ThrowDist_Container7"]
 layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "5"
+
+[node name="HSeparator8" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="Strength_Container8" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
 layout_mode = 2
@@ -406,11 +463,15 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Weight carry capacity :"
 
-[node name="Label_STR_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Strength_Container8"]
+[node name="Label_WEIGHT_MAX" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Strength_Container8"]
 layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "10"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="Strength_Container9" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
 layout_mode = 2
@@ -424,13 +485,13 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Explosives DMG :"
 
-[node name="Label_STR_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Strength_Container9"]
+[node name="Label_EXP_DMG_MULT" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Strength_Container9"]
 layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
 
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+[node name="HSeparator9" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
 layout_mode = 2
 theme_override_constants/separation = 20
 
@@ -446,11 +507,15 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Laser weapons DMG:"
 
-[node name="Label_SCI_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Science_Container6"]
+[node name="Label_LASER_DMG_MULT" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Science_Container6"]
 layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
+
+[node name="HSeparator10" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="Ballistics_Container9" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
 layout_mode = 2
@@ -464,11 +529,15 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Ballistics DMG:"
 
-[node name="Label_BALL_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Ballistics_Container9"]
+[node name="Label_BALL_DMG_MULT" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Ballistics_Container9"]
 layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
+
+[node name="HSeparator11" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="Cypher_Container5" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
 layout_mode = 2
@@ -482,11 +551,15 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Cypher DMG:"
 
-[node name="Label_CYPH_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Cypher_Container5"]
+[node name="Label_CYPH_DMG_MULT" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Cypher_Container5"]
 layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
 text = "1"
+
+[node name="HSeparator12" type="HSeparator" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="Luck_Container4" type="HFlowContainer" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2"]
 layout_mode = 2
@@ -500,7 +573,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Luck :"
 
-[node name="Label_LCK_LVL" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Luck_Container4"]
+[node name="Label_LCK_CHANCE" type="Label" parent="MarginContainer_Transparencia/PanelContainer_Fondo/MarginContainer_MargenMenu/PanelContainer_Frente/MarginContainer_Frente/HBoxContainer/MarginContainer_Resultados/GridContainer2/Luck_Container4"]
 layout_mode = 2
 size_flags_horizontal = 14
 theme_override_font_sizes/font_size = 20
