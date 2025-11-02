@@ -52,9 +52,11 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var fishcount_updater = $fishcount_updater
 
 func _ready():
+	Messenger.player = self
 	if capture_mouse:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	fishcount_updater.start()
+	
 
 func handle_pickup(scene_path:String):
 	equippables_bar.add_tool(scene_path)

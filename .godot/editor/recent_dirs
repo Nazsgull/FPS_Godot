@@ -1,12 +1,12 @@
 res://scenes/objects/wary_waters
+res://assets/materials
 res://scenes/parts
-res://scripts/global
 res://scripts
+res://scripts/global
 res://scenes/objects/Abstract
 res://assets/fonts
 res://scenes/objects
 res://scripts/classes
-res://assets/materials
 res://
 res://scenes/objects/Testing
 res://scripts/inventory
