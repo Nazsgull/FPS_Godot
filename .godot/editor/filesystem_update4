@@ -1,9 +1,10 @@
-res://scenes/objects/wary_waters/neriglissar.tscn
+res://scenes/UI/main_menu.tscn
 res://scripts/door_mine.gd
 res://assets/materials/water.gdshader
-res://objects/inventory/main_inventory.tres
 res://assets/materials/underwater.gdshader
+res://scripts/WaryWaters_WallMap.gd
 res://scenes/maps/WaryWaters_WallMap.tscn
 res://assets/materials/water.tres
 res://assets/materials/oxido_hierro.tres
-res://scenes/objects/button_fancy.tscn
+res://objects/inventory/main_inventory.tres
+res://scenes/objects/wary_waters/cebo.tscn

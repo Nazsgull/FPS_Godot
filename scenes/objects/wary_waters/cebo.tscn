@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cv8hxcny6co73"]
+
+[ext_resource type="Material" uid="uid://b6dmndnuvfqv2" path="res://assets/materials/red_glowy.tres" id="1_xnspw"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mk7fq"]
+rough = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_uvnh6"]
+radius = 0.05
+height = 0.2
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8kp2g"]
+material = ExtResource("1_xnspw")
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.02
+
+[sub_resource type="BoxMesh" id="BoxMesh_4xf48"]
+size = Vector3(0.02, 0.03, 0.01)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_esu84"]
+size = Vector3(0.1, 0.2, 0.1)
+
+[node name="RB_Cebo" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_mk7fq")
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -0.95, 0)
+continuous_cd = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_uvnh6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02, 0)
+mesh = SubResource("CylinderMesh_8kp2g")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.107123, 0)
+mesh = SubResource("BoxMesh_4xf48")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_esu84")
