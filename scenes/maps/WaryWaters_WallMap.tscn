@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://bsidce2fpxi8m" path="res://scenes/objects/wary_waters/fishing_rod_pickup.tscn" id="8_h7lfs"]
 [ext_resource type="PackedScene" uid="uid://drovt3td5ej7e" path="res://scenes/objects/wary_waters/neriglissar.tscn" id="9_yqr1e"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8yaxl"]
+size = Vector3(500, 1, 500)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x07qw"]
 albedo_color = Color(0, 0, 0, 1)
 rim = 0.0
@@ -49,11 +52,29 @@ volumetric_fog_emission_energy = 0.0
 volumetric_fog_length = 175.0
 volumetric_fog_ambient_inject = 2.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_8yaxl"]
-size = Vector3(26.4, 1, 35.5)
-
 [node name="WaryWatersWallMap" type="Node3D"]
 script = ExtResource("1_yaoay")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -33.6, 7, -6.99374e-08)
+collision_layer = 2048
+collision_mask = 2048
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+mass = 0.01
+gravity_scale = 0.0
+can_sleep = false
+freeze = true
+continuous_cd = true
+max_contacts_reported = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.300002, -8, 28.25)
+shape = SubResource("BoxShape3D_8yaxl")
 
 [node name="tierra_firme" type="Node3D" parent="."]
 
@@ -78,6 +99,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.8,
 
 [node name="player" parent="." instance=ExtResource("4_a02oc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.2, 6, 25.5)
+fishcount = 0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.965926, 0, -0.258819, 0.258819, 1.31134e-07, 0.965926, 3.394e-08, -1, 1.26666e-07, 0, 0, 0)
@@ -96,14 +118,6 @@ scene = "res://scenes/objects/wary_waters/fishing_rod_equippable.tscn"
 
 [node name="neriglissar" parent="." instance=ExtResource("9_yqr1e")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -33.6, 7, -6.99374e-08)
-
-[node name="Area3D" type="Area3D" parent="neriglissar"]
-collision_layer = 0
-collision_mask = 2048
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="neriglissar/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.300002, -3, 28.25)
-shape = SubResource("BoxShape3D_8yaxl")
 
 [connection signal="interacted" from="Button_fancy" to="Piston" method="_on_button_fancy_interacted"]
 [connection signal="interacted" from="Button_fancy" to="Fish_deposit" method="donate_1fish"]

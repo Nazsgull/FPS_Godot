@@ -42,7 +42,7 @@ func _update_equippable_displayed():
 		for each_equippable:Equippable in equippables:
 			each_equippable.set_is_working(false)
 		equippables[currently_equipped].set_is_working(true)
-		print("[",currently_equipped,"]")
+		#print("[",currently_equipped,"]")
 		
 func _process(_delta):
 	_tool_switching_by_input()

@@ -1,10 +1,12 @@
-res://scenes/UI/main_menu.tscn
+res://scenes/objects/wary_waters/fishing_rod_equippable.tscn
 res://scripts/door_mine.gd
 res://assets/materials/water.gdshader
-res://assets/materials/underwater.gdshader
-res://scripts/WaryWaters_WallMap.gd
-res://scenes/maps/WaryWaters_WallMap.tscn
 res://assets/materials/water.tres
 res://assets/materials/oxido_hierro.tres
 res://objects/inventory/main_inventory.tres
+res://assets/materials/underwater.gdshader
+res://scripts/fishing_rod.gd
+res://scenes/UI/main_menu.tscn
+res://scenes/maps/WaryWaters_WallMap.tscn
 res://scenes/objects/wary_waters/cebo.tscn
+res://scenes/objects/fishing_rod.tscn

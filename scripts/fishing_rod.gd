@@ -8,11 +8,13 @@ var cebo_scene = preload("res://scenes/objects/wary_waters/cebo.tscn")
 
 @onready var anim_player_cana = $anim_player_cana
 @onready var anim_player_carrete = $anim_player_carrete
-@onready var timer = $Timer
+@onready var timer = $Timer_anim
+@onready var timer_fuerza_mult = $Timer_fuerza_mult
 @onready var marker_3d = $Marker3D
 @onready var player = Messenger.player
 
-var force = -10
+var fuerza_mult = 1
+var force_base = -3
 var upDirection = 3.5
 var canThrow = true
 
@@ -39,7 +41,7 @@ func _physics_process(_delta):
 	if !paused:
 		if Input.is_action_just_pressed("main_action") and canThrow:
 			anim_player_cana.play("swing")
-			
+			timer_fuerza_mult.start()
 			
 		
 		if Input.is_action_just_released("main_action") and canThrow:
@@ -47,6 +49,7 @@ func _physics_process(_delta):
 			anim_player_carrete.play("carrete")
 			canThrow = false
 			_cebo_launch()
+			timer_fuerza_mult.stop()
 			timer.start()
 
 func _cebo_launch():
@@ -54,9 +57,20 @@ func _cebo_launch():
 	cebo_ins.position = marker_3d.get_global_position()
 	get_tree().current_scene.add_child(cebo_ins)
 	var playerRotation = player.get_global_transform().basis.z.normalized()
-	
-	cebo_ins.apply_central_impulse(playerRotation * force + Vector3(0,upDirection,0))
-	
+	#Lanza el cebo con más fuerza cuanto más se aguante el ratón.
+	cebo_ins.apply_central_impulse(playerRotation * force_base * fuerza_mult + Vector3(0,upDirection,0))
+	fuerza_mult = 1
+
 func _on_timer_timeout():
 	anim_player_carrete.stop(true)
 	canThrow = true
+
+#Aumenta la fuerza de lanzamiento cada vez que se acaba el tiempo del timer_fuerza_mult
+func _on_timer_fuerza_mult_timeout():
+	timer_fuerza_mult.start()
+	
+	if fuerza_mult < 16:
+		fuerza_mult = fuerza_mult + 1;
+		printerr(fuerza_mult)
+		return
+	return

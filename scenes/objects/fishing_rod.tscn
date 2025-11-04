@@ -9,7 +9,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Node3D:rotation")
+tracks/0/path = NodePath("vis:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -21,7 +21,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Node3D/caña_ww_1:rotation")
+tracks/1/path = NodePath("vis/caña_ww_1:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -33,7 +33,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Node3D/caña_ww_1/Node3D3:rotation")
+tracks/2/path = NodePath("vis/caña_ww_1/Node3D3:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -50,7 +50,7 @@ step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Node3D:rotation")
+tracks/0/path = NodePath("vis:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -62,7 +62,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Node3D/caña_ww_1:rotation")
+tracks/1/path = NodePath("vis/caña_ww_1:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -78,7 +78,7 @@ length = 0.75
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Node3D:rotation")
+tracks/0/path = NodePath("vis:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -95,28 +95,12 @@ _data = {
 "swing": SubResource("Animation_xhc1o")
 }
 
-[sub_resource type="Animation" id="Animation_gmj2o"]
-resource_name = "carrete"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node3D/caña_ww_1/Node3D3:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, -0.227591), Vector3(0, 0, 0.226893)]
-}
-
 [sub_resource type="Animation" id="Animation_p5wuh"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Node3D/caña_ww_1/Node3D3:rotation")
+tracks/0/path = NodePath("vis/caña_ww_1/Node3D3:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -124,6 +108,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0, 0, 0.226893)]
+}
+
+[sub_resource type="Animation" id="Animation_gmj2o"]
+resource_name = "carrete"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("vis/caña_ww_1/Node3D3:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -0.227591), Vector3(0, 0, 0.226893)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xh1lb"]
@@ -159,40 +159,39 @@ libraries = {
 "": SubResource("AnimationLibrary_xh1lb")
 }
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer_anim" type="Timer" parent="."]
 wait_time = 4.5
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="vis" type="Node3D" parent="."]
 
-[node name="caña_ww_1" parent="Node3D" instance=ExtResource("2_fdjqs")]
+[node name="caña_ww_1" parent="vis" instance=ExtResource("2_fdjqs")]
 transform = Transform3D(0.0499981, 0, -0.000436327, 0, 0.05, 0, 0.000436327, 0, 0.0499981, 0, 0, 0)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D/caña_ww_1"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="vis/caña_ww_1"]
 transform = Transform3D(19.9992, -0.00457173, 0.174471, -5.58794e-09, 19.9931, 0.523889, -0.174531, -0.52387, 19.9923, -0.00773989, 36.8221, -1.56897)
 mesh = SubResource("CylinderMesh_3xfok")
 skeleton = NodePath("../Node3D4")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D/caña_ww_1"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="vis/caña_ww_1"]
 transform = Transform3D(19.9992, -0.00457173, 0.174471, -3.72529e-09, 19.9931, 0.523889, -0.174531, -0.52387, 19.9923, -0.00963958, 45.1299, -1.78666)
 mesh = SubResource("CylinderMesh_3xfok")
 skeleton = NodePath("../Node3D4")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Node3D/caña_ww_1"]
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="vis/caña_ww_1"]
 transform = Transform3D(19.9992, -0.00946883, 0.174274, -1.49012e-08, 19.9705, 1.08506, -0.17453, -1.08502, 19.9697, -0.0139996, 54.8326, -2.21601)
 mesh = SubResource("CylinderMesh_3xfok")
 skeleton = NodePath("../Node3D4")
 
-[node name="Node3D4" type="Node3D" parent="Node3D/caña_ww_1"]
+[node name="Node3D4" type="Node3D" parent="vis/caña_ww_1"]
 transform = Transform3D(19.9992, 0, 0.174531, 0, 20, 0, -0.174531, 0, 19.9992, -0.0128896, 27.2351, -1.42734)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/caña_ww_1/Node3D4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vis/caña_ww_1/Node3D4"]
 mesh = SubResource("CylinderMesh_3xfok")
 
-[node name="Node3D3" type="Node3D" parent="Node3D/caña_ww_1"]
+[node name="Node3D3" type="Node3D" parent="vis/caña_ww_1"]
 transform = Transform3D(19.4874, -4.49902, 0, 4.49902, 19.4874, 0, 0, 0, 20, -0.0110759, 22.4017, -1.49252)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/caña_ww_1/Node3D3"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vis/caña_ww_1/Node3D3"]
 transform = Transform3D(1, 1.49012e-08, 0, 0, 0.972926, -0.23112, 0, 0.23112, 0.972925, 0, -0.192495, -0.0446229)
 mesh = SubResource("CylinderMesh_7yd2q")
 skeleton = NodePath("../../../..")
@@ -200,4 +199,8 @@ skeleton = NodePath("../../../..")
 [node name="Marker3D" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.06536, 0.48969)
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="Timer_fuerza_mult" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer_anim" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer_fuerza_mult" to="." method="_on_timer_fuerza_mult_timeout"]
