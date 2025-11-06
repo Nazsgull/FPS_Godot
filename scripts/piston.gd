@@ -20,3 +20,7 @@ func _on_button_fancy_interacted(body):
 
 func _on_timer_timeout():
 	pass # Replace with function body.
+
+
+func _on_button_fancy_2_interacted(body):
+	extender_retraer()

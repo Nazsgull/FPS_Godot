@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgpbwu8n4d3m4"]
+
+[ext_resource type="PackedScene" uid="uid://csj4m2tdlxwgf" path="res://scenes/objects/Abstract/base_equippable.tscn" id="1_r16x1"]
+[ext_resource type="PackedScene" uid="uid://bqqk6fmdvvtmk" path="res://assets/models_blend/AssaultRifle_3.glb" id="2_ujumq"]
+
+[node name="BaseEquippable" instance=ExtResource("1_r16x1")]
+
+[node name="pivot" parent="." index="0"]
+transform = Transform3D(0.996195, 0, -0.0871558, 0, 1, 0, 0.0871558, 0, 0.996195, 1, -1, 0)
+
+[node name="AK74u" parent="pivot/vis" index="0" instance=ExtResource("2_ujumq")]
+transform = Transform3D(-2.23517e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.23517e-08, -5.96046e-08, 0, -0.5)

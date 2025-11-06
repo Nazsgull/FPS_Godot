@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://di6n3a85uxnyp"]
+
+[ext_resource type="PackedScene" uid="uid://p3glnphhxh3o" path="res://scenes/objects/Abstract/base_pickup.tscn" id="1_7jlip"]
+[ext_resource type="PackedScene" uid="uid://bqqk6fmdvvtmk" path="res://assets/models_blend/AssaultRifle_3.glb" id="2_mtv7c"]
+
+[node name="equippable_pickup" instance=ExtResource("1_7jlip")]
+scene = "res://scenes/objects/wary_waters/ak74u_equippable.tscn"
+
+[node name="AssaultRifle_32" parent="." index="3" instance=ExtResource("2_mtv7c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0, 0)
