@@ -1,6 +1,7 @@
 extends RigidBody3D
 @onready var animation_player = $AnimationPlayer
 
+var player = Messenger.player
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,6 +12,6 @@ func _ready():
 func _process(delta):
 	pass
 
-
+#Pica un pez
 func _on_timer_timeout():
-	animation_player.play("sea_wobble_han_picado")
+	pass # Replace with function body.
