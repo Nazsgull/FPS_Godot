@@ -167,17 +167,17 @@ wait_time = 4.5
 [node name="caña_ww_1" parent="vis" instance=ExtResource("2_fdjqs")]
 transform = Transform3D(0.0499981, 0, -0.000436327, 0, 0.05, 0, 0.000436327, 0, 0.0499981, 0, 0, 0)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="vis/caña_ww_1"]
+[node name="hilo" type="MeshInstance3D" parent="vis/caña_ww_1"]
 transform = Transform3D(19.9992, -0.00457173, 0.174471, -5.58794e-09, 19.9931, 0.523889, -0.174531, -0.52387, 19.9923, -0.00773989, 36.8221, -1.56897)
 mesh = SubResource("CylinderMesh_3xfok")
 skeleton = NodePath("../Node3D4")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="vis/caña_ww_1"]
+[node name="hilo2" type="MeshInstance3D" parent="vis/caña_ww_1"]
 transform = Transform3D(19.9992, -0.00457173, 0.174471, -3.72529e-09, 19.9931, 0.523889, -0.174531, -0.52387, 19.9923, -0.00963958, 45.1299, -1.78666)
 mesh = SubResource("CylinderMesh_3xfok")
 skeleton = NodePath("../Node3D4")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="vis/caña_ww_1"]
+[node name="hilo3" type="MeshInstance3D" parent="vis/caña_ww_1"]
 transform = Transform3D(19.9992, -0.00946883, 0.174274, -1.49012e-08, 19.9705, 1.08506, -0.17453, -1.08502, 19.9697, -0.0139996, 54.8326, -2.21601)
 mesh = SubResource("CylinderMesh_3xfok")
 skeleton = NodePath("../Node3D4")
@@ -185,7 +185,7 @@ skeleton = NodePath("../Node3D4")
 [node name="Node3D4" type="Node3D" parent="vis/caña_ww_1"]
 transform = Transform3D(19.9992, 0, 0.174531, 0, 20, 0, -0.174531, 0, 19.9992, -0.0128896, 27.2351, -1.42734)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vis/caña_ww_1/Node3D4"]
+[node name="hilo_carrete" type="MeshInstance3D" parent="vis/caña_ww_1/Node3D4"]
 mesh = SubResource("CylinderMesh_3xfok")
 
 [node name="Node3D3" type="Node3D" parent="vis/caña_ww_1"]

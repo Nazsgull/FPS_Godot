@@ -14,11 +14,9 @@ var cebo_scene = preload("res://scenes/objects/wary_waters/cebo.tscn")
 @onready var player = Messenger.player
 
 var fuerza_mult = 1
-var force_base = -3
+var force_base = -5
 var upDirection = 3.5
 var canThrow = true
-
-
 
 # Called when the node enters the scene tree for the first time.
 # Conecto las señales a los métodos (declarados arriba)
@@ -28,7 +26,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func handle_pause():
@@ -56,6 +54,9 @@ func _cebo_launch():
 	var cebo_ins = cebo_scene.instantiate()
 	cebo_ins.position = marker_3d.get_global_position()
 	get_tree().current_scene.add_child(cebo_ins)
+	
+	#ACTIVA MODO PESCA
+	player.isFishing = true
 	var playerRotation = player.get_global_transform().basis.z.normalized()
 	#Lanza el cebo con más fuerza cuanto más se aguante el ratón.
 	cebo_ins.apply_central_impulse(playerRotation * force_base * fuerza_mult + Vector3(0,upDirection,0))
@@ -69,8 +70,7 @@ func _on_timer_timeout():
 func _on_timer_fuerza_mult_timeout():
 	timer_fuerza_mult.start()
 	
-	if fuerza_mult < 16:
+	if fuerza_mult < 10:
 		fuerza_mult = fuerza_mult + 1;
-		printerr(fuerza_mult)
 		return
 	return

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://hob0odd0bhgw"]
+[gd_scene load_steps=16 format=3 uid="uid://hob0odd0bhgw"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_7udej"]
 [ext_resource type="PackedScene" uid="uid://7svxl77nwyna" path="res://scenes/parts/interaction_ray.tscn" id="2_evmkn"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bxo86lh5sr6kc" path="res://scenes/parts/equippables_bar.tscn" id="4_gah6f"]
 [ext_resource type="PackedScene" uid="uid://dysy8vo5eoybp" path="res://scenes/UI/Inventory/inventory_grid_menu.tscn" id="5_q2cgs"]
 [ext_resource type="FontFile" uid="uid://c2aqepmm6c8c1" path="res://assets/fonts/PlayfairDisplay-VariableFont_wght.ttf" id="7_bnmlf"]
+[ext_resource type="Texture2D" uid="uid://dp8hdhcjvttrx" path="res://assets/textures/dev/grids/Orange/texture_05.png" id="8_hi4ud"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pikys"]
 
@@ -20,6 +21,67 @@ length = 0.1
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_03bfd"]
 _data = {
 "crouch": SubResource("Animation_ln84c")
+}
+
+[sub_resource type="Animation" id="Animation_xke4q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("head/Camera3D/barra_superior:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.28, -1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("head/Camera3D/barra_inferior:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.28, -1)]
+}
+
+[sub_resource type="Animation" id="Animation_dmbux"]
+resource_name = "fishingmode_inout"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("head/Camera3D/barra_superior:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.28, -1), Vector3(0, 1, -1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("head/Camera3D/barra_inferior:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.28, -1), Vector3(0, -1, -1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qd3ep"]
+_data = {
+"RESET": SubResource("Animation_xke4q"),
+"fishingmode_inout": SubResource("Animation_dmbux")
 }
 
 [node name="player" type="CharacterBody3D" groups=["player"]]
@@ -49,6 +111,22 @@ visible = false
 [node name="equippables_bar" parent="head/Camera3D" instance=ExtResource("4_gah6f")]
 
 [node name="InventoryGridMenu" parent="head/Camera3D" instance=ExtResource("5_q2cgs")]
+
+[node name="barra_superior" type="Sprite3D" parent="head/Camera3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.1, 0, 0, 0, 0.833, 0, 1.28, -1)
+modulate = Color(0, 0, 0, 1)
+transparent = false
+double_sided = false
+no_depth_test = true
+texture = ExtResource("8_hi4ud")
+
+[node name="barra_inferior" type="Sprite3D" parent="head/Camera3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.1, 0, 0, 0, 0.833, 0, -1.28, -1)
+modulate = Color(0, 0, 0, 1)
+transparent = false
+double_sided = false
+no_depth_test = true
+texture = ExtResource("8_hi4ud")
 
 [node name="uncrouching_raycast" type="RayCast3D" parent="."]
 target_position = Vector3(0, 2, 0)
@@ -111,6 +189,7 @@ libraries = {
 [node name="fishcount_display" type="Label3D" parent="."]
 transform = Transform3D(8.1, 0, 0, 0, 9.8, 0, 0, 0, 1, -1.6, 0.55653, -1.5)
 pixel_size = 0.0001
+no_depth_test = true
 render_priority = -1
 outline_render_priority = -2
 text = "0"
@@ -119,5 +198,10 @@ font_size = 256
 outline_size = 20
 
 [node name="fishcount_updater" type="Timer" parent="." groups=["jugador"]]
+
+[node name="fishingmode_animPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qd3ep")
+}
 
 [connection signal="timeout" from="fishcount_updater" to="." method="_on_timer_timeout"]

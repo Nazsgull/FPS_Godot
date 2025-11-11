@@ -8,3 +8,4 @@ script = ExtResource("1_tx2e0")
 [node name="pivot" type="Node3D" parent="."]
 
 [node name="vis" type="Node3D" parent="pivot"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

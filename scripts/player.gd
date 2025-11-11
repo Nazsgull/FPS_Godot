@@ -10,6 +10,7 @@ const JUMP_VELOCITY = 4.5
 @export var WALKING_SPEED = 5.0
 @export var SPRINTING_SPEED = 8.0
 @export var CROUCHING_SPEED = 2.0
+@export var FISHING_SPEED = 0.5
 @export var ground_lerp_speed = 10.0
 @export var air_lerp_speed = 10.0
 
@@ -38,12 +39,14 @@ var paused = false
 @onready var pointer = $pointer
 
 @onready var equippables_bar = $head/Camera3D/equippables_bar
-
+@onready var fishingmode_anim_player = $fishingmode_animPlayer
+var isFishing = false
 enum player_mov_states {
 	CROUCHING,
 	WALKING,
 	SPRINTING,
-	JUMPING
+	JUMPING,
+	FISHING
 	}
 #We start walking by default
 var current_mov_state : player_mov_states = player_mov_states.WALKING
@@ -51,12 +54,13 @@ var current_mov_state : player_mov_states = player_mov_states.WALKING
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var fishcount_updater = $fishcount_updater
 
+var is_fishing = false
+
 func _ready():
 	Messenger.player = self
 	if capture_mouse:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	fishcount_updater.start()
-	
 
 func handle_pickup(scene_path:String):
 	equippables_bar.add_tool(scene_path)
@@ -78,7 +82,7 @@ func _rotate_fishcount_display(event: InputEventMouseMotion)->void:
 	fishcount_display.rotation.x = clamp(head.rotation.x, deg_to_rad(-89), deg_to_rad(89))
 
 
-func _set_state(new_state : player_mov_states) -> void:
+func set_state(new_state : player_mov_states) -> void:
 	current_mov_state = new_state
 	
 func _update_state_machine(delta) -> void:
@@ -90,9 +94,10 @@ func _update_state_machine(delta) -> void:
 		current_mov_state = player_mov_states.CROUCHING
 	elif !Input.is_action_pressed("sprint"):
 		current_mov_state = player_mov_states.WALKING
+	elif isFishing:
+		current_mov_state = player_mov_states.FISHING
 	else:
 		current_mov_state = player_mov_states.SPRINTING
-
 
 	# Handle movement based on the current state
 	match current_mov_state:
@@ -104,6 +109,8 @@ func _update_state_machine(delta) -> void:
 			handle_sprinting(delta)
 		player_mov_states.JUMPING:
 			handle_jumping(delta)
+		player_mov_states.FISHING:
+			handle_fishing(delta)
 
 # Function to handle standing state
 func handle_walking(delta) -> void:
@@ -132,6 +139,10 @@ func handle_sprinting(_delta) -> void:
 # Function to handle jumping state
 func handle_jumping(_delta) -> void:
 	velocity.y = JUMP_VELOCITY
+	
+func handle_fishing(_delta) -> void:
+	current_speed = FISHING_SPEED
+	fishingmode_anim_player.play("fishingmode_inout")
 	
 # Function to handle pausing the game (NOT a movement state)
 func handle_pause():
@@ -170,8 +181,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Pause"):
 		handle_pause()
 
-	#Handle movement states
-	_update_state_machine(delta)
+	#Handle movement states, if not fishing
+	if !is_fishing:
+		_update_state_machine(delta)
 	
 	#Gravity!
 	if not is_on_floor():

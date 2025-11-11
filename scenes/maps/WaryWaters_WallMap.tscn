@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b2ddllldugrvc"]
+[gd_scene load_steps=20 format=3 uid="uid://b2ddllldugrvc"]
 
 [ext_resource type="PackedScene" uid="uid://g386sbqjtrjh" path="res://scenes/objects/water_plane.tscn" id="1_i0w1c"]
 [ext_resource type="Script" path="res://scripts/WaryWaters_WallMap.gd" id="1_yaoay"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bsidce2fpxi8m" path="res://scenes/objects/wary_waters/fishing_rod_pickup.tscn" id="8_h7lfs"]
 [ext_resource type="PackedScene" uid="uid://drovt3td5ej7e" path="res://scenes/objects/wary_waters/neriglissar.tscn" id="9_yqr1e"]
 [ext_resource type="PackedScene" uid="uid://di6n3a85uxnyp" path="res://scenes/objects/wary_waters/ak74u_pickup.tscn" id="10_45300"]
+[ext_resource type="PackedScene" uid="uid://dv8oum2cff01e" path="res://scenes/objects/wary_waters/fish_pickup.tscn" id="11_mt8x8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8yaxl"]
 size = Vector3(500, 1, 500)
@@ -125,6 +126,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.8, 4.8, 14.6)
 
 [node name="Button_fancy2" parent="." instance=ExtResource("5_jhipa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.433013, 0.25, 0, -0.25, 0.433013, -25.8, 5.9567, -10.775)
+
+[node name="equippable_pickup2" parent="." instance=ExtResource("11_mt8x8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6, 5.5, 14.7)
 
 [connection signal="interacted" from="Button_fancy" to="Piston" method="_on_button_fancy_interacted"]
 [connection signal="interacted" from="Button_fancy" to="Fish_deposit" method="donate_1fish"]

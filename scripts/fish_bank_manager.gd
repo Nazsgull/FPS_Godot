@@ -37,7 +37,7 @@ func _update_text()-> void:
 		fish_label.set("theme_override_colors/font_color",default_label_color)
 
 
-func donate_1fish(a) -> void:
+func donate_1fish(_a) -> void:
 	var player_fish : int = player.get_fish()
 	if(player_fish - 1 >= 0):	
 		fish_actual += 1
