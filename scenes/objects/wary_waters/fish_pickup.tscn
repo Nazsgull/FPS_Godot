@@ -1,21 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dv8oum2cff01e"]
+[gd_scene load_steps=2 format=3 uid="uid://dv8oum2cff01e"]
 
 [ext_resource type="PackedScene" uid="uid://p3glnphhxh3o" path="res://scenes/objects/Abstract/base_pickup.tscn" id="1_rao32"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_bxooj"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_m1sna"]
-top_radius = 0.0
-
 [node name="equippable_pickup" instance=ExtResource("1_rao32")]
 scene = "res://scenes/objects/wary_waters/fish_equippable.tscn"
-
-[node name="vis" type="Node3D" parent="." index="3"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="vis" index="0"]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 0.5, 0, 0, 0)
-mesh = SubResource("CapsuleMesh_bxooj")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="vis" index="1"]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 0.5, -0.8, 0, 0)
-mesh = SubResource("CylinderMesh_m1sna")

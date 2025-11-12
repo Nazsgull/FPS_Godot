@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://joso5nj5anwa"]
+[gd_scene load_steps=3 format=3 uid="uid://b4tk8oj4usyp"]
 
 [ext_resource type="PackedScene" uid="uid://csj4m2tdlxwgf" path="res://scenes/objects/Abstract/base_equippable.tscn" id="1_7erqv"]
 [ext_resource type="PackedScene" uid="uid://b6lradejrrjqw" path="res://scenes/objects/fishing_rod.tscn" id="2_f1b7n"]

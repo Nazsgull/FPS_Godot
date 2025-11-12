@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://drovt3td5ej7e"]
+[gd_scene load_steps=5 format=3 uid="uid://drovt3td5ej7e"]
 
 [ext_resource type="PackedScene" uid="uid://dq1415g4dvpx4" path="res://assets/models_gltf/Neriglissar_platform/Neriglissar_WW_sección_babor.glb" id="1_puh8w"]
 [ext_resource type="PackedScene" uid="uid://nvxyuyrm2i3i" path="res://assets/models_gltf/Neriglissar_platform/Neriglissar_WW_sección_estribor.glb" id="2_otd24"]
 [ext_resource type="PackedScene" uid="uid://4d2130jduo17" path="res://assets/models_gltf/Neriglissar_platform/Neriglissar_WW_sección_puente.glb" id="3_734nw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vsn25"]
+size = Vector3(1, 0.8, 0.8)
 
 [node name="Neriglissar" type="Node3D"]
 
@@ -18,3 +21,11 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.35, 0, -5.6)
 light_volumetric_fog_energy = 2.27
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 32768
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, -14.6621, -0.832843, -2.45)
+shape = SubResource("BoxShape3D_vsn25")

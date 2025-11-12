@@ -4,11 +4,15 @@ extends Node3D
 var equippables:Array[Equippable] = []
 var currently_equipped:int = 0
 var previously_equipped:int = 0
-func add_tool(new_scene:String):
+
+func add_tool(new_scene:String,tipo:Messenger.ToolTypes):
+	
+	#if tipo = Messenger.ToolTypes.CAUGHT_FISH and equippables.has():
+	#	pass
 	var scene:Resource = load(new_scene)
 	var new_equippable:Equippable = Equippable.new()
 	var scene_instance = scene.instantiate()
-	
+
 	new_equippable.set_equippable_node(scene_instance)
 	new_equippable.set_is_fully_constructed(true)
 	
@@ -18,8 +22,8 @@ func add_tool(new_scene:String):
 	pivot.add_child(new_equippable.get_equippable_node())
 	
 	
-	
-	
+func _is_fish(tool:Equippable):
+	pass
 func _tool_switching_by_input():
 	if Input.is_action_just_pressed("tool_next"):
 

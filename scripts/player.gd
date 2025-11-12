@@ -62,8 +62,8 @@ func _ready():
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	fishcount_updater.start()
 
-func handle_pickup(scene_path:String):
-	equippables_bar.add_tool(scene_path)
+func handle_pickup(scene_path:String, tipo:Messenger.ToolTypes):
+	equippables_bar.add_tool(scene_path,tipo)
 	
 
 func _input(event):

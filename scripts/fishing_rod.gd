@@ -16,7 +16,7 @@ var cebo_scene = preload("res://scenes/objects/wary_waters/cebo.tscn")
 var fuerza_mult = 1
 var force_base = -5
 var upDirection = 3.5
-var canThrow = true
+var can_throw = true
 
 # Called when the node enters the scene tree for the first time.
 # Conecto las señales a los métodos (declarados arriba)
@@ -37,15 +37,14 @@ func handle_unpause():
 
 func _physics_process(_delta):
 	if !paused:
-		if Input.is_action_just_pressed("main_action") and canThrow:
+		if Input.is_action_just_pressed("main_action") and can_throw:
 			anim_player_cana.play("swing")
-			timer_fuerza_mult.start()
-			
+			timer_fuerza_mult.start()			
 		
-		if Input.is_action_just_released("main_action") and canThrow:
+		if Input.is_action_just_released("main_action") and can_throw:
+			can_throw = false
 			anim_player_cana.play("launch")
 			anim_player_carrete.play("carrete")
-			canThrow = false
 			_cebo_launch()
 			timer_fuerza_mult.stop()
 			timer.start()
@@ -64,7 +63,7 @@ func _cebo_launch():
 
 func _on_timer_timeout():
 	anim_player_carrete.stop(true)
-	canThrow = true
+	can_throw = true
 
 #Aumenta la fuerza de lanzamiento cada vez que se acaba el tiempo del timer_fuerza_mult
 func _on_timer_fuerza_mult_timeout():
