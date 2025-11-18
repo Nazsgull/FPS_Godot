@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciepe0l3vrcdu"]
+
+[ext_resource type="PackedScene" uid="uid://7svxl77nwyna" path="res://scenes/parts/interaction_ray.tscn" id="2_xqhsj"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_odr4i"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pr26a"]
+top_radius = 0.0
+
+[node name="caught_fish" type="Node3D"]
+
+[node name="InteractionRay" parent="." instance=ExtResource("2_xqhsj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 0, -0.5)
+target_position = Vector3(0, 0, 4)
+collision_mask = 32768
+
+[node name="vis" type="Node3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="vis"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 0.5, 2, -8.74228e-08, 0)
+mesh = SubResource("CapsuleMesh_odr4i")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="vis"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 0.5, 1.2, -8.74228e-08, 0)
+mesh = SubResource("CylinderMesh_pr26a")
+skeleton = NodePath("")

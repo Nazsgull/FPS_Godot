@@ -12,7 +12,7 @@ func _on_area_3d_body_entered(_body):
 	if !used:
 		used = true
 		audio_sp.play()
-		player.handle_pickup(scene)
+		player.handle_pickup(scene,Messenger.ToolTypes.FISHING_ROD)
 		timer.start()
 
 func _on_timer_timeout():

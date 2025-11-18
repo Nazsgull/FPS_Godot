@@ -161,7 +161,6 @@ func handle_pause():
 		Messenger.emit_signal("UNPAUSED")
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 func get_input(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -193,7 +192,7 @@ func _physics_process(delta):
 #FISH AREA
 @export var fishcount: int = 10
 @onready var fishcount_display = $fishcount_display
-@onready var bank = get_tree().get_first_node_in_group("Bank")
+@onready var bank = Messenger.fish_bank
 
 func get_fish():
 	return fishcount

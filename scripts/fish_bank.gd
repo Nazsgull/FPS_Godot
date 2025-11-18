@@ -1,11 +1,15 @@
 #BANCO DE PECES, monetario, pero la moneda son los peces.
-#Cada día que pasa se deduce "fish_upkeep" para alimentar a los habitantes de la aldea.
+
 
 extends Node3D
 @onready var fish_label = $Label3D
-@onready var player = get_tree().get_first_node_in_group("player")
+@onready var player = Messenger.player
 
-var fish_actual : int = 3
+var _callable_handle_add1fish = Callable(self,"handle_add_1fish")
+#var _callable_handle_remove1fish = Callable(self, "handle_remove1fish") 
+
+var fish_actual : int = 0
+#Cada día que pasa se deduce "fish_upkeep" para alimentar a los habitantes de la aldea.
 var fish_upkeep : int = 1
 
 signal in_debt_s
@@ -20,6 +24,10 @@ func get_fish_upkeep() -> int:
 	return fish_upkeep
 
 func _ready():
+	Messenger.fish_bank = self
+	
+	Messenger.connect("ADD_1_FISH",_callable_handle_add1fish,2)
+	#Messenger.connect("",_callable_handle_remove1fish,2)
 	_update_text()
 
 
@@ -36,14 +44,19 @@ func _update_text()-> void:
 	else:
 		fish_label.set("theme_override_colors/font_color",default_label_color)
 
+func handle_add_1fish(tipo:String):
+	var player_fish : int = player.get_fish()
+	player.set_fish(player_fish + 1)
 
-func donate_1fish(_a) -> void:
+func handle_remove_1fish(tipo:String) -> void:
 	var player_fish : int = player.get_fish()
 	if(player_fish - 1 >= 0):	
 		fish_actual += 1
 		player.set_fish(player_fish-1)
-	
+
 	
 func _process(_delta):
 	_update_text()
+
+
 

@@ -1,27 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2eoxbchle1sg"]
+[gd_scene load_steps=3 format=3 uid="uid://d2eoxbchle1sg"]
 
 [ext_resource type="PackedScene" uid="uid://csj4m2tdlxwgf" path="res://scenes/objects/Abstract/base_equippable.tscn" id="1_rewp8"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_t6ggy"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_hg6ek"]
-top_radius = 0.0
+[ext_resource type="PackedScene" uid="uid://ciepe0l3vrcdu" path="res://scenes/objects/wary_waters/caught_fish.tscn" id="2_8xkmf"]
 
 [node name="FishEquippable" instance=ExtResource("1_rewp8")]
+
+[node name="pivot" parent="." index="0"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.4, 0, -1.74846e-08)
 
 [node name="vis" parent="pivot" index="0"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="pivot/vis" index="0"]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 0.5, 2, -8.74228e-08, 0)
-mesh = SubResource("CapsuleMesh_t6ggy")
-skeleton = NodePath("")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="pivot/vis" index="1"]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 0.5, 1.2, -8.74228e-08, 0)
-mesh = SubResource("CylinderMesh_hg6ek")
-skeleton = NodePath("")
-
-[node name="Label3D" type="Label3D" parent="pivot/vis" index="2"]
-text = "0
-"
+[node name="caught_fish" parent="pivot/vis" index="0" instance=ExtResource("2_8xkmf")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)

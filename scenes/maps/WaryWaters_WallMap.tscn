@@ -3,14 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://g386sbqjtrjh" path="res://scenes/objects/water_plane.tscn" id="1_i0w1c"]
 [ext_resource type="Script" path="res://scripts/WaryWaters_WallMap.gd" id="1_yaoay"]
 [ext_resource type="PackedScene" uid="uid://cf6it4ih04vwy" path="res://scenes/objects/piston.tscn" id="2_f6ewe"]
+[ext_resource type="PackedScene" uid="uid://crhgcrso4gxux" path="res://scenes/objects/wary_waters/fish_bank.tscn" id="2_q3enb"]
 [ext_resource type="PackedScene" uid="uid://hob0odd0bhgw" path="res://scenes/objects/player.tscn" id="4_a02oc"]
 [ext_resource type="PackedScene" uid="uid://4asvsxmij85k" path="res://scenes/objects/button_fancy.tscn" id="5_jhipa"]
-[ext_resource type="PackedScene" uid="uid://c08w371nri2fs" path="res://scenes/objects/fish_bank.tscn" id="6_w2flc"]
+[ext_resource type="PackedScene" uid="uid://bnsgvfdr8u1y8" path="res://scenes/objects/wary_waters/deposito_peces.tscn" id="5_tl570"]
 [ext_resource type="PackedScene" uid="uid://dsi3ppghy4huk" path="res://scenes/objects/gestor_tiempo.tscn" id="7_vtp0w"]
 [ext_resource type="PackedScene" uid="uid://bsidce2fpxi8m" path="res://scenes/objects/wary_waters/fishing_rod_pickup.tscn" id="8_h7lfs"]
 [ext_resource type="PackedScene" uid="uid://drovt3td5ej7e" path="res://scenes/objects/wary_waters/neriglissar.tscn" id="9_yqr1e"]
 [ext_resource type="PackedScene" uid="uid://di6n3a85uxnyp" path="res://scenes/objects/wary_waters/ak74u_pickup.tscn" id="10_45300"]
-[ext_resource type="PackedScene" uid="uid://dv8oum2cff01e" path="res://scenes/objects/wary_waters/fish_pickup.tscn" id="11_mt8x8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8yaxl"]
 size = Vector3(500, 1, 500)
@@ -100,17 +100,21 @@ environment = SubResource("Environment_j68he")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.8, 8.3, -6.46929e-07)
 
 [node name="player" parent="." instance=ExtResource("4_a02oc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.2, 6, 25.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.2, 6, 23.48)
 fishcount = 0
+
+[node name="deposito_peces" parent="." instance=ExtResource("5_tl570")]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -31.17, 6.15452, -14.6859)
+hover_message = "Deposit fish (currently n)"
+
+[node name="fish_bank" parent="." instance=ExtResource("2_q3enb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.9, 10.8, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.965926, 0, -0.258819, 0.258819, 1.31134e-07, 0.965926, 3.394e-08, -1, 1.26666e-07, 0, 0, 0)
 
 [node name="Button_fancy" parent="." instance=ExtResource("5_jhipa")]
 transform = Transform3D(0.241718, -0.43769, 0, 0.43769, 0.241718, 0, 0, 0, 0.5, -67.5166, 8.87538, 18.5)
-
-[node name="Fish_deposit" parent="." instance=ExtResource("6_w2flc")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -68, 9, 17.5)
 
 [node name="GestorTiempo" parent="." instance=ExtResource("7_vtp0w")]
 
@@ -127,11 +131,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.8, 4.8, 14.6)
 [node name="Button_fancy2" parent="." instance=ExtResource("5_jhipa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.433013, 0.25, 0, -0.25, 0.433013, -25.8, 5.9567, -10.775)
 
-[node name="equippable_pickup2" parent="." instance=ExtResource("11_mt8x8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6, 5.5, 14.7)
-
+[connection signal="ADD_1_FISH" from="deposito_peces" to="fish_bank" method="handle_add_1fish"]
+[connection signal="interacted" from="deposito_peces" to="deposito_peces" method="_on_interacted"]
 [connection signal="interacted" from="Button_fancy" to="Piston" method="_on_button_fancy_interacted"]
-[connection signal="interacted" from="Button_fancy" to="Fish_deposit" method="donate_1fish"]
-[connection signal="in_debt_s" from="Fish_deposit" to="." method="_on_fish_bank_in_debt_s"]
 [connection signal="ha_pasado_un_dia" from="GestorTiempo" to="." method="_on_gestor_tiempo_ha_pasado_un_dia"]
 [connection signal="interacted" from="Button_fancy2" to="Piston" method="_on_button_fancy_2_interacted"]

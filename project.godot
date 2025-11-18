@@ -101,4 +101,4 @@ Inventory={
 3d_physics/layer_3="Obstacles"
 3d_physics/layer_4="Pickups"
 3d_physics/layer_8="Interactables"
-3d_physics/layer_16="CapaDepositoPeces"
+3d_physics/layer_16="Capa 16"

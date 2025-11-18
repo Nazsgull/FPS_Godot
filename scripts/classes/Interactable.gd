@@ -17,5 +17,5 @@ func get_prompt():
 func interact(body):
 	emit_signal(signal_s, body)
 	print("* Player interacted with ", name)
-	print("* "+name+ " emitted signal "+ "[" + interacted.get_name() + "]")
+	print("* "+name+ " emitted signal "+ "[" + signal_s + "]")
 	
