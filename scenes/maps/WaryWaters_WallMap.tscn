@@ -105,7 +105,7 @@ fishcount = 0
 
 [node name="deposito_peces" parent="." instance=ExtResource("5_tl570")]
 transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -31.17, 6.15452, -14.6859)
-hover_message = "Deposit fish (currently n)"
+hover_message = "Deposit fish"
 
 [node name="fish_bank" parent="." instance=ExtResource("2_q3enb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.9, 10.8, 0)
@@ -131,6 +131,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.8, 4.8, 14.6)
 [node name="Button_fancy2" parent="." instance=ExtResource("5_jhipa")]
 transform = Transform3D(0.5, 0, 0, 0, 0.433013, 0.25, 0, -0.25, 0.433013, -25.8, 5.9567, -10.775)
 
+[connection signal="ADD_1_FISH" from="deposito_peces" to="player" method="remove_fish_vis"]
 [connection signal="ADD_1_FISH" from="deposito_peces" to="fish_bank" method="handle_add_1fish"]
 [connection signal="interacted" from="deposito_peces" to="deposito_peces" method="_on_interacted"]
 [connection signal="interacted" from="Button_fancy" to="Piston" method="_on_button_fancy_interacted"]
