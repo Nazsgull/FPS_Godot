@@ -206,8 +206,3 @@ func _update_fishcount_display():
 
 func _on_timer_timeout():
 	_update_fishcount_display()
-
-#Removes a fish_equippable from the equippables bar
-func remove_fish_vis(_a):
-	equippables_bar.remove_1_caught_fish()
-	return

@@ -3,15 +3,7 @@ class_name Equippable
 
 var is_working:bool = false
 var is_fully_constructed = false
-var node
-var tool_type : Messenger.ToolTypes
-
-func set_tool_type(nuevo_tipo:Messenger.ToolTypes):
-	tool_type = nuevo_tipo
-	return true
-
-func get_tool_type() -> Messenger.ToolTypes:
-	return tool_type
+var node:Node3D
 
 func set_is_working(new_is_working:bool) -> void:
 	is_working = new_is_working
@@ -19,7 +11,7 @@ func set_is_working(new_is_working:bool) -> void:
 func get_is_working() -> bool:
 	return is_working
 
-func set_equippable_node(new_node) -> void:
+func set_equippable_node(new_node:Node3D) -> void:
 	node = new_node
 
 func get_equippable_node() -> Node3D:

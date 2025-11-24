@@ -10,6 +10,7 @@ func _ready():
 func _process(_delta):
 	pass
 
-#Fin del día
+
 func _on_timer_timeout():
-	pass
+	emit_signal("ha_pasado_un_dia")
+	print("HA PASADO UN DÍA")
