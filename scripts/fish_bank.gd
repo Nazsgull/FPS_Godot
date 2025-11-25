@@ -44,11 +44,11 @@ func _update_text()-> void:
 	else:
 		fish_label.set("theme_override_colors/font_color",default_label_color)
 
-func handle_add_1fish(tipo:String):
+func handle_add_1fish(_tipo:String):
 	var player_fish : int = player.get_fish()
 	player.set_fish(player_fish + 1)
 
-func handle_remove_1fish(tipo:String) -> void:
+func handle_remove_1fish(_tipo:String) -> void:
 	var player_fish : int = player.get_fish()
 	if(player_fish - 1 >= 0):	
 		fish_actual += 1

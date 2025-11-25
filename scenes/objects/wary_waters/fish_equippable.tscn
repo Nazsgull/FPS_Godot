@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2eoxbchle1sg"]
+[gd_scene load_steps=4 format=3 uid="uid://d2eoxbchle1sg"]
 
 [ext_resource type="PackedScene" uid="uid://csj4m2tdlxwgf" path="res://scenes/objects/Abstract/base_equippable.tscn" id="1_rewp8"]
 [ext_resource type="PackedScene" uid="uid://ciepe0l3vrcdu" path="res://scenes/objects/wary_waters/caught_fish.tscn" id="2_8xkmf"]
+[ext_resource type="Script" path="res://scripts/fish_equippable.gd" id="2_bi41r"]
 
 [node name="FishEquippable" instance=ExtResource("1_rewp8")]
+script = ExtResource("2_bi41r")
 
 [node name="pivot" parent="." index="0"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.4, 0, -1.74846e-08)

@@ -190,7 +190,7 @@ func _physics_process(delta):
 	get_input(delta)
 
 #FISH AREA
-@export var fishcount: int = 10
+@export var fishcount: int = 0
 @onready var fishcount_display = $fishcount_display
 @onready var bank = Messenger.fish_bank
 
@@ -206,3 +206,6 @@ func _update_fishcount_display():
 
 func _on_timer_timeout():
 	_update_fishcount_display()
+	
+func _handle_interacted():
+	self.queue_free()

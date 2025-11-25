@@ -5,7 +5,7 @@ var equippables:Array[Equippable] = []
 var currently_equipped:int = 0
 var previously_equipped:int = 0
 var fish = 0
-func add_tool(new_scene:String,tipo:Messenger.ToolTypes):
+func add_tool(new_scene:String,_tipo:Messenger.ToolTypes):
 
 	var scene:Resource = load(new_scene)
 	var new_equippable:Equippable = Equippable.new()
@@ -40,8 +40,11 @@ func _tool_switching_by_input():
 
 func _update_equippable_displayed():
 	if equippables.size()>0:
-		for each_equippable:Equippable in equippables:
-			each_equippable.set_is_working(false)
+		for one_equippable :Equippable in equippables:
+			if one_equippable == null:
+				equippables.erase(one_equippable)
+			else:
+				one_equippable.set_is_working(false)
 		equippables[currently_equipped].set_is_working(true)
 		#print("[",currently_equipped,"]")
 		

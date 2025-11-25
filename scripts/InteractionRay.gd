@@ -1,8 +1,6 @@
 extends RayCast3D
 @onready var label_3d = $Label3D
 
-#func _ready():
-#	add_exception(Messenger.player)
 
 func _physics_process(_delta):
 	if is_colliding():

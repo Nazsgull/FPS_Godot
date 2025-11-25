@@ -21,6 +21,8 @@ func set_is_fully_constructed(new_is_fully_constructed:bool) -> void:
 	is_fully_constructed = new_is_fully_constructed
 
 func _check_working() -> void:
+	if node == null:
+		return
 	if is_working:
 		node.show()
 		node.set_process_input(true)
