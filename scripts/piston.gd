@@ -1,5 +1,7 @@
 extends Node3D
 @onready var anim_player = $AnimationPlayer
+@onready var smoke_and_mirrors = $"../../SmokeAndMirrors"
+
 var estado = false
 func extender_retraer():
 	anim_player.play("movimiento")
@@ -24,3 +26,4 @@ func _on_timer_timeout():
 
 func _on_button_fancy_2_interacted(_body):
 	extender_retraer()
+	smoke_and_mirrors.play("sea_enter")

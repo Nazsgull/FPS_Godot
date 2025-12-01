@@ -7,13 +7,12 @@
 [node name="Neriglissar" type="Node3D"]
 
 [node name="Neriglissar_WW_sección_babor" parent="." instance=ExtResource("1_puh8w")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -16.17, -1.7, 32.16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.083, -0.85, 16.08)
 
 [node name="Neriglissar_WW_sección_estribor" parent="." instance=ExtResource("2_otd24")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16.444, -1.7, 32.16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.222, -0.85, 16.08)
 
 [node name="Neriglissar_WW_sección_puente" parent="." instance=ExtResource("3_734nw")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.35, 0, -5.6)
