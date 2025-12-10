@@ -2,6 +2,7 @@ extends Node
 
 var player
 var fish_bank
+var map
 enum ToolTypes {FISHING_ROD, AK74U, CAUGHT_FISH}
 enum FishTypes {SIZE_2, SALMON, COALFISH, HADDOCK}
 signal LANZAMIENTO_CAÑA(id:String)

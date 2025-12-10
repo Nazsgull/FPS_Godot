@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dol4jyhjypcxj"]
+
+[ext_resource type="Script" path="res://spawner.gd" id="1_vmejt"]
+
+[node name="Spawner" type="Node3D"]
+script = ExtResource("1_vmejt")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 200)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
