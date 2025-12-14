@@ -20,12 +20,12 @@ func _on_timer_timeout():
 func spawn():
 	var random_num = rand.randf_range(0,3)
 	if random_num <= 1:
-		#A
+		#Aparece el bicho A
 		pass
 	if random_num < 2:
-		#B
+		#Aparece el bicho B
 		pass
 	if random_num < 3:
-		#C
+		#Aparece el bicho C
 		pass
 

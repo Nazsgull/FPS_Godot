@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b2ddllldugrvc"]
+[gd_scene load_steps=28 format=3 uid="uid://b2ddllldugrvc"]
 
 [ext_resource type="PackedScene" uid="uid://g386sbqjtrjh" path="res://scenes/objects/water_plane.tscn" id="1_i0w1c"]
 [ext_resource type="Script" path="res://scripts/WaryWaters_WallMap.gd" id="1_yaoay"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://di6n3a85uxnyp" path="res://scenes/objects/wary_waters/ak74u_pickup.tscn" id="10_45300"]
 [ext_resource type="PackedScene" uid="uid://dv8oum2cff01e" path="res://scenes/objects/wary_waters/fish_pickup.tscn" id="12_crp0e"]
 [ext_resource type="PackedScene" uid="uid://dol4jyhjypcxj" path="res://scenes/objects/wary_waters/spawner.tscn" id="13_bih8v"]
+[ext_resource type="Material" uid="uid://cwy16s8qxcdxn" path="res://assets/materials/indicadores_cana/indicador_cana_si_pescado_on.material" id="14_ts634"]
+[ext_resource type="Material" uid="uid://8rxsknkmxkjl" path="res://assets/materials/indicadores_cana/indicador_cana_no_pescado_on.material" id="15_and37"]
 
 [sub_resource type="Animation" id="Animation_n6d88"]
 length = 0.001
@@ -93,6 +95,9 @@ albedo_color = Color(0.109804, 0.219608, 0.219608, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_cqwrx"]
 size = Vector2(2000, 2000)
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jih4p"]
+material = ExtResource("14_ts634")
+
 [node name="WaryWatersWallMap" type="Node3D"]
 script = ExtResource("1_yaoay")
 
@@ -104,7 +109,7 @@ libraries = {
 }
 
 [node name="TierraFirme" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 261, 0, 0)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="TierraFirme"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15, 0, 0)
@@ -179,6 +184,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 6, -13)
 
 [node name="Spawner" parent="." instance=ExtResource("13_bih8v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2, 0, 1.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 80)
+material_override = ExtResource("15_and37")
+mesh = SubResource("CapsuleMesh_jih4p")
 
 [connection signal="ADD_1_FISH" from="deposito_peces" to="fish_bank" method="handle_add_1fish"]
 [connection signal="interacted" from="deposito_peces" to="deposito_peces" method="_on_interacted"]
