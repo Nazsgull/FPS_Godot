@@ -1,4 +1,4 @@
-res://scenes/objects/wary_waters/spawner.tscn
+res://scenes/UI/main_menu.tscn
 res://scripts/classes/Equippable.gd
 res://scripts/base_equippable.gd
 res://scripts/door_mine.gd
@@ -6,9 +6,8 @@ res://assets/materials/water.gdshader
 res://assets/materials/water.tres
 res://assets/materials/oxido_hierro.tres
 res://objects/inventory/main_inventory.tres
-res://assets/materials/underwater.gdshader
-res://spawner.gd
-res://scenes/maps/WaryWaters_WallMap.tscn
-res://assets/materials/indicadores_cana/indicador_cana_no_pescado_on.material
 res://assets/materials/indicadores_cana/indicador_noise.tres
 res://assets/materials/indicadores_cana/indicador_cana_si_pescado_on.material
+res://assets/materials/indicadores_cana/indicador_cana_no_pescado_on.material
+res://assets/materials/underwater.gdshader
+res://scenes/UI/pause_menu.tscn
